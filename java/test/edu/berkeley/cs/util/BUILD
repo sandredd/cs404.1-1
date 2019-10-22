@@ -44,3 +44,23 @@ java_test(
         "//thirdparty:junit4",
     ],
 )
+
+java_test(
+    name = "minheap",
+    srcs = ["MinHeap_T.java"],
+    test_class = "edu.berkeley.cs.util.MinHeap_T",
+    deps = [
+        "//java/src/edu/berkeley/cs/util",
+        "//thirdparty:junit4",
+    ],
+)
+
+java_test(
+    name = "treemap",
+    srcs = ["TreeMap_T.java"],
+    test_class = "edu.berkeley.cs.util.TreeMap_T",
+    deps = [
+        "//java/src/edu/berkeley/cs/util",
+        "//thirdparty:junit4",
+    ],
+)

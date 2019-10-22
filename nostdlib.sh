@@ -10,6 +10,8 @@ function main() {
     java_blessed=(
         "java.util.Arrays"
         "java.util.Iterator"
+        "java.util.NoSuchElementException"
+        "java.util.Objects"
         "java.util.Random"
     )
 

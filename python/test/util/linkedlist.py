@@ -140,7 +140,6 @@ class LinkedListTest(unittest.TestCase):
         self.assertEqual(1, self.list.front())
         self.assertEqual(0, self.list.back())
 
-
     def test_contains(self):
         size = 10
 

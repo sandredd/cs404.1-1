@@ -9,12 +9,6 @@ class Stack:
     def __iter__(self):
         return iter(self.list)
 
-    def __next__(self):
-        return self.list.__next__()
-
-    def __init(self, value):
-        self.list = value
-
     def peek(self):
         return self.list.front()
 

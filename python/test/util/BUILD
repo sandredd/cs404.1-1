@@ -28,3 +28,15 @@ py_test(
     srcs = ["stack.py"],
     deps = ["//python/src/util"],
 )
+
+py_test(
+    name = "minheap",
+    srcs = ["minheap.py"],
+    deps = ["//python/src/util"],
+)
+
+py_test(
+    name = "treemap",
+    srcs = ["treemap.py"],
+    deps = ["//python/src/util"],
+)

@@ -191,12 +191,12 @@ public class LinkedList_T {
     list.insertEnd(1);
     list.insertEnd(2);
 
-    Iterator<Integer> iterator = list.iterator();
+    Iterator<Integer> itr = list.iterator();
     for (int i = 0; i < list.size(); i++) {
-      Assert.assertTrue(iterator.hasNext());
-      Assert.assertEquals(new Integer(i), iterator.next());
+      Assert.assertTrue(itr.hasNext());
+      Assert.assertEquals(new Integer(i), itr.next());
     }
 
-    Assert.assertFalse(iterator.hasNext());
+    Assert.assertFalse(itr.hasNext());
   }
 }

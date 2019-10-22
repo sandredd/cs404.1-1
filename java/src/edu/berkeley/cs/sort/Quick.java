@@ -1,5 +1,6 @@
 package edu.berkeley.cs.sort;
 
+// Inspired by code available in Algorithms 4th Edition, by Robert Sedgewick and Kevin Wayne
 public class Quick<T extends Comparable> extends Sort<T> {
   protected Insertion<T> insertion = new Insertion<>();
 
