@@ -5,3 +5,9 @@ py_test(
     srcs = ["calculator.py"],
     deps = ["//python/src/app"],
 )
+
+py_test(
+    name = "spellchecker",
+    srcs = ["spellchecker.py"],
+    deps = ["//python/src/app"],
+)

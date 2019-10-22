@@ -3,7 +3,7 @@ package edu.berkeley.cs.util;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class TreeMap<Key extends Comparable<Key>, Value> implements Map<Key, Value>, Iterable<Key>  {
+public class TreeMap<Key extends Comparable<Key>, Value> implements Map<Key, Value>, Iterable<Key> {
   private Node root;
   private int size;
 

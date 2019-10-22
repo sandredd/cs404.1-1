@@ -3,6 +3,7 @@ package(default_visibility = ["//visibility:public"])
 py_library(
     name = "utilities",
     srcs = ["utilities.py"],
+    deps = ["//python/src/graph"],
 )
 
 py_test(
@@ -38,5 +39,17 @@ py_test(
 py_test(
     name = "treemap",
     srcs = ["treemap.py"],
+    deps = ["//python/src/util"],
+)
+
+py_test(
+    name = "hashmap",
+    srcs = ["hashmap.py"],
+    deps = ["//python/src/util"],
+)
+
+py_test(
+    name = "hashset",
+    srcs = ["hashset.py"],
     deps = ["//python/src/util"],
 )

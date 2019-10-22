@@ -3,6 +3,7 @@ package(default_visibility = ["//visibility:public"])
 java_library(
     name = "utilities",
     srcs = ["Utilities.java"],
+    deps = ["//java/src/edu/berkeley/cs/graph"],
 )
 
 java_test(
@@ -59,6 +60,26 @@ java_test(
     name = "treemap",
     srcs = ["TreeMap_T.java"],
     test_class = "edu.berkeley.cs.util.TreeMap_T",
+    deps = [
+        "//java/src/edu/berkeley/cs/util",
+        "//thirdparty:junit4",
+    ],
+)
+
+java_test(
+    name = "hashmap",
+    srcs = ["HashMap_T.java"],
+    test_class = "edu.berkeley.cs.util.HashMap_T",
+    deps = [
+        "//java/src/edu/berkeley/cs/util",
+        "//thirdparty:junit4",
+    ],
+)
+
+java_test(
+    name = "hashset",
+    srcs = ["HashSet_T.java"],
+    test_class = "edu.berkeley.cs.util.HashSet_T",
     deps = [
         "//java/src/edu/berkeley/cs/util",
         "//thirdparty:junit4",

@@ -1,4 +1,5 @@
 class Map:
+
     def clear(self):
         pass
 
@@ -8,14 +9,14 @@ class Map:
     def size(self):
         return 0
 
-    def contains(self, key):
-        return False
-
     def get(self, key):
         return None
 
     def put(self, key, value):
         pass
+
+    def contains(self, key):
+        return False
 
     def delete(self, key):
         pass

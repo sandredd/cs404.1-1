@@ -1,5 +1,6 @@
 package edu.berkeley.cs.util;
 
+import edu.berkeley.cs.graph.Graph;
 import java.util.Random;
 
 public class Utilities {
@@ -23,5 +24,49 @@ public class Utilities {
     }
 
     return true;
+  }
+
+  public static Graph smallGraph() {
+    Graph graph = new Graph(12);
+
+    graph.addEdge(0, 6);
+    graph.addEdge(0, 2);
+    graph.addEdge(0, 1);
+    graph.addEdge(0, 5);
+    graph.addEdge(3, 5);
+    graph.addEdge(3, 4);
+    graph.addEdge(4, 5);
+    graph.addEdge(4, 6);
+    graph.addEdge(7, 8);
+    graph.addEdge(9, 10);
+    graph.addEdge(9, 11);
+
+    return graph;
+  }
+
+  private static boolean arrayContains(int needle, int[] haystack) {
+    for (int value : haystack) {
+      if (value == needle) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  public static int[] vertexInverse(Graph graph, int[] vertices) {
+    int[] inverse = new int[graph.numVertices() - vertices.length];
+    int used = 0;
+
+    for (int i = 0; i < graph.numVertices(); i++) {
+      if (arrayContains(i, vertices)) {
+        continue;
+      }
+
+      inverse[used] = i;
+      used++;
+    }
+
+    return inverse;
   }
 }

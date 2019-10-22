@@ -9,3 +9,14 @@ java_test(
         "//thirdparty:junit4",
     ],
 )
+
+java_test(
+    name = "spellchecker",
+    srcs = ["SpellChecker_T.java"],
+    test_class = "edu.berkeley.cs.app.SpellChecker_T",
+    deps = [
+        "//java/src/edu/berkeley/cs/app",
+        "//java/src/edu/berkeley/cs/util",
+        "//thirdparty:junit4",
+    ],
+)
