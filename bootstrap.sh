@@ -49,6 +49,9 @@ function main() {
             ;;
     esac
 
+    git config --global core.whitespace fix,-indent-with-non-tab,trailing-space,cr-at-eol
+    git config --global core.autocrlf input
+
     username=$1
     repo=cs404.1
 
@@ -61,9 +64,6 @@ function main() {
     git remote add -f origin git@github.com:$username/$repo.git
     git remote add -f upstream git@github.com:fsareshwala/$repo.git
     git push -uf origin master
-
-    git config core.whitespace fix,-indent-with-non-tab,trailing-space,cr-at-eol
-    git config core.autocrlf input
 }
 
 main "$@"
