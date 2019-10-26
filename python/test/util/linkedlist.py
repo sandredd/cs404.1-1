@@ -129,6 +129,18 @@ class LinkedListTest(unittest.TestCase):
         self.assertEqual(0, self.list.front())
         self.assertEqual(2, self.list.back())
 
+    def test_remove_first_occurrence(self):
+        self.list.insert_end(0)
+        self.list.insert_end(1)
+        self.list.insert_end(0)
+
+        self.assertTrue(self.list.remove(0))
+        self.assertEqual(2, self.list.size())
+
+        self.assertEqual(1, self.list.front())
+        self.assertEqual(0, self.list.back())
+
+
     def test_contains(self):
         size = 10
 

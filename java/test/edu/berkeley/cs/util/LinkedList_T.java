@@ -157,6 +157,19 @@ public class LinkedList_T {
   }
 
   @Test
+  public void testRemoveFirstOccurrence() {
+    list.insertEnd(0);
+    list.insertEnd(1);
+    list.insertEnd(0);
+
+    Assert.assertTrue(list.remove(0));
+    Assert.assertEquals(2, list.size());
+
+    Assert.assertEquals(new Integer(1), list.front());
+    Assert.assertEquals(new Integer(0), list.back());
+  }
+
+  @Test
   public void testContains() {
     int size = 10;
 
