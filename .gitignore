@@ -1,5 +1,16 @@
+# bazel
 bazel-*
+
+# intellij
 .ijwb
 .idea
+
+# java
+*.class
+
+# python
+*.pyc
+
+# miscellaneous
 *.tags
 .DS_Store
