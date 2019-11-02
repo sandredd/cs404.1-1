@@ -47,7 +47,8 @@ class ElementarySortTest(unittest.TestCase):
 
         self.assertEqual(expected, actual)
         self.assertEqual(499500, selection.compares)
-        self.assertEqual(1000, selection.swaps)
+        self.assertGreaterEqual(selection.swaps, 999)
+        self.assertLessEqual(selection.swaps, 1000)
 
     def test_shell_sort(self):
         shell = Shell()

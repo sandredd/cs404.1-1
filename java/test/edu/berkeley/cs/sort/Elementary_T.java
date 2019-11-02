@@ -48,7 +48,8 @@ public class Elementary_T {
 
     Assert.assertArrayEquals(expected, actual);
     Assert.assertEquals(499500, selection.compares());
-    Assert.assertEquals(1000, selection.swaps());
+    Assert.assertTrue(selection.swaps() >= 999);
+    Assert.assertTrue(selection.swaps() <= 1000);
   }
 
   @Test
