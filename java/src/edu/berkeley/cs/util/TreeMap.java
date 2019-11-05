@@ -3,7 +3,7 @@ package edu.berkeley.cs.util;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class TreeMap<Key extends Comparable<Key>, Value> implements Iterable<Key> {
+public class TreeMap<Key extends Comparable<Key>, Value> implements Map<Key, Value>, Iterable<Key>  {
   private Node root;
   private int size;
 
@@ -19,14 +19,23 @@ public class TreeMap<Key extends Comparable<Key>, Value> implements Iterable<Key
     }
   }
 
+  @Override
+  public void clear() {
+    root = null;
+    size = 0;
+  }
+
+  @Override
   public boolean isEmpty() {
     return size() == 0;
   }
 
+  @Override
   public int size() {
     return size;
   }
 
+  @Override
   public boolean contains(Key key) {
     if (key == null) {
       throw new IllegalArgumentException("argument to contains() is null");
@@ -35,6 +44,7 @@ public class TreeMap<Key extends Comparable<Key>, Value> implements Iterable<Key
     return get(key) != null;
   }
 
+  @Override
   public Value get(Key key) {
     return get(root, key);
   }
@@ -44,6 +54,7 @@ public class TreeMap<Key extends Comparable<Key>, Value> implements Iterable<Key
     return null;
   }
 
+  @Override
   public void put(Key key, Value value) {
     if (key == null) {
       throw new IllegalArgumentException("calls put() with a null key");
@@ -91,6 +102,7 @@ public class TreeMap<Key extends Comparable<Key>, Value> implements Iterable<Key
     return null;
   }
 
+  @Override
   public void delete(Key key) {
     if (key == null) {
       throw new IllegalArgumentException("calls delete() with a null key");

@@ -1,7 +1,8 @@
+from python.src.util.map import Map
 from python.src.util.queue import Queue
 
 
-class TreeMap:
+class TreeMap(Map):
 
     class Node:
 
@@ -12,6 +13,10 @@ class TreeMap:
             self.right = None
 
     def __init__(self):
+        self.root = None
+        self.num_elements = 0
+
+    def clear(self):
         self.root = None
         self.num_elements = 0
 

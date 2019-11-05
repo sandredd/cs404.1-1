@@ -11,6 +11,18 @@ class TreeMapTestT(unittest.TestCase):
         self.map = TreeMap()
         self.randmax = 999999
 
+    def test_clear(self):
+        self.map.put(1, 2)
+        self.map.put(2, 3)
+
+        self.assertEqual(2, self.map.size())
+        self.assertFalse(self.map.is_empty())
+
+        self.map.clear()
+
+        self.assertEqual(0, self.map.size())
+        self.assertTrue(self.map.is_empty())
+
     def test_size_is_empty(self):
         self.assertTrue(self.map.is_empty())
         self.assertEqual(0, self.map.size())
