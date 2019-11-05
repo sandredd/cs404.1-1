@@ -21,8 +21,11 @@ class MinHeapTest(unittest.TestCase):
         self.assertFalse(self.heap.is_empty())
 
     def test_remove_minimum_empty_heap(self):
-        self.assertIsNone(self.heap.remove_minimum())
-        self.assertIsNone(self.heap.min())
+        with self.assertRaises(Exception):
+            self.heap.remove_minimum()
+
+        with self.assertRaises(Exception):
+            self.heap.min()
 
     def test_sorted_removal(self):
         n = 100

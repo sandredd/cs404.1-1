@@ -1,5 +1,5 @@
-from python.src.scheduling.job import Job
-from python.src.scheduling.scheduler import Scheduler
+from python.src.app.scheduling.job import Job
+from python.src.app.scheduling.scheduler import Scheduler
 from python.src.util.queue import Queue
 
 

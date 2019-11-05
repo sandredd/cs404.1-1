@@ -71,8 +71,8 @@ first in first out scheduling algorithm, a queue for the round robin scheduling 
 binary heap you implemented above for the shortest job first scheduling algorithm. The directory you
 will be working in (depending on the language you are working in) for this exercise is:
 
-- Java: `java/src/edu/berkeley/cs/scheduling`
-- Python: `python/src/scheduling`
+- Java: `java/src/edu/berkeley/cs/app/scheduling`
+- Python: `python/src/app/scheduling`
 
 Tree Map
 --------
@@ -104,9 +104,9 @@ be used to test and grade your code:
 Java:
 
     $ bazel test java/test/edu/berkeley/cs/util:{treemap,minheap}
-    $ bazel test java/test/edu/berkeley/cs/scheduling:all
+    $ bazel test java/test/edu/berkeley/cs/app/scheduling:all
 
 Python:
 
     $ bazel test python/test/util:{treemap,minheap}
-    $ bazel test python/test/scheduling:all
+    $ bazel test python/test/app/scheduling:all

@@ -1,6 +1,6 @@
 import unittest
 
-from python.src.scheduling.round_robin_scheduler import RoundRobinScheduler
+from python.src.app.scheduling.round_robin_scheduler import RoundRobinScheduler
 
 
 class RoundRobinSchedulerTest(unittest.TestCase):

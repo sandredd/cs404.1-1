@@ -5,7 +5,7 @@ py_test(
     srcs = ["fifo_scheduler.py"],
     main = "fifo_scheduler.py",
     deps = [
-        "//python/src/scheduling",
+        "//python/src/app/scheduling",
         "//python/src/util",
     ],
 )
@@ -14,7 +14,7 @@ py_test(
     name = "job",
     srcs = ["job.py"],
     deps = [
-        "//python/src/scheduling",
+        "//python/src/app/scheduling",
     ],
 )
 
@@ -23,7 +23,7 @@ py_test(
     srcs = ["round_robin_scheduler.py"],
     main = "round_robin_scheduler.py",
     deps = [
-        "//python/src/scheduling",
+        "//python/src/app/scheduling",
         "//python/src/util",
     ],
 )
@@ -33,7 +33,7 @@ py_test(
     srcs = ["shortest_job_first_scheduler.py"],
     main = "shortest_job_first_scheduler.py",
     deps = [
-        "//python/src/scheduling",
+        "//python/src/app/scheduling",
         "//python/src/util",
     ],
 )

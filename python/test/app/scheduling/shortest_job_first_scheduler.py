@@ -1,6 +1,6 @@
 import unittest
 
-from python.src.scheduling.shortest_job_first_scheduler import ShortestJobFirstScheduler
+from python.src.app.scheduling.shortest_job_first_scheduler import ShortestJobFirstScheduler
 
 
 class ShortestJobFirstSchedulerTest(unittest.TestCase):

@@ -1,4 +1,4 @@
-package edu.berkeley.cs.scheduling;
+package edu.berkeley.cs.app.scheduling;
 
 import java.util.Arrays;
 import org.junit.Assert;

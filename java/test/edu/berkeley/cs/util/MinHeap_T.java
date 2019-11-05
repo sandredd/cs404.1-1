@@ -2,6 +2,7 @@ package edu.berkeley.cs.util;
 
 import java.util.Arrays;
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 import java.util.Random;
 import org.junit.Assert;
 import org.junit.Before;
@@ -28,7 +29,7 @@ public class MinHeap_T {
     Assert.assertFalse(heap.isEmpty());
   }
 
-  @Test
+  @Test(expected = NoSuchElementException.class)
   public void testRemoveMinimumEmptyHeap() {
     Assert.assertNull(heap.removeMinimum());
     Assert.assertNull(heap.min());

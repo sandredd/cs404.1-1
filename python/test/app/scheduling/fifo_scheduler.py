@@ -1,6 +1,6 @@
 import unittest
 
-from python.src.scheduling.fifo_scheduler import FiFoScheduler
+from python.src.app.scheduling.fifo_scheduler import FiFoScheduler
 
 
 class FiFoSchedulerTest(unittest.TestCase):

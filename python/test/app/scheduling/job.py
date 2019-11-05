@@ -1,6 +1,6 @@
 import unittest
 
-from python.src.scheduling.job import Job
+from python.src.app.scheduling.job import Job
 
 
 class JobTest(unittest.TestCase):
