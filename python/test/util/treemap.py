@@ -13,15 +13,16 @@ class TreeMapTestT(unittest.TestCase):
 
     def test_clear(self):
         self.map.put(1, 2)
-        self.map.put(2, 3)
 
-        self.assertEqual(2, self.map.size())
+        self.assertEqual(1, self.map.size())
         self.assertFalse(self.map.is_empty())
 
         self.map.clear()
 
         self.assertEqual(0, self.map.size())
         self.assertTrue(self.map.is_empty())
+        self.assertFalse(self.map.contains(1))
+        self.assertIsNone(self.map.get(1))
 
     def test_size_is_empty(self):
         self.assertTrue(self.map.is_empty())

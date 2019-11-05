@@ -18,15 +18,16 @@ public class TreeMap_T {
   @Test
   public void testClear() {
     map.put(1, 2);
-    map.put(2, 3);
 
-    Assert.assertEquals(2, map.size());
+    Assert.assertEquals(1, map.size());
     Assert.assertFalse(map.isEmpty());
 
     map.clear();
 
     Assert.assertEquals(0, map.size());
     Assert.assertTrue(map.isEmpty());
+    Assert.assertFalse(map.contains(1));
+    Assert.assertNull(map.get(1));
   }
 
   @Test
