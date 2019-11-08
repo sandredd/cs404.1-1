@@ -66,9 +66,11 @@ time (time spent in the queue). For example, if the workload is 15 units of time
 50 units of time in queue, waiting to be processed, then the total turnaround time is equal to 65
 units.
 
-Implement each scheduling algorithm in its respective file. Choose an appropriate data structure to
-use within each scheduling algorithm. The directory you will be working in (depending on the
-language you are working in) for this exercise is:
+Implement each scheduling algorithm in its respective file. The first in first out scheduler can be
+implemented with a linked list or a queue. The shortest job first scheduler should be implemented
+with a priority queue, and the round robin scheduler should be implemented with a queue. Some of
+this data structure selection has been done for you already. The directory you will be working in
+(depending on the language you are working in) for this exercise is:
 
 - Java: `java/src/edu/berkeley/cs/app/scheduling`
 - Python: `python/src/app/scheduling`
