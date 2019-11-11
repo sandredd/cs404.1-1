@@ -1,6 +1,5 @@
 package edu.berkeley.cs.graph;
 
-import edu.berkeley.cs.util.Queue;
 import edu.berkeley.cs.util.Stack;
 
 public class BreadthFirstSearch {

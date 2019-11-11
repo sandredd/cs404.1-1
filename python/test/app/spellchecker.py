@@ -6,6 +6,7 @@ from python.src.util.hashset import HashSet
 
 
 class SpellCheckerTest(unittest.TestCase):
+
     def setUp(self):
         words = HashSet()
 
@@ -26,22 +27,26 @@ class SpellCheckerTest(unittest.TestCase):
     def test_suggestinos_add_start_character(self):
         for word in self.spellchecker.words:
             misspelled = word[1:]
-            self.assertTrue(self.spellchecker.get_suggestions(misspelled).contains(word))
+            self.assertTrue(
+                self.spellchecker.get_suggestions(misspelled).contains(word))
 
     def test_suggestions_add_end_character(self):
         for word in self.spellchecker.words:
             misspelled = word[:-1]
-            self.assertTrue(self.spellchecker.get_suggestions(misspelled).contains(word))
+            self.assertTrue(
+                self.spellchecker.get_suggestions(misspelled).contains(word))
 
     def test_suggestions_remove_start_character(self):
         for word in self.spellchecker.words:
             for c in ascii_lowercase:
-                self.assertTrue(self.spellchecker.get_suggestions(c + word).contains(word))
+                self.assertTrue(
+                    self.spellchecker.get_suggestions(c + word).contains(word))
 
     def test_suggestions_remove_end_character(self):
         for word in self.spellchecker.words:
             for c in ascii_lowercase:
-                self.assertTrue(self.spellchecker.get_suggestions(word + c).contains(word))
+                self.assertTrue(
+                    self.spellchecker.get_suggestions(word + c).contains(word))
 
     def swap(self, word, i, j):
         temp = word[i]
@@ -55,7 +60,8 @@ class SpellCheckerTest(unittest.TestCase):
                 self.swap(elements, i, i - 1)
 
                 candidate = ''.join(elements)
-                self.assertTrue(self.spellchecker.get_suggestions(candidate).contains(word))
+                self.assertTrue(
+                    self.spellchecker.get_suggestions(candidate).contains(word))
 
                 self.swap(elements, i - 1, i)
 

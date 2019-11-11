@@ -5,20 +5,27 @@ from python.test.util.utilities import Utilities
 
 
 class BreadthFirstSearchTest(unittest.TestCase):
+
     def setUp(self):
         self.graph = Utilities.small_graph()
 
     def check_path_to(self, bfs, path_to, no_path_to):
         for v in path_to:
-            self.assertTrue(bfs.has_path_to(v), "%d should be connected to %d" % (bfs.source(), v))
+            self.assertTrue(bfs.has_path_to(v),
+                            "%d should be connected to %d" % (bfs.source(), v))
 
         for v in no_path_to:
-            self.assertFalse(bfs.has_path_to(v), "%d should not be connected to %d" % (bfs.source(), v))
+            self.assertFalse(
+                bfs.has_path_to(v),
+                "%d should not be connected to %d" % (bfs.source(), v))
 
     def check_dist_to(self, bfs, vertices, dist_to):
         for i in range(len(vertices)):
-            self.assertEqual(dist_to[i], bfs.distance_to(vertices[i]), "%d is %d hops away from %d, should be %d" % (
-                bfs.source(), bfs.distance_to(vertices[i]), vertices[i], dist_to[i]))
+            self.assertEqual(
+                dist_to[i], bfs.distance_to(vertices[i]),
+                "%d is %d hops away from %d, should be %d" %
+                (bfs.source(), bfs.distance_to(
+                    vertices[i]), vertices[i], dist_to[i]))
 
     def test_source(self):
         for i in range(self.graph.num_vertices()):
