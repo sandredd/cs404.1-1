@@ -45,7 +45,7 @@ Spell Checker
 -------------
 One way to implement a very basic spell checker is to use a hash set, preloaded with a list of words
 known to be spelled correctly. As new words are seen by the application, the spell checker can be
-queried to see if it the word is spelled correctly or not (e.g. if the hash set contains the word or
+queried to see if the word is spelled correctly or not (e.g. if the hash set contains the word or
 not). The spell checker can also offer suggestions on the correct spelling of the word being
 examined.
 
