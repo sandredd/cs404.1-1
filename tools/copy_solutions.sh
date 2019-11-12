@@ -117,7 +117,9 @@ function main() {
     fi
 
     for file in "${files[@]}"; do
-        cp $solutions_path/$file $(dirname $file)/solutions
+        directory=$(dirname $file)/solutions
+        mkdir -p $directory
+        cp $solutions_path/$file $directory
     done
 }
 
