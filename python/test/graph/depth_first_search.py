@@ -50,3 +50,7 @@ class DepthFirstSearchTest(unittest.TestCase):
             vertices = [9, 10, 11]
             self.check_path_to(dfs, vertices,
                                Utilities.vertex_inverse(self.graph, vertices))
+
+
+if __name__ == '__main__':
+    unittest.main()

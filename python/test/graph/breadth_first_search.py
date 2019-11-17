@@ -115,3 +115,7 @@ class BreadthFirstSearchTest(unittest.TestCase):
         vertices = [9, 10, 11]
         self.check_path_to(bfs, vertices, Utilities.vertex_inverse(vertices))
         self.check_dist_to(bfs, vertices, [1, 2, 0])
+
+
+if __name__ == '__main__':
+    unittest.main()
