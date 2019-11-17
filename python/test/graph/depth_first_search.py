@@ -22,7 +22,7 @@ class DepthFirstSearchTest(unittest.TestCase):
     def test_source(self):
         for i in range(self.graph.num_vertices()):
             dfs = DepthFirstSearch(self.graph, i)
-            self.assertEqual(i, dfs.source)
+            self.assertEqual(i, dfs.source())
 
     def test_source_0_1_2_3_4_5_6(self):
         for i in range(7):
@@ -36,7 +36,7 @@ class DepthFirstSearchTest(unittest.TestCase):
     def test_source_7_8(self):
         for i in range(7, 9):
             dfs = DepthFirstSearch(self.graph, i)
-            self.assertEqual(7, dfs.connected_vertices())
+            self.assertEqual(2, dfs.connected_vertices())
 
             vertices = [7, 8]
             self.check_path_to(dfs, vertices,
@@ -45,7 +45,7 @@ class DepthFirstSearchTest(unittest.TestCase):
     def test_source_9_10_11(self):
         for i in range(9, 12):
             dfs = DepthFirstSearch(self.graph, i)
-            self.assertEqual(7, dfs.connected_vertices())
+            self.assertEqual(3, dfs.connected_vertices())
 
             vertices = [9, 10, 11]
             self.check_path_to(dfs, vertices,
