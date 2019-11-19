@@ -1,4 +1,5 @@
 class Edge:
+
     def __init__(self, source, dest, weight=0):
         if source < 0 or dest < 0:
             raise Exception("Vertex names must be nonnegative integers")
