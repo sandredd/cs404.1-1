@@ -26,25 +26,25 @@ class HashMapTest(unittest.TestCase):
         self.assertEqual(1, self.graph.degree(10))
         self.assertEqual(1, self.graph.degree(11))
 
-    def has_edge_to(self, edges, vertex):
+    def has_edge_to(self, edges, vertex, weight):
         for edge in edges:
-            if edge.dest() == vertex:
+            if edge.dest() == vertex and edge.weight() == weight:
                 return True
 
         return False
 
     def test_adjacent_vertices(self):
-        self.assertTrue(self.has_edge_to(self.graph.adjacent_vertices(0), 6))
-        self.assertTrue(self.has_edge_to(self.graph.adjacent_vertices(0), 2))
-        self.assertTrue(self.has_edge_to(self.graph.adjacent_vertices(0), 1))
-        self.assertTrue(self.has_edge_to(self.graph.adjacent_vertices(0), 5))
-        self.assertTrue(self.has_edge_to(self.graph.adjacent_vertices(3), 5))
-        self.assertTrue(self.has_edge_to(self.graph.adjacent_vertices(3), 4))
-        self.assertTrue(self.has_edge_to(self.graph.adjacent_vertices(4), 5))
-        self.assertTrue(self.has_edge_to(self.graph.adjacent_vertices(4), 6))
-        self.assertTrue(self.has_edge_to(self.graph.adjacent_vertices(7), 8))
-        self.assertTrue(self.has_edge_to(self.graph.adjacent_vertices(9), 10))
-        self.assertTrue(self.has_edge_to(self.graph.adjacent_vertices(9), 11))
+        self.assertTrue(self.has_edge_to(self.graph.adjacent_vertices(0), 6, 20))
+        self.assertTrue(self.has_edge_to(self.graph.adjacent_vertices(0), 2, 12))
+        self.assertTrue(self.has_edge_to(self.graph.adjacent_vertices(0), 1, 14))
+        self.assertTrue(self.has_edge_to(self.graph.adjacent_vertices(0), 5, 8))
+        self.assertTrue(self.has_edge_to(self.graph.adjacent_vertices(3), 5, 2))
+        self.assertTrue(self.has_edge_to(self.graph.adjacent_vertices(3), 4, 4))
+        self.assertTrue(self.has_edge_to(self.graph.adjacent_vertices(4), 5, 7))
+        self.assertTrue(self.has_edge_to(self.graph.adjacent_vertices(4), 6, 13))
+        self.assertTrue(self.has_edge_to(self.graph.adjacent_vertices(7), 8, 17))
+        self.assertTrue(self.has_edge_to(self.graph.adjacent_vertices(9), 10, 19))
+        self.assertTrue(self.has_edge_to(self.graph.adjacent_vertices(9), 11, 11))
 
 
 if __name__ == '__main__':
