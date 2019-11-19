@@ -6,6 +6,7 @@ java_test(
     test_class = "edu.berkeley.cs.graph.Graph_T",
     deps = [
         "//java/src/edu/berkeley/cs/graph",
+        "//java/src/edu/berkeley/cs/util",
         "//java/test/edu/berkeley/cs/util:utilities",
         "//thirdparty:junit4",
     ],

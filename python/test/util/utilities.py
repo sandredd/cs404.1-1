@@ -26,17 +26,17 @@ class Utilities:
     def small_graph():
         graph = Graph(12)
 
-        graph.add_edge(0, 6)
-        graph.add_edge(0, 2)
-        graph.add_edge(0, 1)
-        graph.add_edge(0, 5)
-        graph.add_edge(3, 5)
-        graph.add_edge(3, 4)
-        graph.add_edge(4, 5)
-        graph.add_edge(4, 6)
-        graph.add_edge(7, 8)
-        graph.add_edge(9, 10)
-        graph.add_edge(9, 11)
+        graph.add_edge(0, 6, 20)
+        graph.add_edge(0, 2, 12)
+        graph.add_edge(0, 1, 14)
+        graph.add_edge(0, 5, 8)
+        graph.add_edge(3, 5, 2)
+        graph.add_edge(3, 4, 4)
+        graph.add_edge(4, 5, 7)
+        graph.add_edge(4, 6, 13)
+        graph.add_edge(7, 8, 17)
+        graph.add_edge(9, 10, 19)
+        graph.add_edge(9, 11, 11)
 
         return graph
 

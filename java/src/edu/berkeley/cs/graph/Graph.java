@@ -4,10 +4,14 @@ import edu.berkeley.cs.util.LinkedList;
 
 public class Graph {
   private final int vertices;
-  private int edges;
-  private LinkedList<Integer>[] adjacencyList;
+  protected int edges;
+  protected LinkedList<Edge>[] adjacencyList;
 
   public Graph(int vertices) {
+    if (vertices < 0) {
+      throw new IllegalArgumentException("Number of vertices must be nonnegative");
+    }
+
     this.vertices = vertices;
     adjacencyList = new LinkedList[vertices];
 
@@ -29,16 +33,31 @@ public class Graph {
       throw new IllegalArgumentException("vertex " + v + " is not between 0 and " + (vertices - 1));
   }
 
-  public void addEdge(int v, int w) {
-    validateVertex(v);
-    validateVertex(w);
-
-    edges++;
-    adjacencyList[v].insertEnd(w);
-    adjacencyList[w].insertEnd(v);
+  public void addEdge(int from, int to) {
+    addEdge(from, to, 0);
   }
 
-  public LinkedList<Integer> adjacentVertices(int v) {
+  public void addEdge(int from, int to, double weight) {
+    validateVertex(from);
+    validateVertex(to);
+
+    edges++;
+    adjacencyList[from].insertEnd(new Edge(from, to, weight));
+    adjacencyList[to].insertEnd(new Edge(to, from, weight));
+  }
+
+  public LinkedList<Edge> edges() {
+    LinkedList<Edge> list = new LinkedList<>();
+    for (int i = 0; i < vertices; i++) {
+      for (Edge edge : adjacentVertices(i)) {
+        list.insertEnd(edge);
+      }
+    }
+
+    return list;
+  }
+
+  public LinkedList<Edge> adjacentVertices(int v) {
     validateVertex(v);
     return adjacencyList[v];
   }

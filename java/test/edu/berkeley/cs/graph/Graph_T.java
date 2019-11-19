@@ -1,5 +1,6 @@
 package edu.berkeley.cs.graph;
 
+import edu.berkeley.cs.util.LinkedList;
 import edu.berkeley.cs.util.Utilities;
 import org.junit.Assert;
 import org.junit.Before;
@@ -35,18 +36,28 @@ public class Graph_T {
     Assert.assertEquals(1, graph.degree(11));
   }
 
+  private boolean hasEdgeTo(LinkedList<Edge> edges, int vertex) {
+    for (Edge edge : edges) {
+      if (edge.to() == vertex) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
   @Test
   public void testAdjacentVertices() {
-    Assert.assertTrue(graph.adjacentVertices(0).contains(6));
-    Assert.assertTrue(graph.adjacentVertices(0).contains(2));
-    Assert.assertTrue(graph.adjacentVertices(0).contains(1));
-    Assert.assertTrue(graph.adjacentVertices(0).contains(5));
-    Assert.assertTrue(graph.adjacentVertices(3).contains(5));
-    Assert.assertTrue(graph.adjacentVertices(3).contains(4));
-    Assert.assertTrue(graph.adjacentVertices(4).contains(5));
-    Assert.assertTrue(graph.adjacentVertices(4).contains(6));
-    Assert.assertTrue(graph.adjacentVertices(7).contains(8));
-    Assert.assertTrue(graph.adjacentVertices(9).contains(10));
-    Assert.assertTrue(graph.adjacentVertices(9).contains(11));
+    Assert.assertTrue(hasEdgeTo(graph.adjacentVertices(0), 6));
+    Assert.assertTrue(hasEdgeTo(graph.adjacentVertices(0), 2));
+    Assert.assertTrue(hasEdgeTo(graph.adjacentVertices(0), 1));
+    Assert.assertTrue(hasEdgeTo(graph.adjacentVertices(0), 5));
+    Assert.assertTrue(hasEdgeTo(graph.adjacentVertices(3), 5));
+    Assert.assertTrue(hasEdgeTo(graph.adjacentVertices(3), 4));
+    Assert.assertTrue(hasEdgeTo(graph.adjacentVertices(4), 5));
+    Assert.assertTrue(hasEdgeTo(graph.adjacentVertices(4), 6));
+    Assert.assertTrue(hasEdgeTo(graph.adjacentVertices(7), 8));
+    Assert.assertTrue(hasEdgeTo(graph.adjacentVertices(9), 10));
+    Assert.assertTrue(hasEdgeTo(graph.adjacentVertices(9), 11));
   }
 }

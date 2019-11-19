@@ -1,4 +1,5 @@
 from python.src.util.linkedlist import LinkedList
+from python.src.graph.edge import Edge
 
 
 class Graph:
@@ -22,13 +23,22 @@ class Graph:
             raise Exception("vertex %d is not between 0 and %d" %
                             (v, self.vertices - 1))
 
-    def add_edge(self, v, w):
-        self.validate_vertex(v)
-        self.validate_vertex(w)
+    def add_edge(self, source, dest, weight=0):
+        self.validate_vertex(source)
+        self.validate_vertex(dest)
 
         self.edges += 1
-        self.adjacency_list[v].insert_end(w)
-        self.adjacency_list[w].insert_end(v)
+        self.adjacency_list[source].insert_end(Edge(source, dest, weight))
+        self.adjacency_list[dest].insert_end(Edge(dest, source, weight))
+
+    def edges(self):
+        edge_list = LinkedList()
+
+        for i in range(self.vertices):
+            for edge in self.adjacent_vertices(i):
+                edge_list.insert_end(edge)
+
+        return edge_list
 
     def adjacent_vertices(self, v):
         self.validate_vertex(v)

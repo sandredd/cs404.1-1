@@ -26,18 +26,25 @@ class HashMapTest(unittest.TestCase):
         self.assertEqual(1, self.graph.degree(10))
         self.assertEqual(1, self.graph.degree(11))
 
+    def has_edge_to(self, edges, vertex):
+        for edge in edges:
+            if edge.dest() == vertex:
+                return True
+
+        return False
+
     def test_adjacent_vertices(self):
-        self.assertTrue(self.graph.adjacent_vertices(0).contains(6))
-        self.assertTrue(self.graph.adjacent_vertices(0).contains(2))
-        self.assertTrue(self.graph.adjacent_vertices(0).contains(1))
-        self.assertTrue(self.graph.adjacent_vertices(0).contains(5))
-        self.assertTrue(self.graph.adjacent_vertices(3).contains(5))
-        self.assertTrue(self.graph.adjacent_vertices(3).contains(4))
-        self.assertTrue(self.graph.adjacent_vertices(4).contains(5))
-        self.assertTrue(self.graph.adjacent_vertices(4).contains(6))
-        self.assertTrue(self.graph.adjacent_vertices(7).contains(8))
-        self.assertTrue(self.graph.adjacent_vertices(9).contains(10))
-        self.assertTrue(self.graph.adjacent_vertices(9).contains(11))
+        self.assertTrue(self.has_edge_to(self.graph.adjacent_vertices(0), 6))
+        self.assertTrue(self.has_edge_to(self.graph.adjacent_vertices(0), 2))
+        self.assertTrue(self.has_edge_to(self.graph.adjacent_vertices(0), 1))
+        self.assertTrue(self.has_edge_to(self.graph.adjacent_vertices(0), 5))
+        self.assertTrue(self.has_edge_to(self.graph.adjacent_vertices(3), 5))
+        self.assertTrue(self.has_edge_to(self.graph.adjacent_vertices(3), 4))
+        self.assertTrue(self.has_edge_to(self.graph.adjacent_vertices(4), 5))
+        self.assertTrue(self.has_edge_to(self.graph.adjacent_vertices(4), 6))
+        self.assertTrue(self.has_edge_to(self.graph.adjacent_vertices(7), 8))
+        self.assertTrue(self.has_edge_to(self.graph.adjacent_vertices(9), 10))
+        self.assertTrue(self.has_edge_to(self.graph.adjacent_vertices(9), 11))
 
 
 if __name__ == '__main__':

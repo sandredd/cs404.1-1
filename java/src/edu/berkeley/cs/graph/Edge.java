@@ -1,0 +1,63 @@
+package edu.berkeley.cs.graph;
+
+public class Edge {
+  private final int from;
+  private final int to;
+  private final double weight;
+
+  public Edge(int from, int to, double weight) {
+    if (from < 0) {
+      throw new IllegalArgumentException("Vertex names must be nonnegative integers");
+    }
+
+    if (to < 0) {
+      throw new IllegalArgumentException("Vertex names must be nonnegative integers");
+    }
+
+    if (Double.isNaN(weight)) {
+      throw new IllegalArgumentException("Weight is NaN");
+    }
+
+    this.from = from;
+    this.to = to;
+    this.weight = weight;
+  }
+
+  public int from() {
+    return from;
+  }
+
+  public int to() {
+    return to;
+  }
+
+  public double weight() {
+    return weight;
+  }
+
+  public Edge reverse() {
+    return new Edge(to, from, weight);
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (!(obj instanceof Edge)) {
+      return false;
+    }
+
+    Edge other = (Edge) obj;
+    if (this.from != other.from) {
+      return false;
+    }
+
+    if (this.to != other.to) {
+      return false;
+    }
+
+    if (Math.abs(this.weight - other.weight) > 0.0001) {
+      return false;
+    }
+
+    return true;
+  }
+}

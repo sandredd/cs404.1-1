@@ -6,19 +6,19 @@ from python.src.util.stack import Stack
 
 class BreadthFirstSearch:
 
-    def __init__(self, graph, source_vertex):
+    def __init__(self, graph, source):
         self.graph = graph
-        self.source_vertex = source_vertex
+        self.source_ = source
 
         self.marked = [False] * graph.num_vertices()
         self.dist_to = [0] * graph.num_vertices()
         self.edge_to = [0] * graph.num_vertices()
 
-        self.graph.validate_vertex(source_vertex)
-        self.bfs(source_vertex)
+        self.graph.validate_vertex(source)
+        self.bfs(source)
 
     def source(self):
-        return self.source_vertex
+        return self.source_
 
     def has_path_to(self, v):
         self.graph.validate_vertex(v)

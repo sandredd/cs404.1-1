@@ -29,17 +29,17 @@ public class Utilities {
   public static Graph smallGraph() {
     Graph graph = new Graph(12);
 
-    graph.addEdge(0, 6);
-    graph.addEdge(0, 2);
-    graph.addEdge(0, 1);
-    graph.addEdge(0, 5);
-    graph.addEdge(3, 5);
-    graph.addEdge(3, 4);
-    graph.addEdge(4, 5);
-    graph.addEdge(4, 6);
-    graph.addEdge(7, 8);
-    graph.addEdge(9, 10);
-    graph.addEdge(9, 11);
+    graph.addEdge(0, 6, 20);
+    graph.addEdge(0, 2, 12);
+    graph.addEdge(0, 1, 14);
+    graph.addEdge(0, 5, 8);
+    graph.addEdge(3, 5, 2);
+    graph.addEdge(3, 4, 4);
+    graph.addEdge(4, 5, 7);
+    graph.addEdge(4, 6, 13);
+    graph.addEdge(7, 8, 17);
+    graph.addEdge(9, 10, 19);
+    graph.addEdge(9, 11, 11);
 
     return graph;
   }
