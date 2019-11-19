@@ -8,6 +8,12 @@ class Edge:
         self.dest_ = dest
         self.weight_ = weight
 
+    def __lt__(self, other):
+        return self.weight_ < other.weight_
+
+    def __gt__(self, other):
+        return other.__lt__(self)
+
     def __eq__(self, other):
         if self.source() != other.source():
             return False
@@ -19,6 +25,9 @@ class Edge:
             return False
 
         return True
+
+    def __ne__(self, other):
+        return not self.__eq__(other)
 
     def source(self):
         return self.source_

@@ -1,6 +1,6 @@
 package edu.berkeley.cs.graph;
 
-public class Edge {
+public class Edge implements Comparable<Edge> {
   private final int from;
   private final int to;
   private final double weight;
@@ -59,5 +59,16 @@ public class Edge {
     }
 
     return true;
+  }
+
+  @Override
+  public int compareTo(Edge edge) {
+    if (this.weight() < edge.weight()) {
+      return -1;
+    } else if (this.weight() > edge.weight()) {
+      return 1;
+    } else {
+      return 0;
+    }
   }
 }
