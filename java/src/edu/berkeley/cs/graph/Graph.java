@@ -46,10 +46,10 @@ public class Graph {
     adjacencyList[to].insertEnd(new Edge(to, from, weight));
   }
 
-  public LinkedList<Edge> edges() {
+  public Iterable<Edge> edges() {
     LinkedList<Edge> list = new LinkedList<>();
     for (int i = 0; i < vertices; i++) {
-      for (Edge edge : adjacentVertices(i)) {
+      for (Edge edge : edges(i)) {
         list.insertEnd(edge);
       }
     }
@@ -57,9 +57,25 @@ public class Graph {
     return list;
   }
 
-  public LinkedList<Edge> adjacentVertices(int v) {
+  public Iterable<Edge> edges(int v) {
+    LinkedList<Edge> list = new LinkedList<>();
+
+    for (Edge edge : adjacencyList[v]) {
+      list.insertEnd(edge);
+    }
+
+    return list;
+  }
+
+  public Iterable<Integer> adjacentVertices(int v) {
     validateVertex(v);
-    return adjacencyList[v];
+
+    LinkedList<Integer> vertices = new LinkedList<>();
+    for (Edge edge : adjacencyList[v]) {
+      vertices.insertEnd(edge.to());
+    }
+
+    return vertices;
   }
 
   public int degree(int v) {

@@ -1,5 +1,7 @@
 package edu.berkeley.cs.graph;
 
+import java.util.Objects;
+
 public class Edge implements Comparable<Edge> {
   private final int from;
   private final int to;
@@ -37,6 +39,11 @@ public class Edge implements Comparable<Edge> {
 
   public Edge reverse() {
     return new Edge(to, from, weight);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(from, to, weight);
   }
 
   @Override
