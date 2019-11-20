@@ -3,7 +3,7 @@ import unittest
 from python.test.util.utilities import Utilities
 
 
-class HashMapTest(unittest.TestCase):
+class GraphTest(unittest.TestCase):
 
     def setUp(self):
         self.graph = Utilities.small_graph()

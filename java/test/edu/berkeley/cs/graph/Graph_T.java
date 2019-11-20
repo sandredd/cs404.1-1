@@ -1,6 +1,5 @@
 package edu.berkeley.cs.graph;
 
-import edu.berkeley.cs.util.LinkedList;
 import edu.berkeley.cs.util.Utilities;
 import org.junit.Assert;
 import org.junit.Before;

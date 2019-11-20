@@ -85,3 +85,13 @@ java_test(
         "//thirdparty:junit4",
     ],
 )
+
+java_test(
+    name = "unionfind",
+    srcs = ["UnionFind_T.java"],
+    test_class = "edu.berkeley.cs.util.UnionFind_T",
+    deps = [
+        "//java/src/edu/berkeley/cs/util",
+        "//thirdparty:junit4",
+    ],
+)

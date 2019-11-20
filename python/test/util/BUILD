@@ -53,3 +53,10 @@ py_test(
     srcs = ["hashset.py"],
     deps = ["//python/src/util"],
 )
+
+py_test(
+    name = "unionfind",
+    srcs = ["union_find.py"],
+    main = "union_find.py",
+    deps = ["//python/src/util"],
+)

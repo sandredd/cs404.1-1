@@ -29,6 +29,9 @@ class Edge:
     def __ne__(self, other):
         return not self.__eq__(other)
 
+    def __hash__(self):
+        return hash((self.source_, self.dest_, self.weight_))
+
     def source(self):
         return self.source_
 
