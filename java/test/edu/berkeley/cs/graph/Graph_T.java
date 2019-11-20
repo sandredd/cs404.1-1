@@ -36,7 +36,7 @@ public class Graph_T {
     Assert.assertEquals(1, graph.degree(11));
   }
 
-  private boolean hasEdgeTo(LinkedList<Edge> edges, int vertex, double weight) {
+  private boolean hasEdgeTo(Iterable<Edge> edges, int vertex, double weight) {
     for (Edge edge : edges) {
       if (edge.to() == vertex && edge.weight() == weight) {
         return true;
@@ -47,17 +47,17 @@ public class Graph_T {
   }
 
   @Test
-  public void testAdjacentVertices() {
-    Assert.assertTrue(hasEdgeTo(graph.adjacentVertices(0), 6, 20));
-    Assert.assertTrue(hasEdgeTo(graph.adjacentVertices(0), 2, 12));
-    Assert.assertTrue(hasEdgeTo(graph.adjacentVertices(0), 1, 14));
-    Assert.assertTrue(hasEdgeTo(graph.adjacentVertices(0), 5, 8));
-    Assert.assertTrue(hasEdgeTo(graph.adjacentVertices(3), 5, 2));
-    Assert.assertTrue(hasEdgeTo(graph.adjacentVertices(3), 4, 4));
-    Assert.assertTrue(hasEdgeTo(graph.adjacentVertices(4), 5, 7));
-    Assert.assertTrue(hasEdgeTo(graph.adjacentVertices(4), 6, 13));
-    Assert.assertTrue(hasEdgeTo(graph.adjacentVertices(7), 8, 17));
-    Assert.assertTrue(hasEdgeTo(graph.adjacentVertices(9), 10, 19));
-    Assert.assertTrue(hasEdgeTo(graph.adjacentVertices(9), 11, 11));
+  public void testEdges() {
+    Assert.assertTrue(hasEdgeTo(graph.edges(0), 6, 20));
+    Assert.assertTrue(hasEdgeTo(graph.edges(0), 2, 12));
+    Assert.assertTrue(hasEdgeTo(graph.edges(0), 1, 14));
+    Assert.assertTrue(hasEdgeTo(graph.edges(0), 5, 8));
+    Assert.assertTrue(hasEdgeTo(graph.edges(3), 5, 2));
+    Assert.assertTrue(hasEdgeTo(graph.edges(3), 4, 4));
+    Assert.assertTrue(hasEdgeTo(graph.edges(4), 5, 7));
+    Assert.assertTrue(hasEdgeTo(graph.edges(4), 6, 13));
+    Assert.assertTrue(hasEdgeTo(graph.edges(7), 8, 17));
+    Assert.assertTrue(hasEdgeTo(graph.edges(9), 10, 19));
+    Assert.assertTrue(hasEdgeTo(graph.edges(9), 11, 11));
   }
 }

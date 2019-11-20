@@ -31,15 +31,15 @@ class Graph:
         self.adjacency_list[source].insert_end(Edge(source, dest, weight))
         self.adjacency_list[dest].insert_end(Edge(dest, source, weight))
 
-    def edges(self, v=None):
+    def get_edges(self, v=None):
         edge_list = LinkedList()
 
         if v is None:
             for i in range(self.vertices):
-                for w in self.adjacent_vertices(i):
+                for w in self.adjacency_list[i]:
                     edge_list.insert_end(w)
         else:
-            for w in self.adjacent_vertices(v):
+            for w in self.adjacency_list[v]:
                 edge_list.insert_end(w)
 
         return edge_list
