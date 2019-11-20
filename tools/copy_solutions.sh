@@ -109,7 +109,25 @@ function main() {
         files+=("python/src/util/hashmap.py")
         files+=("python/src/util/hashset.py")
     elif [[ $program == 6 ]]; then
-        :
+        files+=("java/src/edu/berkeley/cs/graph/DirectedGraph.java")
+        files+=("java/src/edu/berkeley/cs/graph/DirectedCycle.java")
+        files+=("java/src/edu/berkeley/cs/graph/DepthFirstOrderjava")
+        files+=("java/src/edu/berkeley/cs/graph/TopologicalSort.java")
+        files+=("java/src/edu/berkeley/cs/graph/StronglyConnectedComponents.java")
+        files+=("java/src/edu/berkeley/cs/util/UnionFind.java")
+        files+=("java/src/edu/berkeley/cs/graph/MinimumSpanningTree.java")
+        files+=("java/src/edu/berkeley/cs/graph/ShortestPath.java")
+        files+=("java/src/edu/berkeley/cs/graph/MultipleSourceShortestPath.java")
+
+        files+=("python/src/graph/directed_graph.py")
+        files+=("python/src/graph/directed_cycle.py")
+        files+=("python/src/graph/depth_first_order.py")
+        files+=("python/src/graph/topological_sort.py")
+        files+=("python/src/graph/strongly_connected_components.py")
+        files+=("python/src/graph/union_find.py")
+        files+=("python/src/graph/minimum_spanning_tree.py")
+        files+=("python/src/graph/shortest_path.py")
+        files+=("python/src/graph/multiple_source_shortest_path.py")
     elif [[ $program == 7 ]]; then
         :
     else
