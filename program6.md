@@ -84,9 +84,7 @@ Minimum Spanning Trees
 You work for a regional water utility company which has been selected to provide water from its
 water treatment plants to various municipalities around the state. The locations and distances
 between adjacent municipalities and the water treatment plants are shown in the figure below. The
-water treatment plants are located at vertices 2, 7, 13, 23, and 29. The remaining vertices show
-the locations of the various municipalities that are planned to be serviced. The edges show the
-costs to dig and build out pipeline between the vertices within the graph.
+edges show the costs to dig and build out pipeline between the vertices within the graph.
 
 ![graph](resources/images/graph.png)
 
