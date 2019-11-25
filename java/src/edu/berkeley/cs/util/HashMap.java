@@ -3,8 +3,7 @@ package edu.berkeley.cs.util;
 import java.util.Iterator;
 import java.util.Objects;
 
-public class HashMap<Key extends Comparable<Key>, Value>
-    implements Map<Key, Value>, Iterable<HashMap.Entry> {
+public class HashMap<Key, Value> implements Map<Key, Value>, Iterable<HashMap.Entry> {
   protected class Entry {
     protected Key key;
     protected Value value;

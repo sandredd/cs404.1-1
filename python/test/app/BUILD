@@ -11,3 +11,10 @@ py_test(
     srcs = ["spellchecker.py"],
     deps = ["//python/src/app"],
 )
+
+py_test(
+    name = "plagiarism",
+    srcs = ["plagiarism_detector.py"],
+    main = "plagiarism_detector.py",
+    deps = ["//python/src/app"],
+)

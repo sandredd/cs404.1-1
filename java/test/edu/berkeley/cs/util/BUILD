@@ -95,3 +95,13 @@ java_test(
         "//thirdparty:junit4",
     ],
 )
+
+java_test(
+    name = "trie",
+    srcs = ["RadixTrieMap_T.java"],
+    test_class = "edu.berkeley.cs.util.RadixTrieMap_T",
+    deps = [
+        "//java/src/edu/berkeley/cs/util",
+        "//thirdparty:junit4",
+    ],
+)

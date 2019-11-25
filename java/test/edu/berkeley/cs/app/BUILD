@@ -20,3 +20,13 @@ java_test(
         "//thirdparty:junit4",
     ],
 )
+
+java_test(
+    name = "plagiarism",
+    srcs = ["PlagiarismDetector_T.java"],
+    test_class = "edu.berkeley.cs.app.PlagiarismDetector_T",
+    deps = [
+        "//java/src/edu/berkeley/cs/app",
+        "//thirdparty:junit4",
+    ],
+)

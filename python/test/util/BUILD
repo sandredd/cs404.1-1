@@ -60,3 +60,10 @@ py_test(
     main = "union_find.py",
     deps = ["//python/src/util"],
 )
+
+py_test(
+    name = "trie",
+    srcs = ["radix_trie_map.py"],
+    main = "radix_trie_map.py",
+    deps = ["//python/src/util"],
+)

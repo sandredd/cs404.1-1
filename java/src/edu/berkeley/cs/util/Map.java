@@ -1,6 +1,6 @@
 package edu.berkeley.cs.util;
 
-public interface Map<Key extends Comparable<Key>, Value> {
+public interface Map<Key, Value> {
   void clear();
 
   boolean isEmpty();
