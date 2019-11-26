@@ -19,8 +19,8 @@ In more general terms, given a dependency graph, we need to compute the executio
 for a given component, all dependencies are built first. One of the most popular methods to do this
 is using topological sort. Implement topological sort. Remember that only directed, acyclic graphs
 (DAGs) have a topological order. Before implementing topological sort, it may be useful to first
-implement functionality to determine whether a graph has a cycle or not (`DirectedCycle`) and
-functionality to determine the various orderings in a graph (`DepthFirstOrder`).
+implement functionality to determine whether a graph has a cycle or not (`Cycle`) and functionality
+to determine the various orderings in a graph (`DepthFirstOrder`).
 
 The files you will need (depending on the language you are working in) for this exercise are:
 
@@ -47,9 +47,8 @@ One of the algorithms to compute strongly connected components in a directed gra
 class. Implement the algorithm.
 
 Note that the first step of the Kosaraju-Sharir algorithm is to determine the reverse post order of
-the graph's reverse. The reverse post order is effectively the order returned by topological sort
-(which you implemented in the previous step). To obtain the reverse of the graph, you will need to
-fill in the `reverse(...)` function within the `DirectedGraph` class.
+the graph's reverse. To obtain the reverse of the graph, you will need to fill in the `reverse(...)`
+function within the `DirectedGraph` class.
 
 The files you will need (depending on the language you are working in) for this exercise are:
 
