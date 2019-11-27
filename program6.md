@@ -19,18 +19,16 @@ In more general terms, given a dependency graph, we need to compute the executio
 for a given component, all dependencies are built first. One of the most popular methods to do this
 is using topological sort. Implement topological sort. Remember that only directed, acyclic graphs
 (DAGs) have a topological order. Before implementing topological sort, it may be useful to first
-implement functionality to determine whether a graph has a cycle or not (`Cycle`) and functionality
-to determine the various orderings in a graph (`DepthFirstOrder`).
+implement functionality to determine whether a graph has a cycle or not (`Cycle`). You implemented
+functionality to determine the various orderings in a graph in a previous assignment.
 
 The files you will need (depending on the language you are working in) for this exercise are:
 
 - Java:
     - `java/src/edu/berkeley/cs/graph/Cycle.java`
-    - `java/src/edu/berkeley/cs/graph/DepthFirstOrderjava`
     - `java/src/edu/berkeley/cs/graph/TopologicalSort.java`
 - Python:
     - `python/src/graph/cycle.py`
-    - `python/src/graph/depth_first_order.py`
     - `python/src/graph/topological_sort.py`
 
 Strongly Connected Components
@@ -109,7 +107,7 @@ be used to test and grade your code:
 
 Java:
 
-    $ bazel test java/test/edu/berkeley/cs/graph:{digraph,cycle,dfsorder,toposort,scc,mst}
+    $ bazel test java/test/edu/berkeley/cs/graph:{digraph,cycle,toposort,scc,mst}
     $ bazel test java/test/edu/berkeley/cs/util:unionfind
 
 Python:

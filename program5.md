@@ -96,6 +96,16 @@ The files you will need (depending on the language you are working in) for this 
 - Java: `java/src/edu/berkeley/cs/graph/BreadthFirstSearch.java`
 - Python: `python/src/graph/breadth_first_search.py`
 
+Depth First Order
+-----------------
+Now that you have practiced writing depth first search, use DFS to implement functionality to
+determine the various orderings (e.g. preorder, postorder, reverse postorder) in a graph.
+
+The files you will need (depending on the language you are working in) for this exercise are:
+
+- Java: `java/src/edu/berkeley/cs/graph/DepthFirstOrderjava`
+- Python: `python/src/graph/depth_first_order.py`
+
 Grading
 -------
 Tests have already been written to help you ensure that your code works. The following commands will
@@ -104,7 +114,7 @@ be used to test and grade your code:
 Java:
 
     $ bazel test java/test/edu/berkeley/cs/util:{hashset,hashmap}
-    $ bazel test java/test/edu/berkeley/cs/graph:{graph,bfs,dfs}
+    $ bazel test java/test/edu/berkeley/cs/graph:{graph,bfs,dfs,dfsorder}
     $ bazel test java/test/edu/berkeley/cs/app:spellchecker
 
 Python:
