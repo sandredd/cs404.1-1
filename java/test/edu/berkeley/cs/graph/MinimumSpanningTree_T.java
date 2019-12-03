@@ -32,7 +32,7 @@ public class MinimumSpanningTree_T {
   @Test
   public void testLargeGraph() {
     MinimumSpanningTree mst = new MinimumSpanningTree(Utilities.largeGraph());
-    Assert.assertEquals(2140, mst.weight());
+    Assert.assertEquals(2140, mst.weight(), epsilon);
 
     HashSet<Edge> edges = new HashSet<>();
     for (Edge edge : mst.edges()) {
