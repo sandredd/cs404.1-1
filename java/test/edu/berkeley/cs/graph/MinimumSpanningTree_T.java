@@ -8,6 +8,12 @@ import org.junit.Test;
 public class MinimumSpanningTree_T {
   private static final double epsilon = 0.0001;
 
+  private void checkEdge(HashSet<Edge> edges, int from, int to, double weight) {
+    Edge a = new Edge(from, to, weight);
+    Edge b = a.reverse();
+    Assert.assertTrue(from + " -- " + to + " missing", edges.contains(a) || edges.contains(b));
+  }
+
   @Test
   public void testSmallGraph() {
     MinimumSpanningTree mst = new MinimumSpanningTree(Utilities.smallGraph());
@@ -18,15 +24,15 @@ public class MinimumSpanningTree_T {
       edges.add(edge);
     }
 
-    Assert.assertTrue(edges.contains(new Edge(0, 2, 12)));
-    Assert.assertTrue(edges.contains(new Edge(1, 0, 14)));
-    Assert.assertTrue(edges.contains(new Edge(10, 9, 19)));
-    Assert.assertTrue(edges.contains(new Edge(4, 3, 4)));
-    Assert.assertTrue(edges.contains(new Edge(5, 0, 8)));
-    Assert.assertTrue(edges.contains(new Edge(5, 3, 2)));
-    Assert.assertTrue(edges.contains(new Edge(6, 4, 13)));
-    Assert.assertTrue(edges.contains(new Edge(8, 7, 17)));
-    Assert.assertTrue(edges.contains(new Edge(9, 11, 11)));
+    checkEdge(edges, 0, 2, 12);
+    checkEdge(edges, 1, 0, 14);
+    checkEdge(edges, 10, 9, 19);
+    checkEdge(edges, 4, 3, 4);
+    checkEdge(edges, 5, 0, 8);
+    checkEdge(edges, 5, 3, 2);
+    checkEdge(edges, 6, 4, 13);
+    checkEdge(edges, 8, 7, 17);
+    checkEdge(edges, 9, 11, 11);
   }
 
   @Test
@@ -39,54 +45,54 @@ public class MinimumSpanningTree_T {
       edges.add(edge);
     }
 
-    Assert.assertTrue(edges.contains(new Edge(10, 13, 19)));
-    Assert.assertTrue(edges.contains(new Edge(11, 43, 48)));
-    Assert.assertTrue(edges.contains(new Edge(11, 45, 44)));
-    Assert.assertTrue(edges.contains(new Edge(15, 12, 89)));
-    Assert.assertTrue(edges.contains(new Edge(15, 13, 80)));
-    Assert.assertTrue(edges.contains(new Edge(16, 27, 65)));
-    Assert.assertTrue(edges.contains(new Edge(16, 4, 79)));
-    Assert.assertTrue(edges.contains(new Edge(17, 23, 17)));
-    Assert.assertTrue(edges.contains(new Edge(18, 23, 49)));
-    Assert.assertTrue(edges.contains(new Edge(19, 20, 41)));
-    Assert.assertTrue(edges.contains(new Edge(19, 21, 25)));
-    Assert.assertTrue(edges.contains(new Edge(19, 25, 22)));
-    Assert.assertTrue(edges.contains(new Edge(20, 13, 86)));
-    Assert.assertTrue(edges.contains(new Edge(20, 14, 109)));
-    Assert.assertTrue(edges.contains(new Edge(24, 25, 30)));
-    Assert.assertTrue(edges.contains(new Edge(25, 26, 33)));
-    Assert.assertTrue(edges.contains(new Edge(27, 42, 46)));
-    Assert.assertTrue(edges.contains(new Edge(28, 17, 53)));
-    Assert.assertTrue(edges.contains(new Edge(28, 22, 128)));
-    Assert.assertTrue(edges.contains(new Edge(28, 27, 32)));
-    Assert.assertTrue(edges.contains(new Edge(29, 23, 38)));
-    Assert.assertTrue(edges.contains(new Edge(3, 21, 40)));
-    Assert.assertTrue(edges.contains(new Edge(30, 36, 84)));
-    Assert.assertTrue(edges.contains(new Edge(32, 18, 45)));
-    Assert.assertTrue(edges.contains(new Edge(33, 49, 42)));
-    Assert.assertTrue(edges.contains(new Edge(34, 42, 62)));
-    Assert.assertTrue(edges.contains(new Edge(35, 34, 20)));
-    Assert.assertTrue(edges.contains(new Edge(35, 40, 57)));
-    Assert.assertTrue(edges.contains(new Edge(37, 39, 12)));
-    Assert.assertTrue(edges.contains(new Edge(38, 26, 36)));
-    Assert.assertTrue(edges.contains(new Edge(38, 31, 3)));
-    Assert.assertTrue(edges.contains(new Edge(38, 37, 10)));
-    Assert.assertTrue(edges.contains(new Edge(39, 36, 4)));
-    Assert.assertTrue(edges.contains(new Edge(4, 1, 110)));
-    Assert.assertTrue(edges.contains(new Edge(4, 5, 26)));
-    Assert.assertTrue(edges.contains(new Edge(40, 39, 14)));
-    Assert.assertTrue(edges.contains(new Edge(41, 40, 18)));
-    Assert.assertTrue(edges.contains(new Edge(41, 43, 43)));
-    Assert.assertTrue(edges.contains(new Edge(43, 47, 24)));
-    Assert.assertTrue(edges.contains(new Edge(44, 47, 8)));
-    Assert.assertTrue(edges.contains(new Edge(45, 46, 64)));
-    Assert.assertTrue(edges.contains(new Edge(46, 48, 58)));
-    Assert.assertTrue(edges.contains(new Edge(48, 49, 61)));
-    Assert.assertTrue(edges.contains(new Edge(6, 1, 1)));
-    Assert.assertTrue(edges.contains(new Edge(6, 9, 21)));
-    Assert.assertTrue(edges.contains(new Edge(7, 4, 13)));
-    Assert.assertTrue(edges.contains(new Edge(8, 3, 5)));
-    Assert.assertTrue(edges.contains(new Edge(9, 0, 11)));
-    Assert.assertTrue(edges.contains(new Edge(9, 2, 115)));
+    checkEdge(edges, 10, 13, 19);
+    checkEdge(edges, 11, 43, 48);
+    checkEdge(edges, 11, 45, 44);
+    checkEdge(edges, 15, 12, 89);
+    checkEdge(edges, 15, 13, 80);
+    checkEdge(edges, 16, 27, 65);
+    checkEdge(edges, 16, 4, 79);
+    checkEdge(edges, 17, 23, 17);
+    checkEdge(edges, 18, 23, 49);
+    checkEdge(edges, 19, 20, 41);
+    checkEdge(edges, 19, 21, 25);
+    checkEdge(edges, 19, 25, 22);
+    checkEdge(edges, 20, 13, 86);
+    checkEdge(edges, 20, 14, 109);
+    checkEdge(edges, 24, 25, 30);
+    checkEdge(edges, 25, 26, 33);
+    checkEdge(edges, 27, 42, 46);
+    checkEdge(edges, 28, 17, 53);
+    checkEdge(edges, 28, 22, 128);
+    checkEdge(edges, 28, 27, 32);
+    checkEdge(edges, 29, 23, 38);
+    checkEdge(edges, 3, 21, 40);
+    checkEdge(edges, 30, 36, 84);
+    checkEdge(edges, 32, 18, 45);
+    checkEdge(edges, 33, 49, 42);
+    checkEdge(edges, 34, 42, 62);
+    checkEdge(edges, 35, 34, 20);
+    checkEdge(edges, 35, 40, 57);
+    checkEdge(edges, 37, 39, 12);
+    checkEdge(edges, 38, 26, 36);
+    checkEdge(edges, 38, 31, 3);
+    checkEdge(edges, 38, 37, 10);
+    checkEdge(edges, 39, 36, 4);
+    checkEdge(edges, 4, 1, 110);
+    checkEdge(edges, 4, 5, 26);
+    checkEdge(edges, 40, 39, 14);
+    checkEdge(edges, 41, 40, 18);
+    checkEdge(edges, 41, 43, 43);
+    checkEdge(edges, 43, 47, 24);
+    checkEdge(edges, 44, 47, 8);
+    checkEdge(edges, 45, 46, 64);
+    checkEdge(edges, 46, 48, 58);
+    checkEdge(edges, 48, 49, 61);
+    checkEdge(edges, 6, 1, 1);
+    checkEdge(edges, 6, 9, 21);
+    checkEdge(edges, 7, 4, 13);
+    checkEdge(edges, 8, 3, 5);
+    checkEdge(edges, 9, 0, 11);
+    checkEdge(edges, 9, 2, 115);
   }
 }
