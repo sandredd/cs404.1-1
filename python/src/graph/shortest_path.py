@@ -4,6 +4,7 @@ from python.src.util.stack import Stack
 
 
 class ShortestPath:
+
     def __init__(self, graph, s):
         self.edge_to = [None] * graph.num_vertices()
         self.dist_to = [0.0] * graph.num_vertices()

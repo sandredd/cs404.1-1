@@ -4,6 +4,7 @@ from python.test.util.utilities import Utilities
 
 
 class DirectedGraphTest(unittest.TestCase):
+
     def setUp(self):
         self.graph = Utilities.small_directed_graph()
 

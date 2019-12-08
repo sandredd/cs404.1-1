@@ -5,6 +5,7 @@ from python.src.util.radix_trie_map import RadixTrieMap
 
 
 class RadixTrieMapTest(unittest.TestCase):
+
     def setUp(self):
         self.map = RadixTrieMap()
 

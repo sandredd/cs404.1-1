@@ -6,6 +6,7 @@ from python.test.util.utilities import Utilities
 
 
 class TopologicalSortTest(unittest.TestCase):
+
     def test_cyclic_graph_no_topological_order(self):
         graph = Utilities.small_cyclic_graph()
         topological = TopologicalSort(graph)

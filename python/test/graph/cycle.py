@@ -5,6 +5,7 @@ from python.test.util.utilities import Utilities
 
 
 class DirectedGraphTest(unittest.TestCase):
+
     def test_has_cycle(self):
         graph = Utilities.small_cyclic_graph()
         finder = Cycle(graph)

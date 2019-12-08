@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, n):
         self.count = n
         self.parent = [0] * n

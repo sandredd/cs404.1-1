@@ -2,6 +2,7 @@ from python.src.graph.graph import Graph
 
 
 class DirectedGraph(Graph):
+
     def __init__(self, vertices):
         super().__init__(vertices)
 

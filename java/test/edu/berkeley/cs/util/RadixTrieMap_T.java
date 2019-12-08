@@ -1,10 +1,9 @@
 package edu.berkeley.cs.util;
 
+import java.util.Arrays;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.util.Arrays;
 
 public class RadixTrieMap_T {
   private RadixTrieMap<Boolean> map;

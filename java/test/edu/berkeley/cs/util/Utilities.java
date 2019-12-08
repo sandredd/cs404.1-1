@@ -264,7 +264,7 @@ public class Utilities {
   }
 
   public static DirectedGraph largeDirectedGraph() {
-    DirectedGraph graph= new DirectedGraph(50);
+    DirectedGraph graph = new DirectedGraph(50);
     addLargeGraphEdges(graph);
     return graph;
   }

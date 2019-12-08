@@ -5,6 +5,7 @@ from python.test.util.utilities import Utilities
 
 
 class StronglyConnectedComponentsTest(unittest.TestCase):
+
     def setUp(self):
         self.graph = Utilities.small_component_graph()
         self.scc = StronglyConnectedComponents(self.graph)
@@ -49,6 +50,7 @@ class StronglyConnectedComponentsTest(unittest.TestCase):
         self.check_strong_component(10, scc10)
         self.check_strong_component(11, scc11)
         self.check_strong_component(12, scc12)
+
 
 if __name__ == '__main__':
     unittest.main()

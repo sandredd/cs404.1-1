@@ -1,4 +1,5 @@
 class DepthFirstOrder:
+
     def __init__(self, graph):
         # TODO: complete this function
         pass

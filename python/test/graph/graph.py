@@ -43,8 +43,8 @@ class GraphTest(unittest.TestCase):
         self.assertTrue(self.has_edge_to(self.graph.get_edges(4), 5, 7))
         self.assertTrue(self.has_edge_to(self.graph.get_edges(4), 6, 13))
         self.assertTrue(self.has_edge_to(self.graph.get_edges(7), 8, 17))
-        self.assertTrue( self.has_edge_to(self.graph.get_edges(9), 10, 19))
-        self.assertTrue( self.has_edge_to(self.graph.get_edges(9), 11, 11))
+        self.assertTrue(self.has_edge_to(self.graph.get_edges(9), 10, 19))
+        self.assertTrue(self.has_edge_to(self.graph.get_edges(9), 11, 11))
 
 
 if __name__ == '__main__':

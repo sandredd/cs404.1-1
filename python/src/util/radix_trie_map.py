@@ -2,6 +2,7 @@ from python.src.util.map import Map
 
 
 class RadixTrieMap(Map):
+
     def clear(self):
         # TODO: complete this function
         pass

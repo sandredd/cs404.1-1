@@ -1,4 +1,5 @@
 class MinimumSpanningTree:
+
     def __init__(self, graph):
         # TODO: complete this function
         pass

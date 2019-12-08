@@ -7,10 +7,12 @@ from python.test.util.utilities import Utilities
 
 
 class MinimumSpanningTreeTest(unittest.TestCase):
+
     def check_edge(self, edges, source, dest, weight):
         a = Edge(source, dest, weight)
         b = a.reverse()
-        self.assertTrue(a in edges or b in edges, "%d -- %d missing" % (source, dest))
+        self.assertTrue(a in edges or b in edges,
+                        "%d -- %d missing" % (source, dest))
 
     def test_small_graph(self):
         mst = MinimumSpanningTree(Utilities.small_graph())

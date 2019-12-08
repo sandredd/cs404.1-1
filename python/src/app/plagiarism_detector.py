@@ -1,4 +1,5 @@
 class PlagiarismDetector:
+
     def add_search_text(self, search_text):
         # TODO: complete this function
         pass

@@ -4,6 +4,7 @@ from python.src.util.union_find import UnionFind
 
 
 class UnionFindTest(unittest.TestCase):
+
     def setUp(self):
         self.initial_count = 10
         self.uf = UnionFind(self.initial_count)
