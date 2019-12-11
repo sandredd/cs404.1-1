@@ -25,7 +25,7 @@ public class MultipleSourceShortestPath {
   }
 
   public Iterable<Edge> pathTo(int v) {
-    Queue<Edge> path = new Queue<Edge>();
+    Queue<Edge> path = new Queue<>();
     for (Edge edge : sp.pathTo(v)) {
       path.enqueue(edge);
     }
