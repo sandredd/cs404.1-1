@@ -35,23 +35,23 @@ public class MultipleSourceShortestPath_T {
 
     boolean[] hasPathTo =
         new boolean[] {
-            true, true, true, false, false, true, true, false, false, false, false, false
+          true, true, true, false, false, true, true, false, false, false, false, false
         };
 
     double[] distTo =
         new double[] {
-            0,
-            0,
-            12,
-            Integer.MAX_VALUE,
-            Integer.MAX_VALUE,
-            8,
-            20,
-            Integer.MAX_VALUE,
-            Integer.MAX_VALUE,
-            Integer.MAX_VALUE,
-            Integer.MAX_VALUE,
-            Integer.MAX_VALUE,
+          0,
+          0,
+          12,
+          Integer.MAX_VALUE,
+          Integer.MAX_VALUE,
+          8,
+          20,
+          Integer.MAX_VALUE,
+          Integer.MAX_VALUE,
+          Integer.MAX_VALUE,
+          Integer.MAX_VALUE,
+          Integer.MAX_VALUE,
         };
 
     checkGraph(mssp, hasPathTo, distTo);
@@ -145,23 +145,23 @@ public class MultipleSourceShortestPath_T {
 
     boolean[] hasPathTo =
         new boolean[] {
-            true, true, true, false, false, true, true, false, false, false, false, false
+          true, true, true, false, false, true, true, false, false, false, false, false
         };
 
     double[] distTo =
         new double[] {
-            0,
-            14,
-            12,
-            Integer.MAX_VALUE,
-            Integer.MAX_VALUE,
-            0,
-            20,
-            Integer.MAX_VALUE,
-            Integer.MAX_VALUE,
-            Integer.MAX_VALUE,
-            Integer.MAX_VALUE,
-            Integer.MAX_VALUE,
+          0,
+          14,
+          12,
+          Integer.MAX_VALUE,
+          Integer.MAX_VALUE,
+          0,
+          20,
+          Integer.MAX_VALUE,
+          Integer.MAX_VALUE,
+          Integer.MAX_VALUE,
+          Integer.MAX_VALUE,
+          Integer.MAX_VALUE,
         };
 
     checkGraph(mssp, hasPathTo, distTo);
@@ -173,23 +173,23 @@ public class MultipleSourceShortestPath_T {
 
     boolean[] hasPathTo =
         new boolean[] {
-            true, true, true, false, false, true, true, false, false, false, false, false
+          true, true, true, false, false, true, true, false, false, false, false, false
         };
 
     double[] distTo =
         new double[] {
-            0,
-            14,
-            12,
-            Integer.MAX_VALUE,
-            Integer.MAX_VALUE,
-            8,
-            0,
-            Integer.MAX_VALUE,
-            Integer.MAX_VALUE,
-            Integer.MAX_VALUE,
-            Integer.MAX_VALUE,
-            Integer.MAX_VALUE,
+          0,
+          14,
+          12,
+          Integer.MAX_VALUE,
+          Integer.MAX_VALUE,
+          8,
+          0,
+          Integer.MAX_VALUE,
+          Integer.MAX_VALUE,
+          Integer.MAX_VALUE,
+          Integer.MAX_VALUE,
+          Integer.MAX_VALUE,
         };
 
     checkGraph(mssp, hasPathTo, distTo);
@@ -200,24 +200,22 @@ public class MultipleSourceShortestPath_T {
     MultipleSourceShortestPath mssp = new MultipleSourceShortestPath(graph, new int[] {0, 7});
 
     boolean[] hasPathTo =
-        new boolean[] {
-            true, true, true, false, false, true, true, true, true, false, false, false
-        };
+        new boolean[] {true, true, true, false, false, true, true, true, true, false, false, false};
 
     double[] distTo =
         new double[] {
-            0,
-            14,
-            12,
-            Integer.MAX_VALUE,
-            Integer.MAX_VALUE,
-            8,
-            20,
-            0,
-            17,
-            Integer.MAX_VALUE,
-            Integer.MAX_VALUE,
-            Integer.MAX_VALUE,
+          0,
+          14,
+          12,
+          Integer.MAX_VALUE,
+          Integer.MAX_VALUE,
+          8,
+          20,
+          0,
+          17,
+          Integer.MAX_VALUE,
+          Integer.MAX_VALUE,
+          Integer.MAX_VALUE,
         };
 
     checkGraph(mssp, hasPathTo, distTo);
@@ -229,23 +227,23 @@ public class MultipleSourceShortestPath_T {
 
     boolean[] hasPathTo =
         new boolean[] {
-            true, true, true, false, false, true, true, false, true, false, false, false
+          true, true, true, false, false, true, true, false, true, false, false, false
         };
 
     double[] distTo =
         new double[] {
-            0,
-            14,
-            12,
-            Integer.MAX_VALUE,
-            Integer.MAX_VALUE,
-            8,
-            20,
-            Integer.MAX_VALUE,
-            0,
-            Integer.MAX_VALUE,
-            Integer.MAX_VALUE,
-            Integer.MAX_VALUE,
+          0,
+          14,
+          12,
+          Integer.MAX_VALUE,
+          Integer.MAX_VALUE,
+          8,
+          20,
+          Integer.MAX_VALUE,
+          0,
+          Integer.MAX_VALUE,
+          Integer.MAX_VALUE,
+          Integer.MAX_VALUE,
         };
 
     checkGraph(mssp, hasPathTo, distTo);
@@ -256,24 +254,22 @@ public class MultipleSourceShortestPath_T {
     MultipleSourceShortestPath mssp = new MultipleSourceShortestPath(graph, new int[] {0, 9});
 
     boolean[] hasPathTo =
-        new boolean[] {
-            true, true, true, false, false, true, true, false, false, true, true, true
-        };
+        new boolean[] {true, true, true, false, false, true, true, false, false, true, true, true};
 
     double[] distTo =
         new double[] {
-            0,
-            14,
-            12,
-            Integer.MAX_VALUE,
-            Integer.MAX_VALUE,
-            8,
-            20,
-            Integer.MAX_VALUE,
-            Integer.MAX_VALUE,
-            0,
-            19,
-            11,
+          0,
+          14,
+          12,
+          Integer.MAX_VALUE,
+          Integer.MAX_VALUE,
+          8,
+          20,
+          Integer.MAX_VALUE,
+          Integer.MAX_VALUE,
+          0,
+          19,
+          11,
         };
 
     checkGraph(mssp, hasPathTo, distTo);
@@ -285,23 +281,23 @@ public class MultipleSourceShortestPath_T {
 
     boolean[] hasPathTo =
         new boolean[] {
-            true, true, true, false, false, true, true, false, false, false, true, false
+          true, true, true, false, false, true, true, false, false, false, true, false
         };
 
     double[] distTo =
         new double[] {
-            0,
-            14,
-            12,
-            Integer.MAX_VALUE,
-            Integer.MAX_VALUE,
-            8,
-            20,
-            Integer.MAX_VALUE,
-            Integer.MAX_VALUE,
-            Integer.MAX_VALUE,
-            0,
-            Integer.MAX_VALUE,
+          0,
+          14,
+          12,
+          Integer.MAX_VALUE,
+          Integer.MAX_VALUE,
+          8,
+          20,
+          Integer.MAX_VALUE,
+          Integer.MAX_VALUE,
+          Integer.MAX_VALUE,
+          0,
+          Integer.MAX_VALUE,
         };
 
     checkGraph(mssp, hasPathTo, distTo);
@@ -313,23 +309,23 @@ public class MultipleSourceShortestPath_T {
 
     boolean[] hasPathTo =
         new boolean[] {
-            true, true, true, false, false, true, true, false, false, false, false, true
+          true, true, true, false, false, true, true, false, false, false, false, true
         };
 
     double[] distTo =
         new double[] {
-            0,
-            14,
-            12,
-            Integer.MAX_VALUE,
-            Integer.MAX_VALUE,
-            8,
-            20,
-            Integer.MAX_VALUE,
-            Integer.MAX_VALUE,
-            Integer.MAX_VALUE,
-            Integer.MAX_VALUE,
-            0,
+          0,
+          14,
+          12,
+          Integer.MAX_VALUE,
+          Integer.MAX_VALUE,
+          8,
+          20,
+          Integer.MAX_VALUE,
+          Integer.MAX_VALUE,
+          Integer.MAX_VALUE,
+          Integer.MAX_VALUE,
+          0,
         };
 
     checkGraph(mssp, hasPathTo, distTo);
