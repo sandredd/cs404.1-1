@@ -110,3 +110,14 @@ java_test(
         "//thirdparty:junit4",
     ],
 )
+
+java_test(
+    name = "mssp",
+    srcs = ["MultipleSourceShortestPath_T.java"],
+    test_class = "edu.berkeley.cs.graph.MultipleSourceShortestPath_T",
+    deps = [
+        "//java/src/edu/berkeley/cs/graph",
+        "//java/test/edu/berkeley/cs/util:utilities",
+        "//thirdparty:junit4",
+    ],
+)

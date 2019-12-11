@@ -122,8 +122,8 @@ be used to test and grade your code:
 
 Java:
 
-    $ bazel test java/test/edu/berkeley/cs/{app:plagiarism,graph:sp,util:trie}
+    $ bazel test java/test/edu/berkeley/cs/{app:plagiarism,graph:{mssp,sp},util:trie}
 
 Python:
 
-    $ bazel test python/test/{app:plagiarism,graph:sp,util:trie}
+    $ bazel test python/test/{app:plagiarism,graph:{mssp,sp},util:trie}
