@@ -97,3 +97,13 @@ py_test(
         "//python/test/util:utilities",
     ],
 )
+
+py_test(
+    name = "mssp",
+    srcs = ["multiple_source_shortest_path.py"],
+    main = "multiple_source_shortest_path.py",
+    deps = [
+        "//python/src/graph",
+        "//python/test/util:utilities",
+    ],
+)
