@@ -1,4 +1,5 @@
 class MultipleSourceShortestPath:
+
     def __init__(self, input, sources):
         # TODO: complete this function
         pass
