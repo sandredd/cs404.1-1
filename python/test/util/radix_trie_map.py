@@ -107,7 +107,6 @@ class RadixTrieMapTest(unittest.TestCase):
             actual.append(word)
             sorted.append(word)
 
-        actual.sort()
         sorted.sort()
 
         self.assertEqual(sorted, actual)
