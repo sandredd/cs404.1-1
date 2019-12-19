@@ -137,7 +137,7 @@ function main() {
         files+=("python/src/graph/shortest_path.py")
         files+=("python/src/graph/multiple_source_shortest_path.py")
         files+=("python/src/util/radix_trie_map.py")
-        files+=("python/src/graph/plagiarism_detector.py")
+        files+=("python/src/app/plagiarism_detector.py")
     else
         log_error "invalid program number"
     fi

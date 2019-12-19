@@ -113,7 +113,7 @@ The files you will need (depending on the language you are working in) for this 
 - Java:
     - `java/src/edu/berkeley/cs/app/PlagiarismDetector.java`
 - Python:
-    - `python/src/graph/plagiarism_detector.py`
+    - `python/src/app/plagiarism_detector.py`
 
 Grading
 -------
