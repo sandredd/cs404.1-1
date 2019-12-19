@@ -129,7 +129,15 @@ function main() {
         files+=("python/src/graph/shortest_path.py")
         files+=("python/src/graph/multiple_source_shortest_path.py")
     elif [[ $program == 7 ]]; then
-        :
+        files+=("java/src/edu/berkeley/cs/graph/ShortestPath.java")
+        files+=("java/src/edu/berkeley/cs/graph/MultipleSourceShortestPath.java")
+        files+=("java/src/edu/berkeley/cs/util/RadixTrieMap.java")
+        files+=("java/src/edu/berkeley/cs/app/PlagiarismDetector.java")
+
+        files+=("python/src/graph/shortest_path.py")
+        files+=("python/src/graph/multiple_source_shortest_path.py")
+        files+=("python/src/util/radix_trie_map.py")
+        files+=("python/src/graph/plagiarism_detector.py")
     else
         log_error "invalid program number"
     fi
