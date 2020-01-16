@@ -42,8 +42,8 @@ While it is useful to read the style guide and understand why the decisions were
 no one can expect to remember every detail every time. Therefore, we have tooling to help in
 formatting the code in adherence to the style guide.
 
-In order to format your code, simply run `format.sh` from the top level repository root. This script
-formats all supported languages within the repository.
+In order to format your code, simply run `tools/format.sh` from the top level repository root. This
+script formats all supported languages within the repository.
 
 Submitting Your Work
 --------------------
@@ -81,7 +81,8 @@ hosting platform.
   - Execute the following command in a new terminal
   - **Note**: make sure to replace `username` in the command with your GitHub username
   ```
-  curl https://raw.githubusercontent.com/fsareshwala/cs404.1/master/bootstrap.sh | bash -s username
+  curl https://raw.githubusercontent.com/fsareshwala/cs404.1/master/tools/bootstrap.sh | bash -s username
+
   ```
   - You will now have a directory named `cs404.1` where you executed the command above. This is your
     assignment directory where you will do your work.
