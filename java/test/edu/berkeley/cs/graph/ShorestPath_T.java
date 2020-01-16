@@ -36,15 +36,16 @@ public class ShorestPath_T {
           0,
           14,
           12,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
           8,
           20,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE
         };
 
     checkGraph(sp, hasPathTo, distTo);
@@ -61,18 +62,18 @@ public class ShorestPath_T {
 
     double[] distTo =
         new double[] {
-          Integer.MAX_VALUE,
+          Float.MAX_VALUE,
           0,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE
         };
 
     checkGraph(sp, hasPathTo, distTo);
@@ -89,18 +90,18 @@ public class ShorestPath_T {
 
     double[] distTo =
         new double[] {
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
           0,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE
         };
 
     checkGraph(sp, hasPathTo, distTo);
@@ -117,18 +118,18 @@ public class ShorestPath_T {
 
     double[] distTo =
         new double[] {
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
           0,
           4,
           2,
           17,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
         };
 
     checkGraph(sp, hasPathTo, distTo);
@@ -145,18 +146,18 @@ public class ShorestPath_T {
 
     double[] distTo =
         new double[] {
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
           0,
           7,
           13,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
         };
 
     checkGraph(sp, hasPathTo, distTo);
@@ -173,18 +174,18 @@ public class ShorestPath_T {
 
     double[] distTo =
         new double[] {
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
           0,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
         };
 
     checkGraph(sp, hasPathTo, distTo);
@@ -201,18 +202,18 @@ public class ShorestPath_T {
 
     double[] distTo =
         new double[] {
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
           0,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
         };
 
     checkGraph(sp, hasPathTo, distTo);
@@ -229,18 +230,18 @@ public class ShorestPath_T {
 
     double[] distTo =
         new double[] {
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
           0,
           17,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
         };
 
     checkGraph(sp, hasPathTo, distTo);
@@ -257,18 +258,18 @@ public class ShorestPath_T {
 
     double[] distTo =
         new double[] {
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
           0,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
         };
 
     checkGraph(sp, hasPathTo, distTo);
@@ -285,15 +286,15 @@ public class ShorestPath_T {
 
     double[] distTo =
         new double[] {
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
           0,
           19,
           11,
@@ -313,18 +314,18 @@ public class ShorestPath_T {
 
     double[] distTo =
         new double[] {
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
           0,
-          Integer.MAX_VALUE,
+          Float.MAX_VALUE,
         };
 
     checkGraph(sp, hasPathTo, distTo);
@@ -341,17 +342,17 @@ public class ShorestPath_T {
 
     double[] distTo =
         new double[] {
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
-          Integer.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
+          Float.MAX_VALUE,
           0,
         };
 
