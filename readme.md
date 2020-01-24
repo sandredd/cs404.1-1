@@ -1,5 +1,5 @@
-CS 404.1
---------
+CompSci 404.1
+-------------
 This repository houses the code and scaffolding that UC Berkeley Extension students taking CS 404.1
 use when completing their assignments.
 
