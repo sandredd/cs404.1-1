@@ -143,7 +143,7 @@ function main() {
     fi
 
     for file in "${files[@]}"; do
-        directory=$(dirname $file)/solutions
+        directory=solutions/program$program
         mkdir -p $directory
         cp $solutions_path/$file $directory
     done
