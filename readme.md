@@ -57,6 +57,8 @@ assignment.
 
 Student Setup
 -------------
+In order to set up your environment, follow the setup instructions in the [Student
+Setup](https://github.com/fsareshwala/cs404.1/blob/master/student-setup.md) guide.
 
 Contributing
 ------------
