@@ -64,6 +64,12 @@ function main() {
     git remote add -f origin git@github.com:$username/$repo.git
     git remote add -f upstream git@github.com:fsareshwala/$repo.git
     git push -uf origin master
+
+    (cat <<EOF
+test --test_output=errors
+test --cache_test_results=yes
+EOF
+) > ~/.bazelrc
 }
 
 main "$@"
