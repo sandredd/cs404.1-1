@@ -10,7 +10,42 @@ For this reason, we won't be using the standard GitHub workflow here. Instead, w
 through some hoops in order to support our specific use case, while also using GitHub's repository
 hosting platform.
 
-Part 1: Bootstrap Your Repository
+Part 1: Operating System Specific Setup
+---------------------------------------
+Use the following instructions to properly set up your environment and your repository. The
+instructions are slightly different for different operating systems.
+
+### Mac OS X
+Mac OS X doesn't come standard with a lot of the developer tools necessary for this course. To get
+these developer tools, you will have to install XCode tools on your computer. To do so, follow the
+instructions below:
+
+- Install XCode Tools
+  - In a terminal, run the command `xcode-select --install`
+- Install Bazel (via [homebrew](https://brew.sh))
+  - In a terminal window, run the following commands:
+    ```
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    brew tap bazelbuild/tap
+    brew install bazelbuild/tap/bazel
+    ```
+
+### Windows
+Windows doesn't come standard with a lot of the developer tools necessary for this course. To get
+these developer tools, you will have to install a few different programs. To do so, follow the
+instructions below:
+
+- [Download](https://git-scm.com/download/win) and install `git`
+  - The default settings already selected during installation are fine to use
+- Install Bazel
+  - In a new PowerShell window, execute the following commands:
+    ```
+    Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+    iwr -useb get.scoop.sh | iex
+    scoop install bazel
+    ```
+
+Part 2: Bootstrap Your Repository
 ---------------------------------
 Use the following instructions to properly set up your environment and your repository.
 
@@ -52,7 +87,7 @@ Use the following instructions to properly set up your environment and your repo
   - You will now have a directory named `cs404.1` where you executed the command above. This is your
     assignment directory where you will do your work.
 
-Part 2: Installing an IDE
+Part 3: Installing an IDE
 -------------------------
 An integrated development environment (IDE) is a tool that developers use to work on code. The IDE
 includes all of the elements necessary to compile, run, and debug our programs. The IDE we will use
@@ -73,7 +108,7 @@ Follow the instructions below to install and properly set up your IDE.
 - Restart VSCode
 - Load your assignment repository in your IDE and ensure you can compile and run programs and tests
 
-Part 3: Making Your First Commit
+Part 4: Making Your First Commit
 --------------------------------
 Now that you have properly configured your system, let's start making some changes.
 
