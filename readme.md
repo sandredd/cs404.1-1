@@ -21,6 +21,11 @@ languages. Other languages may be offered in the future.
 - Java
 - Python
 
+Student Setup
+-------------
+In order to set up your environment, follow the setup instructions in the [Student
+Setup](https://github.com/fsareshwala/cs404.1/blob/master/student-setup.md) guide.
+
 Use of the Standard Library
 ---------------------------
 This course focuses on data structures, algorithms, and their implementations. As such, in order for
@@ -28,6 +33,11 @@ you to learn about their internals, you must first implement them yourself. Ther
 course, you may not use or import any standard library data structures or algorithms, unless
 expressly permitted. If you need access to a particular data structure or algorithm, you must
 implement it.
+
+In order to ensure that you are not accidentally using a part of the standard library, run
+`tools/nostdlib.sh` from the top level repository root. This script will scan your code and report
+where invalid uses of the standard library are occurring. It's a good idea to run this script before
+submitting your code for grading.
 
 Code Style and Code Formatting
 ------------------------------
@@ -42,8 +52,15 @@ While it is useful to read the style guide and understand why the decisions were
 no one can expect to remember every detail every time. Therefore, we have tooling to help in
 formatting the code in adherence to the style guide.
 
-In order to format your code, simply run `tools/format.sh` from the top level repository root. This
-script formats all supported languages within the repository.
+In order to format your code, run `tools/format.sh` from the top level repository root. This script
+formats all supported languages within the repository.
+
+Pulling In New Changes
+----------------------
+From time to time, I make changes in the upstream repository. You should pull these down into your
+fork of the upstream repository. To do so, run `tools/update.sh` from the top level repository root.
+This script will issue a series of `git` commands and merge the upstream changes with your local
+changes. Remember to push the newly added changes to your GitHub fork as well.
 
 Submitting Your Work
 --------------------
@@ -54,11 +71,6 @@ Grading
 Each program description will include a command that will be used to run tests for the code you
 write in each assignment. The percentage of tests that pass will be your final grade for the
 assignment.
-
-Student Setup
--------------
-In order to set up your environment, follow the setup instructions in the [Student
-Setup](https://github.com/fsareshwala/cs404.1/blob/master/student-setup.md) guide.
 
 Contributing
 ------------
