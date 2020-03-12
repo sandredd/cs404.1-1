@@ -1,15 +1,7 @@
 Program 1
 ---------
-In this task, you will complete a series of shell scripts. To get you started, each shell script
-file along with the appropriate Bazel configuration has already been setup for you in the `shell`
-directory. You simply need to fill out each file with the appropriate code.
-
-In order for tests to pass and ensure that you get the proper grade that you deserve, you must
-ensure that your output case-sensitively matches the output that the tests expect.
-
-Note: some students have reported issues with working with `bash` under Windows. For Windows users,
-it is recommended to use the [Linux Subsystem](https://docs.microsoft.com/en-us/windows/wsl/faq) to
-get a native Linux environment under Windows.
+In this assignment, you will implement some basic data structures and algorithms relating to linked
+lists, stacks, and queues.
 
 `survey.md` (optional)
 ----------------------
@@ -19,59 +11,153 @@ Answering these questions is completely optional and do not affect your grade on
 However, your responses do help me understand your current experience and better tailor the course
 to your individual needs. Your responses will be kept confidential and will never be shared.
 
-`info.sh`
----------
-Write a shell script which displays information about the user's current session. The displayed
-information should look exactly like the following:
+Doubly Linked List
+------------------
+Fill in the empty method stubs in the linked list class  with the implementation for a doubly linked
+list. Ensure that your implementation has `O(1)` runtime for the following operations:
 
-    Current date: Fri Sep  6 19:31:17 PDT 2019
-    Login name: fsareshwala
-    Current directory: /home/fsareshwala/code
-    Home directory: /home/fsareshwala
+- Insert front
+- Insert end
+- Remove front
+- Remove end
+- Front
+- Back
+- Size: track the size of the list in a variable, update when `insert/remove` methods called
+- Is empty
 
-Hint: use the `date`, `whoami`, `pwd`, `realpath`, and `echo` commands.
+Note: data structure operations are tricky to do in your head. For example, `remove(...)` has a lot
+of corner cases and can be tricky to get right. Try drawing out the data structure on a piece of
+paper, working through each individual step of the operations above, and then converting the steps
+to code.
 
-Note: `realpath` is not available by default on Mac OS. To get it, install it using homebrew:
+The files you will need (depending on the language you are working in) for this exercise are:
 
-    brew install coreutils
+- Java: `java/src/edu/berkeley/cs/util/LinkedList.java`
+- Python: `python/src/util/linkedlist.py`
 
-`sum.sh`
---------
-Write a shell script that takes a list of numbers as command line arguments. The output is the sum
-of the numbers.
+Move to Front
+-------------
+If the order that items in a list are stored is not important, you can frequently speed up searching
+with a heuristic known as move to front. Whenever an item is accessed, move it to the front of the
+list. This action usually results in an improvement because frequently accessed items tend to
+migrate toward the front of the list, whereas less frequently accessed items tend to migrate toward
+the end of the list. Consequently, the time complexity of `contains(...)` is often much less than
+`O(n)` because the most frequently accessed items tend to require the least searching.
 
-`seq.sh`
---------
-Write a shell script that takes two integer arguments. The script should output all the numbers
-between the first and last number, inclusive. Your script should be able to take in arguments in the
-following ways:
+Extend the `LinkedList` class in to implement the move-to-front heuristic for linked lists.
 
-    $ seq.sh last
-    $ seq.sh first last
-    $ seq.sh first increment last
+Note: `front(...)` and `back(...)` should not implement the move-to-front heuristic.
 
-If only a single argument is provided, `first` and `increment` default to `1`. If two arguments are
-provided, then `increment` defaults to `1`. The sequence of numbers ends when the sum of the current
-number and `increment` would become greater than `last`. Make sure to check that `increment` is not
-zero. If more than three arguments are provided, print out a suitable error message and exit the
-script with a return status of `1`.
+The files you will need (depending on the language you are working in) for this exercise are:
 
-Hint: Arithmetic in bash uses `$[...]` syntax. To increment variable `var` by 1, you would write
-`var=$[var + 1]`.
+- Java: `java/src/edu/berkeley/cs/util/SplayList.java`
+- Python: `python/src/util/splaylist.py`
 
-Note: this script is inspired by a real command, `seq`. To ensure that your script is working
-properly, compare its output to the real `seq` command output.
+Stack and Queue
+---------------
+A completed stack and queue implementation is available in the following files:
 
-`stdio.sh`
+Java:
+- `java/src/edu/berkeley/cs/util/Stack.java`
+- `java/src/edu/berkeley/cs/util/Queue.java`
+
+Python:
+- `python/src/util/stack.py`
+- `python/src/util/queue.py`
+
+The stack and queue implementations are simply wrappers around the linked list implementation that
+you wrote in the previous section of this assignment. Reusing the doubly linked list class in this
+way allowed us to create a whole new set of data structures, simply by restricting certain access
+patterns on the doubly linked list. Read and understand the implementation. Then read and understand
+the unit tests that ensure the stack and queue work properly.
+
+Java:
+- `java/test/edu/berkeley/cs/util/Stack_T.java`
+- `java/test/edu/berkeley/cs/util/Queue_T.java`
+
+Python:
+- `python/test/util/stack.java`
+- `python/test/util/queue.java`
+
+Calculator
 ----------
-Write a script which takes in directories as arguments on the command line. For each directory, it
-looks up every `.c` file in that directory for the strings `printf` or `fprintf`. If found, the
-script adds the statement `#include <stdio.h>` at the beginning of the file, but only if it doesn't
-already have it included.
+Dijkstra's two stack algorithm, as presented in class, is a simpler version of Dijkstra's real
+algorithm. As presented, it has a serious limitation. It relies on the use of parenthesis to know
+when to execute an operation and store a result on the stack. However, we cannot always rely on
+input expressions to include parenthesis. For example, our algorithm should be able to compute the
+expression `2 + 4 * 2 = 10`, knowing that the `*` operator has higher precedence than the `+`
+operator, without the requirement of parenthesis as a guide.
+
+Below is a slightly more advanced version of the algorithm with order of operations support built
+in.
+
+- Declare two stacks: values and operators
+- Split input (by spaces) into tokens
+- Process each token one by one
+  - If value, push onto value stack
+  - If operator
+    - If operator stack is empty, push input operator onto operator stack
+    - If input operator precedence is greater than precedence of top of operator stack, push input
+      operator onto operator stack
+    - If input operator precedence is less than or equal to precedence of top of operator stack
+      - Repeat until operator stack is empty or token at top of operator stack has lower precedence
+        than input operator
+        - Pop two value tokens from value stack
+        - Pop operator token from operator stack
+        - Apply operator to value tokens
+        - Push result onto value stack
+      - Push input operator
+- Upon reaching end of input, process operators remaining on operator stack until the operator stack
+  is empty
+- Result is single element remaining on top of value stack
+
+Implement the above algorithm. Your implementation should support the following operations:
+
+- Addition
+- Subtraction
+- Multiplication
+- Division
+- Exponents (`^`)
+
+Some starter code is already available in order to make this task easier for you. The files you will
+need (depending on the language you are working in) for this exercise are:
+
+- Java: `java/src/edu/berkeley/cs/app/Calculator.java`
+- Python: `python/src/app/calculator.py`
+
+### Extra Credit
+The above algorithm doesn't support parenthesis and therefore cannot support expressions where the
+user intends to override the order of operations. For example, users cannot evaluate expressions
+like `(4 - 2) * 3`. Extend the above algorithm with the instructions below.
+
+- If left parentheses token, push token onto operator stack
+- If right parenthesis token
+  - Repeat until top of operator stack is left parenthesis
+    - Pop two value tokens from value stack
+    - Pop operator token from operator stack
+    - Apply operator to value tokens
+    - Push result onto value stack
+  - Pop left parenthesis token from top of operator stack
+  - Discard right parenthesis token
+
+### Further Reading
+[The Shunting-Yard Algorithm](https://en.wikipedia.org/wiki/Shunting-yard_algorithm) is Dijkstra's
+full two stack algorithm. The arithmetic expression evaluation algorithm summaries presented in this
+assignment are only simplified versions of this algorithm. The full algorithm supports many more
+mathematical operations (e.g. unary operators, variables, composite functions, functions with
+multiple arguments, etc).
 
 Testing your code
 -----------------
 Tests have already been written to help you ensure that your code works. The following commands will
 be used to test and grade your code:
 
-    $ bazel test shell:tests
+Java:
+
+    $ bazel test java/test/edu/berkeley/cs/util:{linkedlist,splaylist,stack,queue}
+    $ bazel test java/test/edu/berkeley/cs/app:calculator
+
+Python:
+
+    $ bazel test python/test/util:{linkedlist,splaylist,stack,queue}
+    $ bazel test python/test/app:calculator

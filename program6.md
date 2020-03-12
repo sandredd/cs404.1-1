@@ -1,104 +1,119 @@
 Program 6
 ---------
-In this program, you will be implementing and experimenting with various directed graph algorithms.
+In this program, you will continue implementing various directed graph algorithms. You will also
+begin working with some string processing algorithms.
 
-Before beginning on this assignment, make sure to read the `DirectedGraph` class:
+Shortest Paths
+--------------
+After completing your previous project determining the map of pipeline to build, management tasks
+you with your next project. One of the design choices your company made in order to save costs was
+to allow water to flow through a municipality on its way to its destination. This meant that the
+company did not have to build dedicated pipelines from the water treatment plant to each
+municipality that it served. However, it also means that from time to time, the water utility will
+need to visit each municipality to inspect this infrastructure and ensure that it continues to work.
+In the event that this infrastructure is vandalized, tampered with, or is otherwise broken,
+downstream municipalities may not receive the water that they need for their citizens. The water
+treatment plants are located at vertices 2, 7, 13, 23, and 29. The remaining vertices show the
+locations of the various municipalities that are planned to be serviced.
 
-- Java: `java/src/edu/berkeley/cs/graph/DirectedGraph.java`
-- Python: `python/src/graph/directed_graph.py`
+The company has tasked you to come up with a plan that identifies which municipalities should be
+served from each of its water treatment plants and the routes and distances that technicians must
+use. In order to minimize cost, you decide to use a shortest path algorithm to determine the
+shortest paths from a water treatment plant to all other municipalities. As the first step,
+implement Dijkstra's shortest path algorithm to determine the shortest path from a single water
+treatment plant to all other municipalities. Then, use your implementation of Dijkstra's shortest
+path algorithm to determine the shortest paths from multiple source water treatment plants to all
+municipalities.
 
-Task Execution Order
---------------------
-One of the core features of build systems (e.g. bazel) is to build all dependencies of a component
-before building that component within the project. A software build system is just one example where
-such functionality might be necessary. For example, in program 4, we assumed that no job has a
-dependency on another, allowing jobs to run in any order. In reality, such a situation would be
-unlikely. There are many more such examples.
-
-In more general terms, given a dependency graph, we need to compute the execution order such that
-for a given component, all dependencies are built first. One of the most popular methods to do this
-is using topological sort. Implement topological sort. Remember that only directed, acyclic graphs
-(DAGs) have a topological order. Before implementing topological sort, it may be useful to first
-implement functionality to determine whether a graph has a cycle or not (`Cycle`). You implemented
-functionality to determine the various orderings in a graph in a previous assignment.
-
-The files you will need (depending on the language you are working in) for this exercise are:
-
-- Java:
-    - `java/src/edu/berkeley/cs/graph/Cycle.java`
-    - `java/src/edu/berkeley/cs/graph/TopologicalSort.java`
-- Python:
-    - `python/src/graph/cycle.py`
-    - `python/src/graph/topological_sort.py`
-
-Strongly Connected Components
------------------------------
-The algorithm to determine the connected components in an undirected graph is fairly simple: visit
-each vertex in the graph and execute depth first search on it, assigning each newly discovered
-vertex the id of the current component being discovered. However, this algorithm doesn't work when
-we are trying to determine the strongly connected components in a directed graph. Remember, a
-strongly connected component in a directed graph is a subgraph where there is a path in both
-directions between every two vertices.
-
-One of the algorithms to compute strongly connected components in a directed graph is the
-[Kosaraju-Sharir Algorithm](https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm) that we studied in
-class. Implement the algorithm.
-
-Note that the first step of the Kosaraju-Sharir algorithm is to determine the reverse post order of
-the graph's reverse. To obtain the reverse of the graph, you will need to fill in the `reverse(...)`
-function within the `DirectedGraph` class.
+Note: it might be tempting to simply run Dijkstra's algorithm with each water treatment plant as the
+source. However, this will require multiple runs of Dijkstra's algorithm and will be inefficient,
+especially for large graphs. Instead, find a way to run a single pass of Dijkstra's algorithm.
 
 The files you will need (depending on the language you are working in) for this exercise are:
 
 - Java:
-    - `java/src/edu/berkeley/cs/graph/DirectedGraph.java`
-    - `java/src/edu/berkeley/cs/graph/StronglyConnectedComponents.java`
+    - `java/src/edu/berkeley/cs/graph/ShortestPath.java`
+    - `java/src/edu/berkeley/cs/graph/MultipleSourceShortestPath.java`
 - Python:
-    - `python/src/graph/directed_graph.py`
-    - `python/src/graph/strongly_connected_components.py`
+    - `python/src/graph/shortest_path.py`
+    - `python/src/graph/multiple_source_shortest_path.py`
 
-Union Find
-----------
-The [Union Find](https://en.wikipedia.org/wiki/Disjoint-set_data_structure) algorithm is a data
-structure and algorithm that allows us to efficiently partition a set of elements and quickly
-determine whether two elements are a part of the same partition. The data structure and algorithm
-are both covered in detail in section 1.5 of the textbook. Unfortunately, we did not have time to
-cover it in detail in lecture.
+Faster Sorting
+--------------
+Least significant digit (LSD) radix sort is a non-comparison based sorting algorithm. This means
+that the `Ω(n log n)` lower bound that comes with comparison based sorting doesn't apply to it. The
+algorithm depends on applying [counting sort](https://en.wikipedia.org/wiki/Counting_sort)
+(sometimes called key-indexed counting) on an increasing order of significant digits. In class, we
+discussed using LSD radix sort to sort strings. However, the same technique can be applied to
+sort integers.
 
-For the next exercise, we will need the functionality provided by Union Find. An implementation of
-Weighted Quick Union has been provided for you in the files mentioned below. To understand how it
-works, read section 1.5 of the textbook.
+Another way to implement radix sort is to use an R-way trie. Like binary search trees, tries have
+various properties about the order of data within them that we can exploit to extract a sorted set
+of elements. Implement an R-way radix trie that can be used to sort a set of strings
+lexicographically. Specifically, implement the `sorted(...)` function within the `RadixTrieMap`
+class. Assume that all input strings are lowercase.
+
+Note: real radix tries also employ [path
+compression](https://en.wikipedia.org/wiki/Trie#Compressing_tries). You do not need to implement
+path compression for this assignment.
+
+Note: if you are curious, this is the first part of
+[burstsort](https://en.wikipedia.org/wiki/Burstsort), one of the fastest known algorithms to sort
+large sets of strings. The rest of burstsort is beyond the scope of this class.
 
 The files you will need (depending on the language you are working in) for this exercise are:
 
 - Java:
-    - `java/src/edu/berkeley/cs/util/UnionFind.java`
+    - `java/src/edu/berkeley/cs/util/RadixTrieMap.java`
 - Python:
-    - `python/src/graph/union_find.py`
+    - `python/src/util/radix_trie_map.py`
 
-Minimum Spanning Trees
-----------------------
-You work for a regional water utility company which has been selected to provide water from its
-water treatment plants to various municipalities around the state. The locations and distances
-between adjacent municipalities and the water treatment plants are shown in the figure below. The
-edges show the costs to dig and build out pipeline between the vertices within the graph.
-
-![graph](resources/images/graph.png)
-
-In order to save costs, your company wants to avoid building exclusive pipeline from water treatment
-plants to each municipality individually. This means that some municipalities may be connected
-directly to the water treatment plant and some municipalities may receive water through another
-municipality.
-
-Your company has tasked you to come up with the map of pipeline to build out. In order to minimize
-the cost for the company, you decide to use a minimum spanning tree algorithm to connect every
-municipality through the set of edges with minimum cost. Implement either Prim's or Kruskal's
-algorithm for minimum spanning trees to determine the map of pipeline to build.
+Autocomplete
+------------
+One of the most useful features of advanced text editors like `vim`, `emacs`, Sublime Text, VS Code,
+etc is their ability to autocomplete variable names. When a user activates the autocompletion
+feature, the text editor reads the already typed text and completes the remaining portion of it,
+based on what has already been typed in the file. Add the ability to run autocompletion to the
+`RadixTrieMap` that you wrote in the prior step. Specifically, implement the `startsWith(...)`
+function within the `RadixTrieMap` to return the strings within the `RadixTrieMap` that all have the
+given prefix.
 
 The files you will need (depending on the language you are working in) for this exercise are:
 
-- Java: `java/src/edu/berkeley/cs/graph/MinimumSpanningTree.java`
-- Python: `python/src/graph/minimum_spanning_tree.py`
+- Java:
+    - `java/src/edu/berkeley/cs/util/RadixTrieMap.java`
+- Python:
+    - `python/src/util/radix_trie_map.py`
+
+Plagiarism Detector
+-------------------
+Plagiarism detection websites like [TurnItIn](https://www.turnitin.com) offer an interesting
+product. Students and teachers upload papers to the site and TurnItIn tells them where the paper may
+be using borrowed text. In order to handle the scale at which the company operates (TurnItIn claim
+that they scan over 165 million documents), they must use a sophisticated algorithm. Brute force
+just won't cut it.
+
+Implement a simple plagiarism detector similar to TurnItIn. Your plagiarism detector will be seeded
+with a series of strings (papers) and should be able to determine whether a given string appears
+in a previously seeded string.
+
+Use the radix trie that you implemented in the previous exercise to implement your plagiarism
+checker. You'll need to think about how to insert documents into the radix trie so that you can
+efficiently query it to determine whether a given sentence is a substring of a document. You may
+also need to slightly modify the `RadixTrieMap` to support such a query.
+
+Note: This is the first part of the
+[Aho-Corasick](https://en.wikipedia.org/wiki/Aho-Corasick_algorithm) substring search algorithm. The
+Aho-Corasick substring search algorithm matches all substrings simultaneously using suffix tries
+that have additional links between various internal nodes. However, this algorithm is well beyond
+the scope of this course.
+
+The files you will need (depending on the language you are working in) for this exercise are:
+
+- Java:
+    - `java/src/edu/berkeley/cs/app/PlagiarismDetector.java`
+- Python:
+    - `python/src/app/plagiarism_detector.py`
 
 Grading
 -------
@@ -107,10 +122,8 @@ be used to test and grade your code:
 
 Java:
 
-    $ bazel test java/test/edu/berkeley/cs/graph:{digraph,cycle,toposort,scc,mst}
-    $ bazel test java/test/edu/berkeley/cs/util:unionfind
+    $ bazel test java/test/edu/berkeley/cs/{app:plagiarism,graph:{mssp,sp},util:trie}
 
 Python:
 
-    $ bazel test python/test/graph:{digraph,cycle,dfsorder,toposort,scc,mst}
-    $ bazel test python/test/util:unionfind
+    $ bazel test python/test/{app:plagiarism,graph:{mssp,sp},util:trie}

@@ -1,110 +1,104 @@
 Program 5
 ---------
-In this assignment, you will implement more searching algorithms as well as work on some graph
-algorithms.
+In this program, you will be implementing and experimenting with various directed graph algorithms.
 
-Before beginning on this assignment, make sure to read the `Graph` class:
+Before beginning on this assignment, make sure to read the `DirectedGraph` class:
 
-- Java: `java/src/edu/berkeley/cs/graph/Graph.java`
-- Python: `python/src/graph/graph.py`
+- Java: `java/src/edu/berkeley/cs/graph/DirectedGraph.java`
+- Python: `python/src/graph/directed_graph.py`
 
-Hash Map (Separate Chaining)
-----------------------------
-A hash map is a symbol table backed by a hash table. In the previous assignment, you implemented a
-tree map (a symbol table backed by a binary tree). Hash maps have various advantages and
-disadvantages over tree maps and the correct choice depends on the application and problem you
-are trying to solve. Parts of a hash map using separate chaining have been implemented for you.
-Complete the implementation by implementing the following functions:
+Task Execution Order
+--------------------
+One of the core features of build systems (e.g. bazel) is to build all dependencies of a component
+before building that component within the project. A software build system is just one example where
+such functionality might be necessary. For example, in program 4, we assumed that no job has a
+dependency on another, allowing jobs to run in any order. In reality, such a situation would be
+unlikely. There are many more such examples.
 
-- `get(...)`
-- `put(...)`
-- `contains(...)`
-- `delete(...)`
-
-When implementing the above methods, remember to double the hash map when `n / m >= 8` where `n` is
-the number of elements within the hash map and `m` is the size of the array of `SplayList`s (take
-some time also to think about why we use a `SplayList` here). You should also halve the size of the
-hash map when `n / m <= 2`. The `resize(...)` function has already been written for you.
+In more general terms, given a dependency graph, we need to compute the execution order such that
+for a given component, all dependencies are built first. One of the most popular methods to do this
+is using topological sort. Implement topological sort. Remember that only directed, acyclic graphs
+(DAGs) have a topological order. Before implementing topological sort, it may be useful to first
+implement functionality to determine whether a graph has a cycle or not (`Cycle`). You implemented
+functionality to determine the various orderings in a graph in a previous assignment.
 
 The files you will need (depending on the language you are working in) for this exercise are:
 
-- Java: `java/src/edu/berkeley/cs/util/HashMap.java`
-- Python: `python/src/util/hashmap.py`
+- Java:
+    - `java/src/edu/berkeley/cs/graph/Cycle.java`
+    - `java/src/edu/berkeley/cs/graph/TopologicalSort.java`
+- Python:
+    - `python/src/graph/cycle.py`
+    - `python/src/graph/topological_sort.py`
 
-Hash Set
---------
-A hash map can easily decompose into a hash set if the values stored are simply a boolean true. Such
-a hash set has been implemented for you. Read and understand its implementation.
+Strongly Connected Components
+-----------------------------
+The algorithm to determine the connected components in an undirected graph is fairly simple: visit
+each vertex in the graph and execute depth first search on it, assigning each newly discovered
+vertex the id of the current component being discovered. However, this algorithm doesn't work when
+we are trying to determine the strongly connected components in a directed graph. Remember, a
+strongly connected component in a directed graph is a subgraph where there is a path in both
+directions between every two vertices.
 
-The files you will need (depending on the language you are working in) for this exercise are:
+One of the algorithms to compute strongly connected components in a directed graph is the
+[Kosaraju-Sharir Algorithm](https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm) that we studied in
+class. Implement the algorithm.
 
-- Java: `java/src/edu/berkeley/cs/util/HashSet.java`
-- Python: `python/src/util/hashset.py`
-
-Spell Checker
--------------
-One way to implement a very basic spell checker is to use a hash set, preloaded with a list of words
-known to be spelled correctly. As new words are seen by the application, the spell checker can be
-queried to see if the word is spelled correctly or not (e.g. if the hash set contains the word or
-not). The spell checker can also offer suggestions on the correct spelling of the word being
-examined.
-
-Implement a spell checker using the hash set you read about in the previous step. You must implement
-the following methods:
-
-- `isCorrectlySpelled(...)`
-- `getSuggestions(...)`
-
-For the `getSuggestions(...)` method, return any words in the dictionary that are obtainable by
-applying any of the following rules:
-
-- Add one (any) character to the beginning
-- Add one (any) character to the end
-- Remove one (any) character from the beginning
-- Remove one (any) character from the end
-- Exchange any two adjacent characters
+Note that the first step of the Kosaraju-Sharir algorithm is to determine the reverse post order of
+the graph's reverse. To obtain the reverse of the graph, you will need to fill in the `reverse(...)`
+function within the `DirectedGraph` class.
 
 The files you will need (depending on the language you are working in) for this exercise are:
 
-- Java: `java/src/edu/berkeley/cs/app/SpellChecker.java`
-- Python: `python/src/app/spell_checker.py`
+- Java:
+    - `java/src/edu/berkeley/cs/graph/DirectedGraph.java`
+    - `java/src/edu/berkeley/cs/graph/StronglyConnectedComponents.java`
+- Python:
+    - `python/src/graph/directed_graph.py`
+    - `python/src/graph/strongly_connected_components.py`
 
-### Further Reading
-Real spell checkers are not built using hash tables and heuristic rules to reach correctly spelled
-words. To learn more about the real algorithms behind spell checkers, read about the [Levenshtein
-distance](https://en.wikipedia.org/wiki/Levenshtein_distance) algorithm.
+Union Find
+----------
+The [Union Find](https://en.wikipedia.org/wiki/Disjoint-set_data_structure) algorithm is a data
+structure and algorithm that allows us to efficiently partition a set of elements and quickly
+determine whether two elements are a part of the same partition. The data structure and algorithm
+are both covered in detail in section 1.5 of the textbook. Unfortunately, we did not have time to
+cover it in detail in lecture.
 
-Depth First Search (DFS)
-------------------------
-Implement depth first search. You must implement the following methods:
-
-- `dfs(...)`
-
-The files you will need (depending on the language you are working in) for this exercise are:
-
-- Java: `java/src/edu/berkeley/cs/graph/DepthFirstSearch.java`
-- Python: `python/src/graph/depth_first_search.py`
-
-Breadth First Search (BFS)
---------------------------
-Implement breadth first search. You must implement the following methods:
-
-- `bfs(...)`
+For the next exercise, we will need the functionality provided by Union Find. An implementation of
+Weighted Quick Union has been provided for you in the files mentioned below. To understand how it
+works, read section 1.5 of the textbook.
 
 The files you will need (depending on the language you are working in) for this exercise are:
 
-- Java: `java/src/edu/berkeley/cs/graph/BreadthFirstSearch.java`
-- Python: `python/src/graph/breadth_first_search.py`
+- Java:
+    - `java/src/edu/berkeley/cs/util/UnionFind.java`
+- Python:
+    - `python/src/graph/union_find.py`
 
-Depth First Order
------------------
-Now that you have practiced writing depth first search, use DFS to implement functionality to
-determine the various orderings (e.g. preorder, postorder, reverse postorder) in a graph.
+Minimum Spanning Trees
+----------------------
+You work for a regional water utility company which has been selected to provide water from its
+water treatment plants to various municipalities around the state. The locations and distances
+between adjacent municipalities and the water treatment plants are shown in the figure below. The
+edges show the costs to dig and build out pipeline between the vertices within the graph.
+
+![graph](resources/images/graph.png)
+
+In order to save costs, your company wants to avoid building exclusive pipeline from water treatment
+plants to each municipality individually. This means that some municipalities may be connected
+directly to the water treatment plant and some municipalities may receive water through another
+municipality.
+
+Your company has tasked you to come up with the map of pipeline to build out. In order to minimize
+the cost for the company, you decide to use a minimum spanning tree algorithm to connect every
+municipality through the set of edges with minimum cost. Implement either Prim's or Kruskal's
+algorithm for minimum spanning trees to determine the map of pipeline to build.
 
 The files you will need (depending on the language you are working in) for this exercise are:
 
-- Java: `java/src/edu/berkeley/cs/graph/DepthFirstOrderjava`
-- Python: `python/src/graph/depth_first_order.py`
+- Java: `java/src/edu/berkeley/cs/graph/MinimumSpanningTree.java`
+- Python: `python/src/graph/minimum_spanning_tree.py`
 
 Grading
 -------
@@ -113,12 +107,10 @@ be used to test and grade your code:
 
 Java:
 
-    $ bazel test java/test/edu/berkeley/cs/util:{hashset,hashmap}
-    $ bazel test java/test/edu/berkeley/cs/graph:{graph,bfs,dfs,dfsorder}
-    $ bazel test java/test/edu/berkeley/cs/app:spellchecker
+    $ bazel test java/test/edu/berkeley/cs/graph:{digraph,cycle,toposort,scc,mst}
+    $ bazel test java/test/edu/berkeley/cs/util:unionfind
 
 Python:
 
-    $ bazel test python/test/util:{hashset,hashmap}
-    $ bazel test python/test/graph:{graph,bfs,dfs}
-    $ bazel test python/test/app:spellchecker
+    $ bazel test python/test/graph:{digraph,cycle,dfsorder,toposort,scc,mst}
+    $ bazel test python/test/util:unionfind
