@@ -9,12 +9,9 @@ Before beginning on this assignment, make sure to read the abstract `Sort` class
 Within this file, there are some already implemented methods you can use while completing your
 implementations.
 
-Shellsort has already been implemented for you:
+Shellsort and quicksort have already been implemented for you:
 
 - `java/src/edu/berkeley/cs/sort/Shell.java`
-
-Quicksort has already been implemented for you:
-
 - `java/src/edu/berkeley/cs/sort/Quick.java`
 
 Selection Sort
