@@ -32,8 +32,7 @@ to code.
 
 The files you will need (depending on the language you are working in) for this exercise are:
 
-- Java: `java/src/edu/berkeley/cs/util/LinkedList.java`
-- Python: `python/src/util/linkedlist.py`
+- `java/src/edu/berkeley/cs/util/LinkedList.java`
 
 Move to Front
 -------------
@@ -50,20 +49,14 @@ Note: `front(...)` and `back(...)` should not implement the move-to-front heuris
 
 The files you will need (depending on the language you are working in) for this exercise are:
 
-- Java: `java/src/edu/berkeley/cs/util/SplayList.java`
-- Python: `python/src/util/splaylist.py`
+- `java/src/edu/berkeley/cs/util/SplayList.java`
 
 Stack and Queue
 ---------------
 A completed stack and queue implementation is available in the following files:
 
-Java:
 - `java/src/edu/berkeley/cs/util/Stack.java`
 - `java/src/edu/berkeley/cs/util/Queue.java`
-
-Python:
-- `python/src/util/stack.py`
-- `python/src/util/queue.py`
 
 The stack and queue implementations are simply wrappers around the linked list implementation that
 you wrote in the previous section of this assignment. Reusing the doubly linked list class in this
@@ -71,13 +64,8 @@ way allowed us to create a whole new set of data structures, simply by restricti
 patterns on the doubly linked list. Read and understand the implementation. Then read and understand
 the unit tests that ensure the stack and queue work properly.
 
-Java:
 - `java/test/edu/berkeley/cs/util/Stack_T.java`
 - `java/test/edu/berkeley/cs/util/Queue_T.java`
-
-Python:
-- `python/test/util/stack.java`
-- `python/test/util/queue.java`
 
 Calculator
 ----------
@@ -122,8 +110,7 @@ Implement the above algorithm. Your implementation should support the following 
 Some starter code is already available in order to make this task easier for you. The files you will
 need (depending on the language you are working in) for this exercise are:
 
-- Java: `java/src/edu/berkeley/cs/app/Calculator.java`
-- Python: `python/src/app/calculator.py`
+- `java/src/edu/berkeley/cs/app/Calculator.java`
 
 ### Extra Credit
 The above algorithm doesn't support parenthesis and therefore cannot support expressions where the
@@ -152,12 +139,5 @@ Testing your code
 Tests have already been written to help you ensure that your code works. The following commands will
 be used to test and grade your code:
 
-Java:
-
     $ bazel test java/test/edu/berkeley/cs/util:{linkedlist,splaylist,stack,queue}
     $ bazel test java/test/edu/berkeley/cs/app:calculator
-
-Python:
-
-    $ bazel test python/test/util:{linkedlist,splaylist,stack,queue}
-    $ bazel test python/test/app:calculator

@@ -31,12 +31,8 @@ especially for large graphs. Instead, find a way to run a single pass of Dijkstr
 
 The files you will need (depending on the language you are working in) for this exercise are:
 
-- Java:
-    - `java/src/edu/berkeley/cs/graph/ShortestPath.java`
-    - `java/src/edu/berkeley/cs/graph/MultipleSourceShortestPath.java`
-- Python:
-    - `python/src/graph/shortest_path.py`
-    - `python/src/graph/multiple_source_shortest_path.py`
+- `java/src/edu/berkeley/cs/graph/ShortestPath.java`
+- `java/src/edu/berkeley/cs/graph/MultipleSourceShortestPath.java`
 
 Faster Sorting
 --------------
@@ -63,10 +59,7 @@ large sets of strings. The rest of burstsort is beyond the scope of this class.
 
 The files you will need (depending on the language you are working in) for this exercise are:
 
-- Java:
-    - `java/src/edu/berkeley/cs/util/RadixTrieMap.java`
-- Python:
-    - `python/src/util/radix_trie_map.py`
+- `java/src/edu/berkeley/cs/util/RadixTrieMap.java`
 
 Autocomplete
 ------------
@@ -80,10 +73,7 @@ given prefix.
 
 The files you will need (depending on the language you are working in) for this exercise are:
 
-- Java:
-    - `java/src/edu/berkeley/cs/util/RadixTrieMap.java`
-- Python:
-    - `python/src/util/radix_trie_map.py`
+- `java/src/edu/berkeley/cs/util/RadixTrieMap.java`
 
 Plagiarism Detector
 -------------------
@@ -110,20 +100,11 @@ the scope of this course.
 
 The files you will need (depending on the language you are working in) for this exercise are:
 
-- Java:
-    - `java/src/edu/berkeley/cs/app/PlagiarismDetector.java`
-- Python:
-    - `python/src/app/plagiarism_detector.py`
+- `java/src/edu/berkeley/cs/app/PlagiarismDetector.java`
 
 Grading
 -------
 Tests have already been written to help you ensure that your code works. The following commands will
 be used to test and grade your code:
 
-Java:
-
     $ bazel test java/test/edu/berkeley/cs/{app:plagiarism,graph:{mssp,sp},util:trie}
-
-Python:
-
-    $ bazel test python/test/{app:plagiarism,graph:{mssp,sp},util:trie}

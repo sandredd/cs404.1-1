@@ -4,8 +4,7 @@ In this program, you will be implementing and experimenting with various directe
 
 Before beginning on this assignment, make sure to read the `DirectedGraph` class:
 
-- Java: `java/src/edu/berkeley/cs/graph/DirectedGraph.java`
-- Python: `python/src/graph/directed_graph.py`
+- `java/src/edu/berkeley/cs/graph/DirectedGraph.java`
 
 Task Execution Order
 --------------------
@@ -24,12 +23,8 @@ functionality to determine the various orderings in a graph in a previous assign
 
 The files you will need (depending on the language you are working in) for this exercise are:
 
-- Java:
-    - `java/src/edu/berkeley/cs/graph/Cycle.java`
-    - `java/src/edu/berkeley/cs/graph/TopologicalSort.java`
-- Python:
-    - `python/src/graph/cycle.py`
-    - `python/src/graph/topological_sort.py`
+- `java/src/edu/berkeley/cs/graph/Cycle.java`
+- `java/src/edu/berkeley/cs/graph/TopologicalSort.java`
 
 Strongly Connected Components
 -----------------------------
@@ -50,12 +45,8 @@ function within the `DirectedGraph` class.
 
 The files you will need (depending on the language you are working in) for this exercise are:
 
-- Java:
-    - `java/src/edu/berkeley/cs/graph/DirectedGraph.java`
-    - `java/src/edu/berkeley/cs/graph/StronglyConnectedComponents.java`
-- Python:
-    - `python/src/graph/directed_graph.py`
-    - `python/src/graph/strongly_connected_components.py`
+- `java/src/edu/berkeley/cs/graph/DirectedGraph.java`
+- `java/src/edu/berkeley/cs/graph/StronglyConnectedComponents.java`
 
 Union Find
 ----------
@@ -71,10 +62,7 @@ works, read section 1.5 of the textbook.
 
 The files you will need (depending on the language you are working in) for this exercise are:
 
-- Java:
-    - `java/src/edu/berkeley/cs/util/UnionFind.java`
-- Python:
-    - `python/src/graph/union_find.py`
+- `java/src/edu/berkeley/cs/util/UnionFind.java`
 
 Minimum Spanning Trees
 ----------------------
@@ -97,20 +85,12 @@ algorithm for minimum spanning trees to determine the map of pipeline to build.
 
 The files you will need (depending on the language you are working in) for this exercise are:
 
-- Java: `java/src/edu/berkeley/cs/graph/MinimumSpanningTree.java`
-- Python: `python/src/graph/minimum_spanning_tree.py`
+- `java/src/edu/berkeley/cs/graph/MinimumSpanningTree.java`
 
 Grading
 -------
 Tests have already been written to help you ensure that your code works. The following commands will
 be used to test and grade your code:
 
-Java:
-
     $ bazel test java/test/edu/berkeley/cs/graph:{digraph,cycle,toposort,scc,mst}
     $ bazel test java/test/edu/berkeley/cs/util:unionfind
-
-Python:
-
-    $ bazel test python/test/graph:{digraph,cycle,dfsorder,toposort,scc,mst}
-    $ bazel test python/test/util:unionfind

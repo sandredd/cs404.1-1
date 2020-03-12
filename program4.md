@@ -5,8 +5,7 @@ algorithms.
 
 Before beginning on this assignment, make sure to read the `Graph` class:
 
-- Java: `java/src/edu/berkeley/cs/graph/Graph.java`
-- Python: `python/src/graph/graph.py`
+- `java/src/edu/berkeley/cs/graph/Graph.java`
 
 Hash Map (Separate Chaining)
 ----------------------------
@@ -28,8 +27,7 @@ hash map when `n / m <= 2`. The `resize(...)` function has already been written 
 
 The files you will need (depending on the language you are working in) for this exercise are:
 
-- Java: `java/src/edu/berkeley/cs/util/HashMap.java`
-- Python: `python/src/util/hashmap.py`
+- `java/src/edu/berkeley/cs/util/HashMap.java`
 
 Hash Set
 --------
@@ -38,8 +36,7 @@ a hash set has been implemented for you. Read and understand its implementation.
 
 The files you will need (depending on the language you are working in) for this exercise are:
 
-- Java: `java/src/edu/berkeley/cs/util/HashSet.java`
-- Python: `python/src/util/hashset.py`
+- `java/src/edu/berkeley/cs/util/HashSet.java`
 
 Spell Checker
 -------------
@@ -66,8 +63,7 @@ applying any of the following rules:
 
 The files you will need (depending on the language you are working in) for this exercise are:
 
-- Java: `java/src/edu/berkeley/cs/app/SpellChecker.java`
-- Python: `python/src/app/spell_checker.py`
+- `java/src/edu/berkeley/cs/app/SpellChecker.java`
 
 ### Further Reading
 Real spell checkers are not built using hash tables and heuristic rules to reach correctly spelled
@@ -82,8 +78,7 @@ Implement depth first search. You must implement the following methods:
 
 The files you will need (depending on the language you are working in) for this exercise are:
 
-- Java: `java/src/edu/berkeley/cs/graph/DepthFirstSearch.java`
-- Python: `python/src/graph/depth_first_search.py`
+- `java/src/edu/berkeley/cs/graph/DepthFirstSearch.java`
 
 Breadth First Search (BFS)
 --------------------------
@@ -93,8 +88,7 @@ Implement breadth first search. You must implement the following methods:
 
 The files you will need (depending on the language you are working in) for this exercise are:
 
-- Java: `java/src/edu/berkeley/cs/graph/BreadthFirstSearch.java`
-- Python: `python/src/graph/breadth_first_search.py`
+- `java/src/edu/berkeley/cs/graph/BreadthFirstSearch.java`
 
 Depth First Order
 -----------------
@@ -103,22 +97,13 @@ determine the various orderings (e.g. preorder, postorder, reverse postorder) in
 
 The files you will need (depending on the language you are working in) for this exercise are:
 
-- Java: `java/src/edu/berkeley/cs/graph/DepthFirstOrderjava`
-- Python: `python/src/graph/depth_first_order.py`
+- `java/src/edu/berkeley/cs/graph/DepthFirstOrderjava`
 
 Grading
 -------
 Tests have already been written to help you ensure that your code works. The following commands will
 be used to test and grade your code:
 
-Java:
-
     $ bazel test java/test/edu/berkeley/cs/util:{hashset,hashmap}
     $ bazel test java/test/edu/berkeley/cs/graph:{graph,bfs,dfs,dfsorder}
     $ bazel test java/test/edu/berkeley/cs/app:spellchecker
-
-Python:
-
-    $ bazel test python/test/util:{hashset,hashmap}
-    $ bazel test python/test/graph:{graph,bfs,dfs}
-    $ bazel test python/test/app:spellchecker

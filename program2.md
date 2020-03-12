@@ -4,21 +4,18 @@ In this assignment, you will implement and make improvements to various sorting 
 
 Before beginning on this assignment, make sure to read the abstract `Sort` class:
 
-- Java: `java/src/edu/berkeley/cs/sort/Sort.java`
-- Python: `python/src/sort/sort.py`
+- `java/src/edu/berkeley/cs/sort/Sort.java`
 
 Within this file, there are some already implemented methods you can use while completing your
 implementations.
 
 Shellsort has already been implemented for you:
 
-- Java: `java/src/edu/berkeley/cs/sort/Shell.java`
-- Python: `python/src/sort/shell.py`
+- `java/src/edu/berkeley/cs/sort/Shell.java`
 
 Quicksort has already been implemented for you:
 
-- Java: `java/src/edu/berkeley/cs/sort/Quick.java`
-- Python: `python/src/sort/quick.py`
+- `java/src/edu/berkeley/cs/sort/Quick.java`
 
 Selection Sort
 --------------
@@ -26,8 +23,7 @@ Implement selection sort.
 
 The files you will need (depending on the language you are working in) for this exercise are:
 
-- Java: `java/src/edu/berkeley/cs/sort/Selection.java`
-- Python: `python/src/sort/selection.py`
+- `java/src/edu/berkeley/cs/sort/Selection.java`
 
 Insertion Sort
 --------------
@@ -39,8 +35,7 @@ index `high`.
 
 The files you will need (depending on the language you are working in) for this exercise are:
 
-- Java: `java/src/edu/berkeley/cs/sort/Insertion.java`
-- Python: `python/src/sort/insertion.py`
+- `java/src/edu/berkeley/cs/sort/Insertion.java`
 
 Quicksort
 ----------
@@ -63,8 +58,7 @@ sort to continue working.
 
 The files you will need (depending on the language you are working in) for this exercise are:
 
-- Java: `java/src/edu/berkeley/cs/sort/Quick.java`
-- Python: `python/src/sort/quick.py`
+- `java/src/edu/berkeley/cs/sort/Quick.java`
 
 Merge Sort
 ----------
@@ -81,8 +75,7 @@ sorted order.
 
 The files you will need (depending on the language you are working in) for this exercise are:
 
-- Java: `java/src/edu/berkeley/cs/sort/Merge.java`
-- Python: `python/src/sort/merge.py`
+- `java/src/edu/berkeley/cs/sort/Merge.java`
 
 Mergesort Linked Lists
 ----------------------
@@ -96,18 +89,11 @@ implementation.
 
 The files you will need (depending on the language you are working in) for this exercise are:
 
-- Java: `java/src/edu/berkeley/cs/sort/Merge.java`
-- Python: `python/src/sort/merge.py`
+- `java/src/edu/berkeley/cs/sort/Merge.java`
 
 Testing your code
 -----------------
 Tests have already been written to help you ensure that your code works. The following commands will
 be used to test and grade your code:
 
-Java:
-
     $ bazel test java/test/edu/berkeley/cs/sort:{elementary,merge,quick}
-
-Python:
-
-    $ bazel test python/test/sort:{elementary,merge,quick}

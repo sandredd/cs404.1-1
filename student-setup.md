@@ -117,8 +117,3 @@ Now that you have properly configured your system, let's start making some chang
   - Replace the contents with your name
   - Commit the addition and push the change to GitHub
   - This is how I know who the repository belongs to
-- Identify your language of choice
-  - Open the `language.md` file in the top level root of the repository
-  - Add your language of choice, in fully lowercase characters (e.g. java, python)
-  - Commit the addition and push the change to GitHub
-  - This is how I know which language you will be using

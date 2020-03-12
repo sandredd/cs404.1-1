@@ -20,8 +20,7 @@ repeatedly growing and shrinking as discussed in class.
 
 The files you will need (depending on the language you are working in) for this exercise are:
 
-- Java: `java/src/edu/berkeley/cs/util/MinHeap.java`
-- Python: `python/src/util/minheap.py`
+- `java/src/edu/berkeley/cs/util/MinHeap.java`
 
 Priority Queues
 ---------------
@@ -72,8 +71,7 @@ with a priority queue, and the round robin scheduler should be implemented with 
 this data structure selection has been done for you already. The directory you will be working in
 (depending on the language you are working in) for this exercise is:
 
-- Java: `java/src/edu/berkeley/cs/app/scheduling`
-- Python: `python/src/app/scheduling`
+- `java/src/edu/berkeley/cs/app/scheduling`
 
 Tree Map
 --------
@@ -94,20 +92,12 @@ iteratively.
 
 The files you will need (depending on the language you are working in) for this exercise are:
 
-- Java: `java/src/edu/berkeley/cs/util/TreeMapjava`
-- Python: `python/src/util/treemap.py`
+- `java/src/edu/berkeley/cs/util/TreeMapjava`
 
 Grading
 -------
 Tests have already been written to help you ensure that your code works. The following commands will
 be used to test and grade your code:
 
-Java:
-
     $ bazel test java/test/edu/berkeley/cs/util:{treemap,minheap}
     $ bazel test java/test/edu/berkeley/cs/app/scheduling:all
-
-Python:
-
-    $ bazel test python/test/util:{treemap,minheap}
-    $ bazel test python/test/app/scheduling:all

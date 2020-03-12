@@ -15,15 +15,6 @@ function main() {
         "java.util.Random"
     )
 
-    python_blessed=(
-        "Enum"
-        "math"
-        "python.src"
-        "python.test"
-        "random"
-        "unittest"
-    )
-
     error_message="The following imports are invalid (you may not use the standard library):"
     gitroot=$(git rev-parse --show-toplevel)
     cd $gitroot
@@ -32,13 +23,6 @@ function main() {
     if [[ $java_invalid != "" ]]; then
         echo "$error_message"
         echo "$java_invalid"
-        exit 1
-    fi
-
-    python_invalid="$(git grep 'import ' python | grep -Ev $(join '|' ${python_blessed[@]}))"
-    if [[ $python_invalid != "" ]]; then
-        echo "$error_message"
-        echo "$python_invalid"
         exit 1
     fi
 }
