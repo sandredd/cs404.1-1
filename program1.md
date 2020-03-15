@@ -30,7 +30,7 @@ of corner cases and can be tricky to get right. Try drawing out the data structu
 paper, working through each individual step of the operations above, and then converting the steps
 to code.
 
-The files you will need (depending on the language you are working in) for this exercise are:
+The file(s) you will need for this exercise are:
 
 - `java/src/edu/berkeley/cs/util/LinkedList.java`
 
@@ -47,7 +47,7 @@ Extend the `LinkedList` class in to implement the move-to-front heuristic for li
 
 Note: `front(...)` and `back(...)` should not implement the move-to-front heuristic.
 
-The files you will need (depending on the language you are working in) for this exercise are:
+The file(s) you will need for this exercise are:
 
 - `java/src/edu/berkeley/cs/util/SplayList.java`
 
@@ -108,7 +108,7 @@ Implement the above algorithm. Your implementation should support the following 
 - Exponents (`^`)
 
 Some starter code is already available in order to make this task easier for you. The files you will
-need (depending on the language you are working in) for this exercise are:
+need for this exercise are:
 
 - `java/src/edu/berkeley/cs/app/Calculator.java`
 

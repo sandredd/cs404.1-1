@@ -18,7 +18,7 @@ Selection Sort
 --------------
 Implement selection sort.
 
-The files you will need (depending on the language you are working in) for this exercise are:
+The file(s) you will need for this exercise are:
 
 - `java/src/edu/berkeley/cs/sort/Selection.java`
 
@@ -30,7 +30,7 @@ subarrays in mergesort or quicksort, we want to be able to sort just the subarra
 insertion sort to support sorting just the subarray starting from the index `low` and ending at the
 index `high`.
 
-The files you will need (depending on the language you are working in) for this exercise are:
+The file(s) you will need for this exercise are:
 
 - `java/src/edu/berkeley/cs/sort/Insertion.java`
 
@@ -53,7 +53,7 @@ the subarray to be sorted.
 **Note**: for this step, you may find that `partition(...)` needs to be slightly modified for the
 sort to continue working.
 
-The files you will need (depending on the language you are working in) for this exercise are:
+The file(s) you will need for this exercise are:
 
 - `java/src/edu/berkeley/cs/sort/Quick.java`
 
@@ -70,7 +70,7 @@ Skip the call to `merge(...)` if `input[mid]` is less than or equal to `input[mi
 effectively converts mergesort's time complexity to `O(n)` when sorting an array that is already in
 sorted order.
 
-The files you will need (depending on the language you are working in) for this exercise are:
+The file(s) you will need for this exercise are:
 
 - `java/src/edu/berkeley/cs/sort/Merge.java`
 
@@ -84,7 +84,7 @@ linearithmic. Unfortunately, our current implementation of mergesort will not wo
 Fill in the linked list specific `merge(...)` and `sort(...)` methods within your mergesort
 implementation.
 
-The files you will need (depending on the language you are working in) for this exercise are:
+The file(s) you will need for this exercise are:
 
 - `java/src/edu/berkeley/cs/sort/Merge.java`
 

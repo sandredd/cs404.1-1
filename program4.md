@@ -25,7 +25,7 @@ the number of elements within the hash map and `m` is the size of the array of `
 some time also to think about why we use a `SplayList` here). You should also halve the size of the
 hash map when `n / m <= 2`. The `resize(...)` function has already been written for you.
 
-The files you will need (depending on the language you are working in) for this exercise are:
+The file(s) you will need for this exercise are:
 
 - `java/src/edu/berkeley/cs/util/HashMap.java`
 
@@ -34,7 +34,7 @@ Hash Set
 A hash map can easily decompose into a hash set if the values stored are simply a boolean true. Such
 a hash set has been implemented for you. Read and understand its implementation.
 
-The files you will need (depending on the language you are working in) for this exercise are:
+The file(s) you will need for this exercise are:
 
 - `java/src/edu/berkeley/cs/util/HashSet.java`
 
@@ -61,7 +61,7 @@ applying any of the following rules:
 - Remove one (any) character from the end
 - Exchange any two adjacent characters
 
-The files you will need (depending on the language you are working in) for this exercise are:
+The file(s) you will need for this exercise are:
 
 - `java/src/edu/berkeley/cs/app/SpellChecker.java`
 
@@ -76,7 +76,7 @@ Implement depth first search. You must implement the following methods:
 
 - `dfs(...)`
 
-The files you will need (depending on the language you are working in) for this exercise are:
+The file(s) you will need for this exercise are:
 
 - `java/src/edu/berkeley/cs/graph/DepthFirstSearch.java`
 
@@ -86,7 +86,7 @@ Implement breadth first search. You must implement the following methods:
 
 - `bfs(...)`
 
-The files you will need (depending on the language you are working in) for this exercise are:
+The file(s) you will need for this exercise are:
 
 - `java/src/edu/berkeley/cs/graph/BreadthFirstSearch.java`
 
@@ -95,7 +95,7 @@ Depth First Order
 Now that you have practiced writing depth first search, use DFS to implement functionality to
 determine the various orderings (e.g. preorder, postorder, reverse postorder) in a graph.
 
-The files you will need (depending on the language you are working in) for this exercise are:
+The file(s) you will need for this exercise are:
 
 - `java/src/edu/berkeley/cs/graph/DepthFirstOrderjava`
 

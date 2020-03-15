@@ -18,7 +18,7 @@ growing the array, we want to double in size. However, when shrinking the array,
 so when the array is 1/4 used, rather than 1/2 used. This avoids avoid a possible worst case of
 repeatedly growing and shrinking as discussed in class.
 
-The files you will need (depending on the language you are working in) for this exercise are:
+The file(s) you will need for this exercise are:
 
 - `java/src/edu/berkeley/cs/util/MinHeap.java`
 
@@ -69,7 +69,7 @@ Implement each scheduling algorithm in its respective file. The first in first o
 implemented with a linked list or a queue. The shortest job first scheduler should be implemented
 with a priority queue, and the round robin scheduler should be implemented with a queue. Some of
 this data structure selection has been done for you already. The directory you will be working in
-(depending on the language you are working in) for this exercise is:
+ for this exercise is:
 
 - `java/src/edu/berkeley/cs/app/scheduling`
 
@@ -90,7 +90,7 @@ You may implement these functions either iteratively or recursively. An example 
 implementation of Hibbard deletion is implemented in `delete(...)`. The same could have been done
 iteratively.
 
-The files you will need (depending on the language you are working in) for this exercise are:
+The file(s) you will need for this exercise are:
 
 - `java/src/edu/berkeley/cs/util/TreeMapjava`
 

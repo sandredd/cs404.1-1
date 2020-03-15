@@ -29,7 +29,7 @@ Note: it might be tempting to simply run Dijkstra's algorithm with each water tr
 source. However, this will require multiple runs of Dijkstra's algorithm and will be inefficient,
 especially for large graphs. Instead, find a way to run a single pass of Dijkstra's algorithm.
 
-The files you will need (depending on the language you are working in) for this exercise are:
+The file(s) you will need for this exercise are:
 
 - `java/src/edu/berkeley/cs/graph/ShortestPath.java`
 - `java/src/edu/berkeley/cs/graph/MultipleSourceShortestPath.java`
@@ -57,7 +57,7 @@ Note: if you are curious, this is the first part of
 [burstsort](https://en.wikipedia.org/wiki/Burstsort), one of the fastest known algorithms to sort
 large sets of strings. The rest of burstsort is beyond the scope of this class.
 
-The files you will need (depending on the language you are working in) for this exercise are:
+The file(s) you will need for this exercise are:
 
 - `java/src/edu/berkeley/cs/util/RadixTrieMap.java`
 
@@ -71,7 +71,7 @@ based on what has already been typed in the file. Add the ability to run autocom
 function within the `RadixTrieMap` to return the strings within the `RadixTrieMap` that all have the
 given prefix.
 
-The files you will need (depending on the language you are working in) for this exercise are:
+The file(s) you will need for this exercise are:
 
 - `java/src/edu/berkeley/cs/util/RadixTrieMap.java`
 
@@ -98,7 +98,7 @@ Aho-Corasick substring search algorithm matches all substrings simultaneously us
 that have additional links between various internal nodes. However, this algorithm is well beyond
 the scope of this course.
 
-The files you will need (depending on the language you are working in) for this exercise are:
+The file(s) you will need for this exercise are:
 
 - `java/src/edu/berkeley/cs/app/PlagiarismDetector.java`
 

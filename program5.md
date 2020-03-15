@@ -21,7 +21,7 @@ is using topological sort. Implement topological sort. Remember that only direct
 implement functionality to determine whether a graph has a cycle or not (`Cycle`). You implemented
 functionality to determine the various orderings in a graph in a previous assignment.
 
-The files you will need (depending on the language you are working in) for this exercise are:
+The file(s) you will need for this exercise are:
 
 - `java/src/edu/berkeley/cs/graph/Cycle.java`
 - `java/src/edu/berkeley/cs/graph/TopologicalSort.java`
@@ -43,7 +43,7 @@ Note that the first step of the Kosaraju-Sharir algorithm is to determine the re
 the graph's reverse. To obtain the reverse of the graph, you will need to fill in the `reverse(...)`
 function within the `DirectedGraph` class.
 
-The files you will need (depending on the language you are working in) for this exercise are:
+The file(s) you will need for this exercise are:
 
 - `java/src/edu/berkeley/cs/graph/DirectedGraph.java`
 - `java/src/edu/berkeley/cs/graph/StronglyConnectedComponents.java`
@@ -60,7 +60,7 @@ For the next exercise, we will need the functionality provided by Union Find. An
 Weighted Quick Union has been provided for you in the files mentioned below. To understand how it
 works, read section 1.5 of the textbook.
 
-The files you will need (depending on the language you are working in) for this exercise are:
+The file(s) you will need for this exercise are:
 
 - `java/src/edu/berkeley/cs/util/UnionFind.java`
 
@@ -83,7 +83,7 @@ the cost for the company, you decide to use a minimum spanning tree algorithm to
 municipality through the set of edges with minimum cost. Implement either Prim's or Kruskal's
 algorithm for minimum spanning trees to determine the map of pipeline to build.
 
-The files you will need (depending on the language you are working in) for this exercise are:
+The file(s) you will need for this exercise are:
 
 - `java/src/edu/berkeley/cs/graph/MinimumSpanningTree.java`
 
