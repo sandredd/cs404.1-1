@@ -48,49 +48,9 @@ The file(s) you will need for this exercise are:
 - `java/src/edu/berkeley/cs/graph/DirectedGraph.java`
 - `java/src/edu/berkeley/cs/graph/StronglyConnectedComponents.java`
 
-Union Find
-----------
-The [Union Find](https://en.wikipedia.org/wiki/Disjoint-set_data_structure) algorithm is a data
-structure and algorithm that allows us to efficiently partition a set of elements and quickly
-determine whether two elements are a part of the same partition. The data structure and algorithm
-are both covered in detail in section 1.5 of the textbook. Unfortunately, we did not have time to
-cover it in detail in lecture.
-
-For the next exercise, we will need the functionality provided by Union Find. An implementation of
-Weighted Quick Union has been provided for you in the files mentioned below. To understand how it
-works, read section 1.5 of the textbook.
-
-The file(s) you will need for this exercise are:
-
-- `java/src/edu/berkeley/cs/util/UnionFind.java`
-
-Minimum Spanning Trees
-----------------------
-You work for a regional water utility company which has been selected to provide water from its
-water treatment plants to various municipalities around the state. The locations and distances
-between adjacent municipalities and the water treatment plants are shown in the figure below. The
-edges show the costs to dig and build out pipeline between the vertices within the graph.
-
-![graph](resources/images/graph.png)
-
-In order to save costs, your company wants to avoid building exclusive pipeline from water treatment
-plants to each municipality individually. This means that some municipalities may be connected
-directly to the water treatment plant and some municipalities may receive water through another
-municipality.
-
-Your company has tasked you to come up with the map of pipeline to build out. In order to minimize
-the cost for the company, you decide to use a minimum spanning tree algorithm to connect every
-municipality through the set of edges with minimum cost. Implement either Prim's or Kruskal's
-algorithm for minimum spanning trees to determine the map of pipeline to build.
-
-The file(s) you will need for this exercise are:
-
-- `java/src/edu/berkeley/cs/graph/MinimumSpanningTree.java`
-
 Grading
 -------
 Tests have already been written to help you ensure that your code works. The following commands will
 be used to test and grade your code:
 
-    $ bazel test java/test/edu/berkeley/cs/graph:{digraph,cycle,toposort,scc,mst}
-    $ bazel test java/test/edu/berkeley/cs/util:unionfind
+    $ bazel test java/test/edu/berkeley/cs/graph:{digraph,cycle,toposort,scc}
