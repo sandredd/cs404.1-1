@@ -13,10 +13,3 @@ java_import(
         "junit/junit-4.12.jar",
     ],
 )
-
-py_binary(
-    name = "format-python",
-    main = "__main__.py",
-    srcs = glob(["format/yapf/**/*.py"]),
-    imports = ["format/yapf"],
-)
