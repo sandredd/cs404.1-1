@@ -3,14 +3,6 @@ Program 1
 In this assignment, you will implement some basic data structures and algorithms relating to linked
 lists, stacks, and queues.
 
-`survey.md` (optional)
-----------------------
-Add responses to the questions in `survey.md`, located in the top-level root of the repository.
-
-Answering these questions is completely optional and do not affect your grade on this assignment.
-However, your responses do help me understand your current experience and better tailor the course
-to your individual needs. Your responses will be kept confidential and will never be shared.
-
 Doubly Linked List
 ------------------
 Fill in the empty method stubs in the linked list class  with the implementation for a doubly linked
