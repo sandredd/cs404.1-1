@@ -17,7 +17,7 @@ entirely.
 
     Required arguments:
         -p|--program          The program number to copy solutions for
-        -s|--solutions        The path to the git repository where solutions are available
+        -r|--repo             The path to the git repository where solutions are available
 
     Optional arguments:
         -h|--help             Show this help
@@ -29,8 +29,8 @@ function main() {
     while [[ $# -gt 0 ]]; do
         key="$1"
         case $key in
-            -s|--solutions)
-                solutions_path="$2"
+            -r|--repo)
+                repo_path="$2"
                 shift; shift
                 ;;
             -p|--program)
@@ -48,7 +48,7 @@ function main() {
         esac
     done
 
-    if [[ -z "$solutions_path" ]]; then
+    if [[ -z "$repo_path" ]]; then
         log_error "no solutions path provided"
     elif [[ -z "$program" ]]; then
         log_error "no program number provided"
@@ -106,7 +106,7 @@ function main() {
     for file in "${files[@]}"; do
         directory=solutions/program$program
         mkdir -p $directory
-        cp $solutions_path/$file $directory
+        cp $repo_path/program$program/$file $directory
     done
 }
 
