@@ -58,7 +58,8 @@ Pulling In New Changes
 From time to time, I make changes in the upstream repository. You should pull these down into your
 fork of the upstream repository. To do so, run `tools/update.sh` from the top level repository root.
 This script will issue a series of `git` commands and merge the upstream changes with your local
-changes. Remember to push the newly added changes to your GitHub fork as well.
+changes. Remember to push the newly added changes to your GitHub fork as well. If you prefer, you
+may use a GUI `git` client to simply fetch from the remote repository and merge automatically.
 
 Submitting Your Work
 --------------------
