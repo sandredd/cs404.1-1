@@ -56,7 +56,8 @@ Use the following instructions to properly set up your environment and your repo
   - Create the repository
 - Add `fsareshwala` as a collaborator
   - Visit the `Settings` tab
-  - Select the `Collaborators` section on the left
+  - Select the `Manage access` section on the left
+  - Click `Invite a collaborator` near the bottom of the page
   - Add the `fsareshwala` user as a collaborator to your repository
 - Configure `git` properly
   - Tell `git` who you are (replace my information with yours)
