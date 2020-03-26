@@ -19,7 +19,6 @@ Quite a bit of work goes into preparing the course and the repository to use a p
 languages. Other languages may be offered in the future.
 
 - Java
-- Python
 
 Student Setup
 -------------
@@ -46,7 +45,6 @@ have an established coding style for each language that they develop in. For thi
 using Google's style guides for each language:
 
 - Java: [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)
-- Python: [Google Python Style Guide](http://google.github.io/styleguide/pyguide.html)
 
 While it is useful to read the style guide and understand why the decisions were made as they were,
 no one can expect to remember every detail every time. Therefore, we have tooling to help in
