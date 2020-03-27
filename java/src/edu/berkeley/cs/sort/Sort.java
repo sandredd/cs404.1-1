@@ -1,6 +1,6 @@
 package edu.berkeley.cs.sort;
 
-public abstract class Sort<T extends Comparable> {
+public abstract class Sort<T extends Comparable<T>> {
   private int swaps = 0;
   private int compares = 0;
   protected final int cutoff = 5;

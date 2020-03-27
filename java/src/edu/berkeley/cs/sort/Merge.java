@@ -3,7 +3,7 @@ package edu.berkeley.cs.sort;
 import edu.berkeley.cs.util.LinkedList;
 import java.util.Arrays;
 
-public class Merge<T extends Comparable> extends Sort<T> {
+public class Merge<T extends Comparable<T>> extends Sort<T> {
   protected Insertion<T> insertion = new Insertion<>();
 
   @Override

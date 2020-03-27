@@ -1,6 +1,6 @@
 package edu.berkeley.cs.sort;
 
-public class Shell<T extends Comparable> extends Sort<T> {
+public class Shell<T extends Comparable<T>> extends Sort<T> {
   @Override
   public void sort(T[] input) {
     int h = 1;

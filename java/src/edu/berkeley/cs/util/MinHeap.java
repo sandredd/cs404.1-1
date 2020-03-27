@@ -3,7 +3,7 @@ package edu.berkeley.cs.util;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class MinHeap<T extends Comparable> implements Iterable<T> {
+public class MinHeap<T extends Comparable<T>> implements Iterable<T> {
   protected final int initialSize = 10;
   private int size = 0;
   protected T[] array;

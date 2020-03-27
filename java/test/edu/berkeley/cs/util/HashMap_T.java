@@ -120,7 +120,7 @@ public class HashMap_T {
   public void testIterator() {
     Random random = new Random();
 
-    HashMap.Entry[] entries = new HashMap.Entry[10];
+    HashMap<Integer, Integer>.Entry[] entries = new HashMap.Entry[10];
     for (int i = 0; i < entries.length; i++) {
       int key = random.nextInt();
       int value = random.nextInt();
@@ -128,13 +128,13 @@ public class HashMap_T {
       map.put(key, value);
     }
 
-    Iterator<HashMap.Entry> itr = map.iterator();
+    Iterator<HashMap<Integer, Integer>.Entry> itr = map.iterator();
     for (int i = 0; i < map.size(); i++) {
       Assert.assertTrue(itr.hasNext());
 
-      HashMap.Entry entry = itr.next();
+      HashMap<Integer, Integer>.Entry entry = itr.next();
       boolean found = false;
-      for (HashMap.Entry element : entries) {
+      for (HashMap<Integer, Integer>.Entry element : entries) {
         if (element.key.equals(entry.key)) {
           found = true;
           break;

@@ -3,7 +3,7 @@ package edu.berkeley.cs.app.scheduling;
 import java.util.Objects;
 import java.util.Random;
 
-public class Job implements Comparable {
+public class Job implements Comparable<Job> {
   private int timeLeft;
   private int processingTime;
   private int waitingTime;
@@ -36,12 +36,7 @@ public class Job implements Comparable {
   }
 
   @Override
-  public int compareTo(Object o) {
-    if (!(o instanceof Job)) {
-      return -1;
-    }
-
-    Job job = (Job) o;
+  public int compareTo(Job job) {
     return this.timeLeft - job.timeLeft;
   }
 
