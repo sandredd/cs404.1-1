@@ -86,7 +86,9 @@ Follow the instructions below to install and properly set up your IDE.
 
 - [Download](https://code.visualstudio.com/Download) and install VSCode
 - Open VSCode and open the extension installation page
-- Search for and install the `vscode-bazel` extension
+- Search for and install the following extensions within VSCode
+  - Java Extension Pack
+  - `vscode-bazel`
 - Restart VSCode
 - Load your assignment repository in your IDE and ensure you can compile and run programs and tests
 
