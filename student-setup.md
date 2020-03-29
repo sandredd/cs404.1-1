@@ -61,9 +61,9 @@ Use the following instructions to properly set up your environment and your repo
   - Add the `fsareshwala` user as a collaborator to your repository
 - Bootstrap your repository
   - Execute the following command in a new terminal
-  - **Note**: make sure to replace `username` in the command with your GitHub username
+  - **Note**: make sure to replace `username` in the command below with your GitHub username
   ```
-  curl https://raw.githubusercontent.com/fsareshwala/cs404.1/master/tools/bootstrap.sh | bash -s username
+  curl https://raw.githubusercontent.com/fsareshwala/dotfiles/master/prefix/bin/bootstrap | bash -s cs404.1 username
 
   ```
   - You will now have a directory named `cs404.1` where you executed the command above. This is your
