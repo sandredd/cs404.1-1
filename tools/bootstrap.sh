@@ -57,12 +57,12 @@ function main() {
 
     test -d $repo && rm -rf $repo
 
-    git clone git@github.com:fsareshwala/$repo.git
+    git clone https://github.com/fsareshwala/$repo.git
     cd $repo || log_error "directory $repo does not exist"
 
     git remote remove origin
-    git remote add -f origin git@github.com:$username/$repo.git
-    git remote add -f upstream git@github.com:fsareshwala/$repo.git
+    git remote add -f origin https://github.com/$username/$repo.git
+    git remote add -f upstream https://github.com/fsareshwala/$repo.git
     git push -uf origin master
 
     (cat <<EOF
