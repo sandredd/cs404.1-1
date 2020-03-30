@@ -73,24 +73,26 @@ Part 3: Installing an IDE
 -------------------------
 An integrated development environment (IDE) is a tool that developers use to work on code. The IDE
 includes all of the elements necessary to compile, run, and debug our programs. The IDE we will use
-for this class is Visual Studio Code (VSCode).
+for this class is IntelliJ IDEA.
 
-**Note**: you are not required to use VSCode or even an IDE. You may use whatever tools you prefer
-using. However, VSCode is the supported IDE for this class. If you venture off on your own, you will
-be responsible for ensuring your environment works and runs programs properly. It is up to you to
-determine whichever development environment works best for your personal tastes. As such, detailed
-instructions on how to perform various environment related operations won't be provided. I assume
-that by this stage of your software engineering career, you are familiar with your tools of choice.
+**Note**: you are not required to use IntelliJ IDEA or even an IDE. You may use whatever tools you
+prefer using. However, IntelliJ IDEA is the supported IDE for this class. If you venture off on your
+own, you will be responsible for ensuring your environment works and runs programs properly. It is
+up to you to determine whichever development environment works best for your personal tastes. As
+such, detailed instructions on how to perform various environment related operations won't be
+provided. I assume that by this stage of your software engineering career, you are familiar with
+your tools of choice.
 
 Follow the instructions below to install and properly set up your IDE.
 
-- [Download](https://code.visualstudio.com/Download) and install VSCode
-- Open VSCode and open the extension installation page
-- Search for and install the following extensions within VSCode
-  - Java Extension Pack
-  - `vscode-bazel`
-- Restart VSCode
-- Load your assignment repository in your IDE and ensure you can compile and run programs and tests
+- [Download](https://www.jetbrains.com/idea/download) and install IntelliJ IDEA
+- Open IntelliJ IDEA and open the preferences pane
+- Search for and install the following extensions within IntelliJ IDEA
+  - `Bazel` by Google
+  - `google-java-format` by Google`
+- Restart IntelliJ IDEA after installing your plugins
+- Load your assignment repository by importing a Bazel project in IntelliJ IDEA
+- Click through until the repository is loaded (default settings are fine to use)
 
 Part 4: Making Your First Commit
 --------------------------------
