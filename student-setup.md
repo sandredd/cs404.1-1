@@ -91,6 +91,9 @@ Follow the instructions below to install and properly set up your IDE.
   - `Bazel` by Google
   - `google-java-format` by Google`
 - Restart IntelliJ IDEA after installing your plugins
+- Open a terminal window, run the command `which bazel`, and copy the output
+- Open the preferences pane for the Bazel plugin
+- Enter the output of `which bazel` as the path that IntelliJ IDEA should use to run Bazel
 - Load your assignment repository by importing a Bazel project in IntelliJ IDEA
 - Click through until the repository is loaded (default settings are fine to use)
 
