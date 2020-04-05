@@ -73,30 +73,28 @@ Use the following instructions to properly set up your environment and your repo
 Part 3: Installing an IDE
 -------------------------
 An integrated development environment (IDE) is a tool that developers use to work on code. The IDE
-includes all of the elements necessary to compile, run, and debug our programs. The IDE we will use
-for this class is IntelliJ IDEA.
+includes all of the elements necessary to compile, run, and debug our programs. You are not required
+to use any specific set of tools for this class outside of `git` and `bazel`. You may use whatever
+tools you prefer using and that includes your choice of IDE. It is up to you to determine whichever
+development environment works best for your personal tastes. As such, detailed instructions on how
+to set up your IDE or perform various environment related operations won't be provided. I assume
+that by this stage of your software engineering career, you are familiar with your tools of choice.
 
-**Note**: you are not required to use IntelliJ IDEA or even an IDE. You may use whatever tools you
-prefer using. However, IntelliJ IDEA is the supported IDE for this class. If you venture off on your
-own, you will be responsible for ensuring your environment works and runs programs properly. It is
-up to you to determine whichever development environment works best for your personal tastes. As
-such, detailed instructions on how to perform various environment related operations won't be
-provided. I assume that by this stage of your software engineering career, you are familiar with
-your tools of choice.
+Having said that, I offer you the following suggestions:
 
-Follow the instructions below to install and properly set up your IDE.
-
-- [Download](https://www.jetbrains.com/idea/download) and install IntelliJ IDEA
-- Open IntelliJ IDEA and open the preferences pane
-- Search for and install the following extensions within IntelliJ IDEA
-  - `Bazel` by Google
-  - `google-java-format` by Google`
-- Restart IntelliJ IDEA after installing your plugins
-- Open a terminal window, run the command `which bazel`, and copy the output
-- Open the preferences pane for the Bazel plugin
-- Enter the output of `which bazel` as the path that IntelliJ IDEA should use to run Bazel
-- Load your assignment repository by importing a Bazel project in IntelliJ IDEA
-- Click through until the repository is loaded (default settings are fine to use)
+- [IntelliJ IDEA](https://www.jetbrains.com/idea/download)
+  - **NOTE**: the Bazel plugin for IntelliJ IDEA is known not to work very well with Windows and
+    Java projects
+  - Once installed, open IntelliJ IDEA and open the preferences pane
+  - Search for and install the following extensions within IntelliJ IDEA
+    - `Bazel` by Google
+    - `google-java-format` by Google`
+  - Restart IntelliJ IDEA after installing your plugins
+  - Open a terminal window, run the command `which bazel`, and copy the output
+  - Open the preferences pane for the Bazel plugin
+  - Enter the output of `which bazel` as the path that IntelliJ IDEA should use to run Bazel
+  - Load your assignment repository by importing a Bazel project in IntelliJ IDEA
+  - Click through until the repository is loaded (default settings are fine to use)
 
 Part 4: Making Your First Commit
 --------------------------------
