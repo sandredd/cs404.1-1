@@ -42,7 +42,8 @@ instructions below:
     ```
     Set-ExecutionPolicy RemoteSigned -scope CurrentUser
     iwr -useb get.scoop.sh | iex
-    scoop install bazel
+    scoop install sudo
+    sudo scoop install bazel --global
     ```
 
 Part 2: Bootstrap Your Repository
