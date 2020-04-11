@@ -10,6 +10,7 @@ list. Ensure that your implementation has `O(1)` runtime for the following opera
 
 - Insert front
 - Insert end
+- Remove
 - Remove front
 - Remove end
 - Front
