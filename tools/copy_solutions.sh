@@ -102,7 +102,7 @@ function main() {
     for file in "${files[@]}"; do
         directory=solutions/program$program
         mkdir -p $directory
-        cp $repo_path/program$program/$file $directory
+        cp $repo_path/$file $directory
     done
 }
 
