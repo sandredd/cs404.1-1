@@ -56,47 +56,43 @@ function main() {
 
     files=()
     if [[ $program == 1 ]]; then
-        files+=("shell/info.sh")
-        files+=("shell/seq.sh")
-        files+=("shell/stdio.sh")
-        files+=("shell/sum.sh")
-    elif [[ $program == 2 ]]; then
         files+=("java/src/edu/berkeley/cs/app/Calculator.java")
         files+=("java/src/edu/berkeley/cs/util/LinkedList.java")
         files+=("java/src/edu/berkeley/cs/util/Queue.java")
         files+=("java/src/edu/berkeley/cs/util/SplayList.java")
         files+=("java/src/edu/berkeley/cs/util/Stack.java")
-    elif [[ $program == 3 ]]; then
+    elif [[ $program == 2 ]]; then
         files+=("java/src/edu/berkeley/cs/sort/Insertion.java")
         files+=("java/src/edu/berkeley/cs/sort/Merge.java")
         files+=("java/src/edu/berkeley/cs/sort/Quick.java")
         files+=("java/src/edu/berkeley/cs/sort/Selection.java")
         files+=("java/src/edu/berkeley/cs/sort/Shell.java")
-    elif [[ $program == 4 ]]; then
+    elif [[ $program == 3 ]]; then
         files+=("java/src/edu/berkeley/cs/app/scheduling/FiFoScheduler.java")
         files+=("java/src/edu/berkeley/cs/app/scheduling/RoundRobinScheduler.java")
         files+=("java/src/edu/berkeley/cs/app/scheduling/ShortestJobFirstScheduler.java")
         files+=("java/src/edu/berkeley/cs/util/MinHeap.java")
         files+=("java/src/edu/berkeley/cs/util/TreeMap.java")
-    elif [[ $program == 5 ]]; then
+    elif [[ $program == 4 ]]; then
         files+=("java/src/edu/berkeley/cs/graph/BreadthFirstSearch.java")
         files+=("java/src/edu/berkeley/cs/graph/DepthFirstSearch.java")
         files+=("java/src/edu/berkeley/cs/graph/Graph.java")
         files+=("java/src/edu/berkeley/cs/util/HashMap.java")
         files+=("java/src/edu/berkeley/cs/util/HashSet.java")
-    elif [[ $program == 6 ]]; then
+        files+=("java/src/edu/berkeley/cs/app/SpellChecker.java")
+        files+=("java/src/edu/berkeley/cs/graph/DepthFirstOrderjava")
+    elif [[ $program == 5 ]]; then
+        files+=("java/src/edu/berkeley/cs/graph/Cycle.java")
         files+=("java/src/edu/berkeley/cs/graph/DirectedGraph.java")
         files+=("java/src/edu/berkeley/cs/graph/DirectedCycle.java")
-        files+=("java/src/edu/berkeley/cs/graph/DepthFirstOrderjava")
         files+=("java/src/edu/berkeley/cs/graph/TopologicalSort.java")
         files+=("java/src/edu/berkeley/cs/graph/StronglyConnectedComponents.java")
+    elif [[ $program == 6 ]]; then
         files+=("java/src/edu/berkeley/cs/util/UnionFind.java")
         files+=("java/src/edu/berkeley/cs/graph/MinimumSpanningTree.java")
         files+=("java/src/edu/berkeley/cs/graph/ShortestPath.java")
         files+=("java/src/edu/berkeley/cs/graph/MultipleSourceShortestPath.java")
     elif [[ $program == 7 ]]; then
-        files+=("java/src/edu/berkeley/cs/graph/ShortestPath.java")
-        files+=("java/src/edu/berkeley/cs/graph/MultipleSourceShortestPath.java")
         files+=("java/src/edu/berkeley/cs/util/RadixTrieMap.java")
         files+=("java/src/edu/berkeley/cs/app/PlagiarismDetector.java")
     else
