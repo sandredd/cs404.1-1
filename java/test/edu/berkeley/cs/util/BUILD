@@ -10,6 +10,7 @@ java_test(
     name = "linkedlist",
     srcs = ["LinkedList_T.java"],
     test_class = "edu.berkeley.cs.util.LinkedList_T",
+    size = "small",
     deps = [
         "//java/src/edu/berkeley/cs/util",
         "//thirdparty:junit4",
@@ -20,6 +21,7 @@ java_test(
     name = "splaylist",
     srcs = ["SplayList_T.java"],
     test_class = "edu.berkeley.cs.util.SplayList_T",
+    size = "small",
     deps = [
         "//java/src/edu/berkeley/cs/util",
         "//thirdparty:junit4",
@@ -30,6 +32,7 @@ java_test(
     name = "queue",
     srcs = ["Queue_T.java"],
     test_class = "edu.berkeley.cs.util.Queue_T",
+    size = "small",
     deps = [
         "//java/src/edu/berkeley/cs/util",
         "//thirdparty:junit4",
@@ -40,6 +43,7 @@ java_test(
     name = "stack",
     srcs = ["Stack_T.java"],
     test_class = "edu.berkeley.cs.util.Stack_T",
+    size = "small",
     deps = [
         "//java/src/edu/berkeley/cs/util",
         "//thirdparty:junit4",
@@ -50,6 +54,7 @@ java_test(
     name = "minheap",
     srcs = ["MinHeap_T.java"],
     test_class = "edu.berkeley.cs.util.MinHeap_T",
+    size = "small",
     deps = [
         "//java/src/edu/berkeley/cs/util",
         "//thirdparty:junit4",
@@ -60,6 +65,7 @@ java_test(
     name = "treemap",
     srcs = ["TreeMap_T.java"],
     test_class = "edu.berkeley.cs.util.TreeMap_T",
+    size = "small",
     deps = [
         "//java/src/edu/berkeley/cs/util",
         "//thirdparty:junit4",
@@ -70,6 +76,7 @@ java_test(
     name = "hashmap",
     srcs = ["HashMap_T.java"],
     test_class = "edu.berkeley.cs.util.HashMap_T",
+    size = "small",
     deps = [
         "//java/src/edu/berkeley/cs/util",
         "//thirdparty:junit4",
@@ -80,6 +87,7 @@ java_test(
     name = "hashset",
     srcs = ["HashSet_T.java"],
     test_class = "edu.berkeley.cs.util.HashSet_T",
+    size = "small",
     deps = [
         "//java/src/edu/berkeley/cs/util",
         "//thirdparty:junit4",
@@ -90,6 +98,7 @@ java_test(
     name = "unionfind",
     srcs = ["UnionFind_T.java"],
     test_class = "edu.berkeley.cs.util.UnionFind_T",
+    size = "small",
     deps = [
         "//java/src/edu/berkeley/cs/util",
         "//thirdparty:junit4",
@@ -100,6 +109,7 @@ java_test(
     name = "trie",
     srcs = ["RadixTrieMap_T.java"],
     test_class = "edu.berkeley.cs.util.RadixTrieMap_T",
+    size = "small",
     deps = [
         "//java/src/edu/berkeley/cs/util",
         "//thirdparty:junit4",
