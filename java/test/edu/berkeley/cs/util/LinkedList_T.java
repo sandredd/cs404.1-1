@@ -40,12 +40,14 @@ public class LinkedList_T {
 
     Assert.assertEquals(new Integer(1), list.front());
     Assert.assertEquals(new Integer(0), list.back());
+    Assert.assertEquals(null, list.head.prev);
 
     list.insertFront(2);
     Assert.assertEquals(3, list.size());
 
     Assert.assertEquals(new Integer(2), list.front());
     Assert.assertEquals(new Integer(0), list.back());
+    Assert.assertEquals(null, list.head.prev);
   }
 
   @Test
@@ -57,12 +59,14 @@ public class LinkedList_T {
 
     Assert.assertEquals(new Integer(0), list.front());
     Assert.assertEquals(new Integer(1), list.back());
+    Assert.assertEquals(null, list.tail.next);
 
     list.insertEnd(2);
     Assert.assertEquals(3, list.size());
 
     Assert.assertEquals(new Integer(0), list.front());
     Assert.assertEquals(new Integer(2), list.back());
+    Assert.assertEquals(null, list.tail.next);
   }
 
   @Test
@@ -75,6 +79,7 @@ public class LinkedList_T {
     Assert.assertEquals(new Integer(0), list.removeFront());
     Assert.assertEquals(1, list.size());
     Assert.assertEquals(new Integer(1), list.front());
+    Assert.assertEquals(null, list.head.prev);
 
     Assert.assertEquals(new Integer(1), list.removeFront());
     Assert.assertEquals(0, list.size());
@@ -91,6 +96,7 @@ public class LinkedList_T {
     Assert.assertEquals(new Integer(1), list.removeEnd());
     Assert.assertEquals(1, list.size());
     Assert.assertEquals(new Integer(0), list.front());
+    Assert.assertEquals(null, list.tail.next);
 
     Assert.assertEquals(new Integer(0), list.removeEnd());
     Assert.assertEquals(0, list.size());
