@@ -82,7 +82,8 @@ the method of choice for sorting linked lists because it uses no extra space and
 linearithmic. Unfortunately, our current implementation of mergesort will not work on linked lists.
 
 Fill in the linked list specific `merge(...)` and `sort(...)` methods within your mergesort
-implementation.
+implementation. For your specific implementation, you don't need to worry about optimizing to avoid
+allocating extra space.
 
 The file(s) you will need for this exercise are:
 
