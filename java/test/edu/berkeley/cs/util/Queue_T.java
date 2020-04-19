@@ -16,13 +16,13 @@ public class Queue_T {
   @Test
   public void testEnqueuePeek() {
     queue.enqueue(0);
-    Assert.assertEquals(new Integer(0), queue.peek());
+    Assert.assertEquals(Integer.valueOf(0), queue.peek());
 
     queue.enqueue(1);
-    Assert.assertEquals(new Integer(0), queue.peek());
+    Assert.assertEquals(Integer.valueOf(0), queue.peek());
 
     queue.dequeue();
-    Assert.assertEquals(new Integer(1), queue.peek());
+    Assert.assertEquals(Integer.valueOf(1), queue.peek());
   }
 
   @Test
@@ -32,9 +32,9 @@ public class Queue_T {
     queue.enqueue(2);
 
     Assert.assertEquals(3, queue.size());
-    Assert.assertEquals(new Integer(0), queue.dequeue());
-    Assert.assertEquals(new Integer(1), queue.dequeue());
-    Assert.assertEquals(new Integer(2), queue.dequeue());
+    Assert.assertEquals(Integer.valueOf(0), queue.dequeue());
+    Assert.assertEquals(Integer.valueOf(1), queue.dequeue());
+    Assert.assertEquals(Integer.valueOf(2), queue.dequeue());
   }
 
   @Test
@@ -64,7 +64,7 @@ public class Queue_T {
     Iterator<Integer> iterator = queue.iterator();
     for (int i = 0; i < queue.size(); i++) {
       Assert.assertTrue(iterator.hasNext());
-      Assert.assertEquals(new Integer(i), iterator.next());
+      Assert.assertEquals(Integer.valueOf(i), iterator.next());
     }
 
     Assert.assertFalse(iterator.hasNext());

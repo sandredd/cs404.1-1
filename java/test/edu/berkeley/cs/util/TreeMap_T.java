@@ -77,7 +77,7 @@ public class TreeMap_T {
     }
 
     for (int i = 0; i < keys.length; i++) {
-      Assert.assertEquals(new Integer(values[i]), map.get(keys[i]));
+      Assert.assertEquals(Integer.valueOf(values[i]), map.get(keys[i]));
     }
   }
 
@@ -93,12 +93,12 @@ public class TreeMap_T {
       map.put(random.nextInt(), random.nextInt());
     }
 
-    Assert.assertEquals(new Integer(value), map.get(key));
+    Assert.assertEquals(Integer.valueOf(value), map.get(key));
 
     value = random.nextInt();
     map.put(key, value);
     Assert.assertTrue(map.isBST());
-    Assert.assertEquals(new Integer(value), map.get(key));
+    Assert.assertEquals(Integer.valueOf(value), map.get(key));
   }
 
   @Test
@@ -116,13 +116,13 @@ public class TreeMap_T {
     }
 
     Assert.assertTrue(map.contains(minimum));
-    Assert.assertEquals(new Integer(minimum), map.min());
+    Assert.assertEquals(Integer.valueOf(minimum), map.min());
 
     map.deleteMin();
 
     Assert.assertTrue(map.isBST());
     Assert.assertFalse(map.contains(minimum));
-    Assert.assertNotEquals(new Integer(minimum), map.min());
+    Assert.assertNotEquals(Integer.valueOf(minimum), map.min());
   }
 
   @Test
@@ -140,13 +140,13 @@ public class TreeMap_T {
     }
 
     Assert.assertTrue(map.contains(maximum));
-    Assert.assertEquals(new Integer(maximum), map.max());
+    Assert.assertEquals(Integer.valueOf(maximum), map.max());
 
     map.deleteMax();
 
     Assert.assertTrue(map.isBST());
     Assert.assertFalse(map.contains(maximum));
-    Assert.assertNotEquals(new Integer(maximum), map.max());
+    Assert.assertNotEquals(Integer.valueOf(maximum), map.max());
   }
 
   @Test

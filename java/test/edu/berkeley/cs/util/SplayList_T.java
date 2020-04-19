@@ -17,8 +17,8 @@ public class SplayList_T {
     list.insertEnd(0);
     list.insertEnd(1);
 
-    Assert.assertEquals(new Integer(1), list.back());
-    Assert.assertEquals(new Integer(0), list.front());
+    Assert.assertEquals(Integer.valueOf(1), list.back());
+    Assert.assertEquals(Integer.valueOf(0), list.front());
   }
 
   @Test
@@ -28,8 +28,8 @@ public class SplayList_T {
 
     Assert.assertEquals(2, list.size());
 
-    Assert.assertEquals(new Integer(0), list.front());
-    Assert.assertEquals(new Integer(1), list.back());
+    Assert.assertEquals(Integer.valueOf(0), list.front());
+    Assert.assertEquals(Integer.valueOf(1), list.back());
   }
 
   @Test
@@ -39,8 +39,8 @@ public class SplayList_T {
 
     Assert.assertFalse(list.isEmpty());
 
-    Assert.assertEquals(new Integer(0), list.front());
-    Assert.assertEquals(new Integer(1), list.back());
+    Assert.assertEquals(Integer.valueOf(0), list.front());
+    Assert.assertEquals(Integer.valueOf(1), list.back());
   }
 
   @Test
@@ -64,8 +64,8 @@ public class SplayList_T {
     list.insertEnd(0);
 
     Assert.assertTrue(list.contains(0));
-    Assert.assertEquals(new Integer(0), list.front());
-    Assert.assertEquals(new Integer(0), list.back());
+    Assert.assertEquals(Integer.valueOf(0), list.front());
+    Assert.assertEquals(Integer.valueOf(0), list.back());
   }
 
   @Test
@@ -74,8 +74,8 @@ public class SplayList_T {
     list.insertEnd(1);
 
     Assert.assertTrue(list.contains(0));
-    Assert.assertEquals(new Integer(0), list.front());
-    Assert.assertEquals(new Integer(1), list.back());
+    Assert.assertEquals(Integer.valueOf(0), list.front());
+    Assert.assertEquals(Integer.valueOf(1), list.back());
 
     Assert.assertTrue(list.contains(0));
     Assert.assertTrue(list.contains(1));
@@ -87,8 +87,8 @@ public class SplayList_T {
     list.insertEnd(1);
 
     Assert.assertTrue(list.contains(1));
-    Assert.assertEquals(new Integer(1), list.front());
-    Assert.assertEquals(new Integer(0), list.back());
+    Assert.assertEquals(Integer.valueOf(1), list.front());
+    Assert.assertEquals(Integer.valueOf(0), list.back());
 
     Assert.assertTrue(list.contains(0));
     Assert.assertTrue(list.contains(1));
@@ -101,8 +101,8 @@ public class SplayList_T {
     list.insertEnd(2);
 
     Assert.assertTrue(list.contains(1));
-    Assert.assertEquals(new Integer(1), list.front());
-    Assert.assertEquals(new Integer(2), list.back());
+    Assert.assertEquals(Integer.valueOf(1), list.front());
+    Assert.assertEquals(Integer.valueOf(2), list.back());
 
     Assert.assertTrue(list.contains(0));
     Assert.assertTrue(list.contains(1));

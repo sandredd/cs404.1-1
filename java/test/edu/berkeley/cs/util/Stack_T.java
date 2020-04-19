@@ -16,13 +16,13 @@ public class Stack_T {
   @Test
   public void testPushPeek() {
     stack.push(0);
-    Assert.assertEquals(new Integer(0), stack.peek());
+    Assert.assertEquals(Integer.valueOf(0), stack.peek());
 
     stack.push(1);
-    Assert.assertEquals(new Integer(1), stack.peek());
+    Assert.assertEquals(Integer.valueOf(1), stack.peek());
 
     stack.push(2);
-    Assert.assertEquals(new Integer(2), stack.peek());
+    Assert.assertEquals(Integer.valueOf(2), stack.peek());
   }
 
   @Test
@@ -32,9 +32,9 @@ public class Stack_T {
     stack.push(2);
 
     Assert.assertEquals(3, stack.size());
-    Assert.assertEquals(new Integer(2), stack.pop());
-    Assert.assertEquals(new Integer(1), stack.pop());
-    Assert.assertEquals(new Integer(0), stack.pop());
+    Assert.assertEquals(Integer.valueOf(2), stack.pop());
+    Assert.assertEquals(Integer.valueOf(1), stack.pop());
+    Assert.assertEquals(Integer.valueOf(0), stack.pop());
   }
 
   @Test
@@ -64,7 +64,7 @@ public class Stack_T {
     Iterator<Integer> iterator = stack.iterator();
     for (int i = stack.size() - 1; i >= 0; i--) {
       Assert.assertTrue(iterator.hasNext());
-      Assert.assertEquals(new Integer(i), iterator.next());
+      Assert.assertEquals(Integer.valueOf(i), iterator.next());
     }
 
     Assert.assertFalse(iterator.hasNext());

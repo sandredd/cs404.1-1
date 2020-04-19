@@ -75,7 +75,7 @@ public class HashMap_T {
     }
 
     for (int i = 0; i < keys.length; i++) {
-      Assert.assertEquals(new Integer(values[i]), map.get(keys[i]));
+      Assert.assertEquals(Integer.valueOf(values[i]), map.get(keys[i]));
     }
   }
 
@@ -91,11 +91,11 @@ public class HashMap_T {
       map.put(random.nextInt(), random.nextInt());
     }
 
-    Assert.assertEquals(new Integer(value), map.get(key));
+    Assert.assertEquals(Integer.valueOf(value), map.get(key));
 
     value = random.nextInt();
     map.put(key, value);
-    Assert.assertEquals(new Integer(value), map.get(key));
+    Assert.assertEquals(Integer.valueOf(value), map.get(key));
   }
 
   @Test
@@ -192,7 +192,7 @@ public class HashMap_T {
     Assert.assertEquals(capacity * 2, map.table.length);
 
     for (int i = 0; i < map.size(); i++) {
-      Assert.assertEquals(new Integer(i), map.get(i));
+      Assert.assertEquals(Integer.valueOf(i), map.get(i));
     }
   }
 }
