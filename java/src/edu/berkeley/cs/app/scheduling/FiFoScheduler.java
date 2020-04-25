@@ -1,13 +1,13 @@
 package edu.berkeley.cs.app.scheduling;
 
-import edu.berkeley.cs.util.LinkedList;
+import edu.berkeley.cs.util.Queue;
 
 public class FiFoScheduler implements Scheduler {
-  protected LinkedList<Job> jobs = new LinkedList<>();
+  protected Queue<Job> jobs = new Queue<>();
 
   public FiFoScheduler(int numJobs) {
     for (int i = 0; i < numJobs; i++) {
-      jobs.insertEnd(new Job());
+      jobs.enqueue(new Job());
     }
   }
 
