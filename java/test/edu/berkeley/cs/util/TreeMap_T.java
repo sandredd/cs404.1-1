@@ -169,6 +169,45 @@ public class TreeMap_T {
   }
 
   @Test
+  public void testDeleteSingleton() {
+    Random random = new Random();
+
+    int key = random.nextInt();
+
+    // test deleteMin on a single node tree
+    map.put(key, random.nextInt());
+    Assert.assertTrue(map.contains(key));
+    Assert.assertEquals(Integer.valueOf(key), map.min());
+
+    map.deleteMin();
+
+    Assert.assertTrue(map.isEmpty());
+    Assert.assertTrue(map.isBST());
+    Assert.assertFalse(map.contains(key));
+
+    // test deleteMax on a single node tree
+    map.put(key, random.nextInt());
+    Assert.assertTrue(map.contains(key));
+    Assert.assertEquals(Integer.valueOf(key), map.max());
+
+    map.deleteMax();
+
+    Assert.assertTrue(map.isEmpty());
+    Assert.assertTrue(map.isBST());
+    Assert.assertFalse(map.contains(key));
+
+    // test delete on a single node tree
+    map.put(key, random.nextInt());
+    Assert.assertTrue(map.contains(key));
+
+    map.delete(key);
+
+    Assert.assertTrue(map.isBST());
+    Assert.assertFalse(map.contains(key));
+    Assert.assertNull(map.get(key));
+  }
+
+  @Test
   public void testIterator() {
     Random random = new Random();
 
