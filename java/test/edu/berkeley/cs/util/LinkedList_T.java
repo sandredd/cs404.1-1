@@ -77,11 +77,11 @@ public class LinkedList_T {
     Assert.assertEquals(2, list.size());
     Assert.assertEquals(Integer.valueOf(1), list.front());
 
-    Assert.assertEquals(Integer.valueOf(0), list.removeFront());
-    Assert.assertEquals(1, list.size());
-    Assert.assertEquals(Integer.valueOf(1), list.front());
-
     Assert.assertEquals(Integer.valueOf(1), list.removeFront());
+    Assert.assertEquals(1, list.size());
+    Assert.assertEquals(Integer.valueOf(2), list.front());
+
+    Assert.assertEquals(Integer.valueOf(2), list.removeFront());
     Assert.assertEquals(0, list.size());
     Assert.assertNull(list.front());
   }
