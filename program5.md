@@ -18,8 +18,8 @@ In more general terms, given a dependency graph, we need to compute the executio
 for a given component, all dependencies are built first. One of the most popular methods to do this
 is using topological sort. Implement topological sort. Remember that only directed, acyclic graphs
 (DAGs) have a topological order. Before implementing topological sort, it may be useful to first
-implement functionality to determine whether a graph has a cycle or not (`Cycle`). You implemented
-functionality to determine the various orderings in a graph in a previous assignment.
+implement functionality to determine whether a graph has a cycle or not (`Cycle`). As you know, a
+graph with a cycle does not have a topological ordering.
 
 The file(s) you will need for this exercise are:
 
