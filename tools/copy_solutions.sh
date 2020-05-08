@@ -17,7 +17,6 @@ entirely.
 
     Required arguments:
         -p|--program          The program number to copy solutions for
-        -r|--repo             The path to the git repository where solutions are available
 
     Optional arguments:
         -h|--help             Show this help
@@ -29,10 +28,6 @@ function main() {
     while [[ $# -gt 0 ]]; do
         key="$1"
         case $key in
-            -r|--repo)
-                repo_path="$2"
-                shift; shift
-                ;;
             -p|--program)
                 program="$2"
                 shift; shift
@@ -48,9 +43,8 @@ function main() {
         esac
     done
 
-    if [[ -z "$repo_path" ]]; then
-        log_error "no solutions path provided"
-    elif [[ -z "$program" ]]; then
+    repo_path=$(dirname $(dirname $0))
+    if [[ -z "$program" ]]; then
         log_error "no program number provided"
     fi
 
@@ -80,7 +74,7 @@ function main() {
         files+=("java/src/edu/berkeley/cs/util/HashMap.java")
         files+=("java/src/edu/berkeley/cs/util/HashSet.java")
         files+=("java/src/edu/berkeley/cs/app/SpellChecker.java")
-        files+=("java/src/edu/berkeley/cs/graph/DepthFirstOrderjava")
+        files+=("java/src/edu/berkeley/cs/graph/DepthFirstOrder.java")
     elif [[ $program == 5 ]]; then
         files+=("java/src/edu/berkeley/cs/graph/Cycle.java")
         files+=("java/src/edu/berkeley/cs/graph/DirectedGraph.java")
