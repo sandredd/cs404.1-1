@@ -131,11 +131,11 @@ public class HashMap_T {
     Iterator<HashMap<Integer, Integer>.Entry> itr = map.iterator();
     for (int i = 0; i < map.size(); i++) {
       Assert.assertTrue(itr.hasNext());
-
       HashMap<Integer, Integer>.Entry entry = itr.next();
+
       boolean found = false;
       for (HashMap<Integer, Integer>.Entry element : entries) {
-        if (element.key.equals(entry.key)) {
+        if (element.key().equals(entry.key()) && element.value().equals(entry.value())) {
           found = true;
           break;
         }

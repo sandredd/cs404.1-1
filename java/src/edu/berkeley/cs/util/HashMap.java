@@ -4,13 +4,21 @@ import java.util.Iterator;
 import java.util.Objects;
 
 public class HashMap<Key, Value> implements Map<Key, Value>, Iterable<HashMap<Key, Value>.Entry> {
-  protected class Entry {
-    protected Key key;
-    protected Value value;
+  public class Entry {
+    private Key key;
+    private Value value;
 
     Entry(Key key, Value value) {
       this.key = key;
       this.value = value;
+    }
+
+    public Key key() {
+      return key;
+    }
+
+    public Value value() {
+      return value;
     }
 
     @Override
