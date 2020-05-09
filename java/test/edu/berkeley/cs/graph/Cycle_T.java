@@ -13,21 +13,18 @@ public class Cycle_T {
     graph = Utilities.smallCyclicGraph();
     Cycle finder = new Cycle(graph);
     Assert.assertTrue(finder.hasCycle());
-  }
 
-  @Test
-  public void testCycleFound() {
-    graph = Utilities.smallCyclicGraph();
-    Cycle finder = new Cycle(graph);
     LinkedList<Integer> expectedCycle = new LinkedList<>();
     expectedCycle.insertFront(2);
     expectedCycle.insertFront(3);
-    int actualCycleSize = 0;
-    for (int i : finder.cycle()){
-      actualCycleSize++;
-      Assert.assertTrue(expectedCycle.contains(i));
+
+    int actualSize = 0;
+    for (int node : finder.cycle()) {
+      actualSize++;
+      Assert.assertTrue(expectedCycle.contains(node));
     }
-    Assert.assertTrue(actualCycleSize == expectedCycle.size());
+
+    Assert.assertEquals(expectedCycle.size(), actualSize);
   }
 
   @Test
