@@ -2,9 +2,9 @@ package(default_visibility = ["//visibility:public"])
 
 java_test(
     name = "calculator",
+    size = "small",
     srcs = ["Calculator_T.java"],
     test_class = "edu.berkeley.cs.app.Calculator_T",
-    size = "small",
     deps = [
         "//java/src/edu/berkeley/cs/app",
         "//thirdparty:junit4",
@@ -13,9 +13,9 @@ java_test(
 
 java_test(
     name = "spellchecker",
+    size = "small",
     srcs = ["SpellChecker_T.java"],
     test_class = "edu.berkeley.cs.app.SpellChecker_T",
-    size = "small",
     deps = [
         "//java/src/edu/berkeley/cs/app",
         "//java/src/edu/berkeley/cs/util",
@@ -25,9 +25,9 @@ java_test(
 
 java_test(
     name = "plagiarism",
+    size = "small",
     srcs = ["PlagiarismDetector_T.java"],
     test_class = "edu.berkeley.cs.app.PlagiarismDetector_T",
-    size = "small",
     deps = [
         "//java/src/edu/berkeley/cs/app",
         "//thirdparty:junit4",
