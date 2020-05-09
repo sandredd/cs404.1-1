@@ -56,6 +56,7 @@ java_test(
     deps = [
         "//java/src/edu/berkeley/cs/graph",
         "//java/test/edu/berkeley/cs/util:utilities",
+        "//java/src/edu/berkeley/cs/util",
         "//thirdparty:junit4",
     ],
 )
