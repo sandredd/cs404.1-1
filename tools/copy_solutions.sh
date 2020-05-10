@@ -77,7 +77,6 @@ function main() {
         files+=("java/src/edu/berkeley/cs/util/HashSet.java")
     elif [[ $program == 5 ]]; then
         files+=("java/src/edu/berkeley/cs/graph/Cycle.java")
-        files+=("java/src/edu/berkeley/cs/graph/DirectedCycle.java")
         files+=("java/src/edu/berkeley/cs/graph/DirectedGraph.java")
         files+=("java/src/edu/berkeley/cs/graph/StronglyConnectedComponents.java")
         files+=("java/src/edu/berkeley/cs/graph/TopologicalSort.java")
