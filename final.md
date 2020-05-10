@@ -38,6 +38,10 @@ If you choose to solve this problem, you'll find some starter code in the follow
 
 - `java/src/edu/berkeley/cs/app/PermutationSearch.java`
 
+The following command will be used to test and grade your solution:
+
+    $ bazel test java/test/edu/berkeley/cs/app:permutation_search
+
 Fuzzy Search
 ------------
 DNA is composed of four nucleotide bases: A, T, C, and G. A strand of DNA is simply some sequence of
@@ -71,6 +75,10 @@ complete this problem without the use of regular expressions.
 If you choose to solve this problem, you'll find some starter code in the following file(s):
 
 - `java/src/edu/berkeley/cs/app/FuzzySearch.java`
+
+The following command will be used to test and grade your solution:
+
+    $ bazel test java/test/edu/berkeley/cs/app:fuzzy_search
 
 Alien Sort Checking
 -------------------
@@ -108,6 +116,10 @@ example of how this would work.
 If you choose to solve this problem, you'll find some starter code in the following file(s):
 
 - `java/src/edu/berkeley/cs/app/SortChecker.java`
+
+The following command will be used to test and grade your solution:
+
+    $ bazel test java/test/edu/berkeley/cs/app:sort_checker
 
 Hotkey Generation
 -----------------
@@ -148,6 +160,10 @@ exception.
 If you choose to solve this problem, you'll find some starter code in the following file(s):
 
 - `java/src/edu/berkeley/cs/app/HotkeyGenerator.java`
+
+The following command will be used to test and grade your solution:
+
+    $ bazel test java/test/edu/berkeley/cs/app:hotkey
 
 Format
 ------

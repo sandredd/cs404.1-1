@@ -33,3 +33,47 @@ java_test(
         "//thirdparty:junit4",
     ],
 )
+
+java_test(
+    name = "fuzzy_search",
+    size = "small",
+    srcs = ["FuzzySearch_T.java"],
+    test_class = "edu.berkeley.cs.app.FuzzySearch_T",
+    deps = [
+        "//java/src/edu/berkeley/cs/app",
+        "//thirdparty:junit4",
+    ],
+)
+
+java_test(
+    name = "hotkey",
+    size = "small",
+    srcs = ["HotKeyGenerator_T.java"],
+    test_class = "edu.berkeley.cs.app.HotKeyGenerator_T",
+    deps = [
+        "//java/src/edu/berkeley/cs/app",
+        "//thirdparty:junit4",
+    ],
+)
+
+java_test(
+    name = "permutation_search",
+    size = "small",
+    srcs = ["PermutationSearch_T.java"],
+    test_class = "edu.berkeley.cs.app.PermutationSearch_T",
+    deps = [
+        "//java/src/edu/berkeley/cs/app",
+        "//thirdparty:junit4",
+    ],
+)
+
+java_test(
+    name = "sort_checker",
+    size = "small",
+    srcs = ["SortChecker_T.java"],
+    test_class = "edu.berkeley.cs.app.SortChecker_T",
+    deps = [
+        "//java/src/edu/berkeley/cs/app",
+        "//thirdparty:junit4",
+    ],
+)
