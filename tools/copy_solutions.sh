@@ -89,6 +89,11 @@ function main() {
     elif [[ $program == 7 ]]; then
         files+=("java/src/edu/berkeley/cs/util/RadixTrieMap.java")
         files+=("java/src/edu/berkeley/cs/app/PlagiarismDetector.java")
+    elif [[ $program == "final" ]]; then
+        files+=("java/src/edu/berkeley/cs/app/FuzzySearch.java")
+        files+=("java/src/edu/berkeley/cs/app/HotKeyGenerator.java")
+        files+=("java/src/edu/berkeley/cs/app/PermutationSearch.java")
+        files+=("java/src/edu/berkeley/cs/app/SortChecker.java")
     else
         log_error "invalid program number"
     fi
