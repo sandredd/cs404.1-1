@@ -77,3 +77,14 @@ java_test(
         "//thirdparty:junit4",
     ],
 )
+
+java_test(
+    name = "duplicate_usernames",
+    size = "small",
+    srcs = ["DuplicateUsernames_T.java"],
+    test_class = "edu.berkeley.cs.app.DuplicateUsernames_T",
+    deps = [
+        "//java/src/edu/berkeley/cs/app",
+        "//thirdparty:junit4",
+    ],
+)
