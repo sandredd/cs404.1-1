@@ -34,6 +34,11 @@ public class HashMap<Key, Value> implements Map<Key, Value>, Iterable<HashMap<Ke
     public int hashCode() {
       return Objects.hash(key, value);
     }
+
+    @Override
+    public String toString() {
+      return String.format("%s -> %s", key, value);
+    }
   }
 
   protected SplayList<Entry>[] table = new SplayList[32];

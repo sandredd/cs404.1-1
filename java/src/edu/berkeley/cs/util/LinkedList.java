@@ -135,4 +135,27 @@ public class LinkedList<T> implements Iterable<T> {
     // TODO: complete this function
     return false;
   }
+
+
+  /**
+   * @return A string representation of this list.
+   */
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+
+    sb.append('[');
+    boolean added = false;
+    for (T key : this) {
+      if (added) {
+        sb.append(", ");
+      }
+
+      sb.append(key);
+      added = true;
+    }
+
+    sb.append(']');
+    return sb.toString();
+  }
 }
