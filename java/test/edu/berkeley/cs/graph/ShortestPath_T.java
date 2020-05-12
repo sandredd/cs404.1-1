@@ -4,7 +4,7 @@ import edu.berkeley.cs.util.Utilities;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class ShorestPath_T {
+public class ShortestPath_T {
   private DirectedGraph graph = Utilities.smallDirectedGraph();
   private double epsilon = 0.0001;
 

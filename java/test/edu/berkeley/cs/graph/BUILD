@@ -113,8 +113,8 @@ java_test(
 java_test(
     name = "sp",
     size = "small",
-    srcs = ["ShorestPath_T.java"],
-    test_class = "edu.berkeley.cs.graph.ShorestPath_T",
+    srcs = ["ShortestPath_T.java"],
+    test_class = "edu.berkeley.cs.graph.ShortestPath_T",
     deps = [
         "//java/src/edu/berkeley/cs/graph",
         "//java/test/edu/berkeley/cs/util:utilities",
