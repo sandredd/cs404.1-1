@@ -43,7 +43,7 @@ public class Edge implements Comparable<Edge> {
 
   @Override
   public int hashCode() {
-    return Objects.hash(from, to, weight);
+    return Objects.hash(from, to);
   }
 
   @Override
@@ -81,6 +81,6 @@ public class Edge implements Comparable<Edge> {
 
   @Override
   public String toString() {
-    return String.format("%d:%d", from, to);
+    return String.format("%d -- %d", from, to);
   }
 }
