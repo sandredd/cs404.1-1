@@ -78,4 +78,9 @@ public class Edge implements Comparable<Edge> {
       return 0;
     }
   }
+
+  @Override
+  public String toString() {
+    return String.format("%d:%d", from, to);
+  }
 }
