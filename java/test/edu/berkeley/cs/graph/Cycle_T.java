@@ -15,6 +15,7 @@ public class Cycle_T {
     Assert.assertTrue(finder.hasCycle());
 
     LinkedList<Integer> expectedCycle = new LinkedList<>();
+    expectedCycle.insertFront(3);
     expectedCycle.insertFront(2);
     expectedCycle.insertFront(3);
 
