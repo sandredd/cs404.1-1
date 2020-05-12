@@ -41,7 +41,7 @@ public class HashMap<Key, Value> implements Map<Key, Value>, Iterable<HashMap<Ke
     }
   }
 
-  protected SplayList<Entry>[] table = new SplayList[32];
+  protected SplayList<Entry>[] table = new SplayList[8];
   private int size = 0;
 
   public HashMap() {
