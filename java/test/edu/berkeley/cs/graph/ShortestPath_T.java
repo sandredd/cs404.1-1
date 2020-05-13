@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class ShortestPath_T {
   private DirectedGraph graph = Utilities.smallDirectedGraph();
-  private double epsilon = 0.0001;
+  private static final double epsilon = 0.0001;
 
   private void checkGraph(ShortestPath sp, boolean[] expectedHasPathTo, double[] expectedDistTo) {
     boolean[] actualHasPathTo = new boolean[expectedHasPathTo.length];
@@ -36,7 +36,6 @@ public class ShortestPath_T {
           0,
           14,
           12,
-          Float.MAX_VALUE,
           Float.MAX_VALUE,
           Float.MAX_VALUE,
           8,
