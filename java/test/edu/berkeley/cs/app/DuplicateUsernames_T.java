@@ -21,6 +21,13 @@ public class DuplicateUsernames_T {
     }
 
     @Test
+    public void testEmptySet() {
+        LinkedList<HashSet<String>> groups = new LinkedList<>();
+        HashSet<String> a = new HashSet<>();
+        Assert.assertEquals(0, duplicateUsernames.uniqueUsers(groups));
+    }
+
+    @Test
     public void testSingleUser() {
         LinkedList<HashSet<String>> groups = new LinkedList<>();
 

@@ -13,12 +13,12 @@ public class FuzzySearch_T {
     }
 
     @Test
-    public void testNeedleLongerThanHaystack() {
+    public void testLongNeedle() {
         Assert.assertEquals(-1, fuzzySearch.indexOf("A", "AAA"));
     }
 
     @Test
-    public void testMissingString() {
+    public void testNeedleNotFound() {
         Assert.assertEquals(-1, fuzzySearch.indexOf("ACTGGTCA", "TGAT"));
     }
 
