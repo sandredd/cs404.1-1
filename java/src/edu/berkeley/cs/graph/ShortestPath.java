@@ -15,7 +15,7 @@ public class ShortestPath {
   }
 
   public boolean hasPathTo(int v) {
-    return distTo[v] < Integer.MAX_VALUE;
+    return distTo[v] < Float.MAX_VALUE;
   }
 
   public Iterable<Edge> pathTo(int v) {
