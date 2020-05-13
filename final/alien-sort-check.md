@@ -13,7 +13,7 @@ language and a lexicographic priority for the language's letters, implement an a
 determine whether or not the input words are in sorted order. See the following code snippet for an
 example of how this would work.
 
-    char[] englishOrder = new char[] {'A', 'B', 'C', 'D', 'E', 'F', 'G', ...};
+    char[] englishOrder = new char[] {'a', 'b', 'c', 'd', 'e', 'f', 'g', ...};
     SortChecker english = new SortChecker(englishOrder);
 
     // would return true
