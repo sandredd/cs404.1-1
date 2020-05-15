@@ -1,7 +1,6 @@
 package edu.berkeley.cs.app;
 
 import edu.berkeley.cs.util.HashMap;
-import edu.berkeley.cs.util.HashSet;
 import edu.berkeley.cs.util.LinkedList;
 import org.junit.Assert;
 import org.junit.Before;
