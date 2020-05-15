@@ -8,11 +8,7 @@ public class Edge implements Comparable<Edge> {
   private final double weight;
 
   public Edge(int from, int to, double weight) {
-    if (from < 0) {
-      throw new IllegalArgumentException("Vertex names must be nonnegative integers");
-    }
-
-    if (to < 0) {
+    if (from < 0 || to < 0) {
       throw new IllegalArgumentException("Vertex names must be nonnegative integers");
     }
 
