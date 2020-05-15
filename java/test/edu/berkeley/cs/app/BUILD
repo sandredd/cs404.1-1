@@ -52,6 +52,7 @@ java_test(
     test_class = "edu.berkeley.cs.app.HotKeyGenerator_T",
     deps = [
         "//java/src/edu/berkeley/cs/app",
+        "//java/src/edu/berkeley/cs/util",
         "//thirdparty:junit4",
     ],
 )
