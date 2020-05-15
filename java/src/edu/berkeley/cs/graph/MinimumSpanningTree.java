@@ -10,7 +10,7 @@ public class MinimumSpanningTree {
     return null;
   }
 
-  public int weight() {
+  public float weight() {
     // TODO: complete this function
     return 0;
   }
