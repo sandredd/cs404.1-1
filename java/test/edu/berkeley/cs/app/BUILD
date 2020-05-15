@@ -57,17 +57,6 @@ java_test(
 )
 
 java_test(
-    name = "permutation_search",
-    size = "small",
-    srcs = ["PermutationSearch_T.java"],
-    test_class = "edu.berkeley.cs.app.PermutationSearch_T",
-    deps = [
-        "//java/src/edu/berkeley/cs/app",
-        "//thirdparty:junit4",
-    ],
-)
-
-java_test(
     name = "sort_checker",
     size = "small",
     srcs = ["SortChecker_T.java"],
