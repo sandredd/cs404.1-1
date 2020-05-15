@@ -30,6 +30,7 @@ public class FuzzySearch_T {
   @Test
   public void testSingleCharacter() {
     Assert.assertEquals(0, fuzzySearch.indexOf("A", "A"));
+    Assert.assertEquals(-1, fuzzySearch.indexOf("G", "A"));
   }
 
   @Test
