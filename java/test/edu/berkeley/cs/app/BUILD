@@ -79,3 +79,14 @@ java_test(
         "//thirdparty:junit4",
     ],
 )
+
+java_test(
+    name = "summable_tree",
+    size = "small",
+    srcs = ["SummableTree_T.java"],
+    test_class = "edu.berkeley.cs.app.SummableTree_T",
+    deps = [
+        "//java/src/edu/berkeley/cs/app",
+        "//thirdparty:junit4",
+    ],
+)

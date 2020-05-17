@@ -4,14 +4,14 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 public class TreeMap<Key extends Comparable<Key>, Value> implements Map<Key, Value>, Iterable<Key> {
-  private Node root;
+  protected Node root;
   private int size;
 
-  private class Node {
-    private Key key;
-    private Value value;
-    private Node left;
-    private Node right;
+  protected class Node {
+    public Key key;
+    public Value value;
+    public Node left;
+    public Node right;
 
     public Node(Key key, Value value) {
       this.key = key;
