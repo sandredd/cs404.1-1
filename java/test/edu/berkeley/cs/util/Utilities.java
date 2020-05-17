@@ -269,7 +269,7 @@ public class Utilities {
     return graph;
   }
 
-  private static boolean arrayContains(int needle, int[] haystack) {
+  private static boolean arrayContains(int[] haystack, int needle) {
     for (int value : haystack) {
       if (value == needle) {
         return true;
@@ -284,7 +284,7 @@ public class Utilities {
     int used = 0;
 
     for (int i = 0; i < graph.numVertices(); i++) {
-      if (arrayContains(i, vertices)) {
+      if (arrayContains(vertices, i)) {
         continue;
       }
 
