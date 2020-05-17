@@ -21,13 +21,6 @@ the following code snippet for an example of how this would work.
     FuzzySearch.indexOf("A.AC.ATG", "ACT");   // 2 because ACT matches AC.
     FuzzySearch.indexOf("ACT.G.CA", "GGAC")); // 3 because GGAC matches .G.C
 
-Note: one method to solve this is to use regular expressions. The textbook covers regular
-expressions in section 5.4. However, we didn't have time to cover this section in our course. Given
-what we have studied in our course, you should now have enough of an algorithmic foundation to be
-able to complete this problem without the use of regular expressions. If you know how to implement
-the internals of regular expressions, you may use that strategy. Obviously, you may not use regular
-expressions from Java's standard library.
-
 If you choose to solve this problem, you'll find some starter code in the following file(s):
 
 - `java/src/edu/berkeley/cs/app/FuzzySearch.java`
