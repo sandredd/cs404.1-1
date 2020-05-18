@@ -3,9 +3,46 @@ package edu.berkeley.cs.util;
 import edu.berkeley.cs.graph.DirectedGraph;
 import edu.berkeley.cs.graph.Graph;
 import java.util.Random;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Future;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 public class Utilities {
   private static Random random = new Random();
+
+  public static class TimedExecution {
+    private ExecutorService executor =
+        new ThreadPoolExecutor(5, 32, 1000, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<>());
+
+    private static TimedExecution instance;
+
+    private TimedExecution() {}
+
+    public static TimedExecution getInstance() {
+      if (instance == null) {
+        instance = new TimedExecution();
+      }
+
+      return instance;
+    }
+
+    public <T> T callWithTimeout(Callable<T> callable, long timeout, TimeUnit unit)
+        throws TimeoutException, InterruptedException, ExecutionException {
+      Future<T> future = executor.submit(callable);
+
+      try {
+        return future.get(timeout, unit);
+      } catch (InterruptedException | TimeoutException | ExecutionException e) {
+        future.cancel(true);
+        throw e;
+      }
+    }
+  }
 
   public static Integer[] generateRandomArray(int size) {
     Integer[] array = new Integer[size];

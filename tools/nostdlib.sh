@@ -13,6 +13,14 @@ function main() {
         "java.util.NoSuchElementException"
         "java.util.Objects"
         "java.util.Random"
+        "java.util.concurrent.Callable"
+        "java.util.concurrent.ExecutionException"
+        "java.util.concurrent.ExecutorService"
+        "java.util.concurrent.Future"
+        "java.util.concurrent.LinkedBlockingQueue"
+        "java.util.concurrent.ThreadPoolExecutor"
+        "java.util.concurrent.TimeUnit"
+        "java.util.concurrent.TimeoutException"
     )
 
     error_message="The following imports are invalid (you may not use the standard library):"
