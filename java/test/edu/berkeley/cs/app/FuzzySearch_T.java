@@ -85,18 +85,23 @@ public class FuzzySearch_T {
     Assert.assertEquals(3, fuzzySearch.indexOf("ACT.G.CA", "GGAC"));
   }
 
+  private String getLongSequence(int length) {
+    StringBuilder sb = new StringBuilder(length + 1);
+
+    for (int i = 0; i < length; i++) {
+      sb.append('A');
+    }
+
+    sb.append('G');
+    return sb.toString();
+  }
+
   @Test
   public void testPerformance() throws InterruptedException, ExecutionException, TimeoutException {
-    StringBuilder sb = new StringBuilder();
-    for (int i = 0; i < 10000000; i++) {
-      sb.append("ATCG");
-    }
-    sb.append("....");
+    String haystack = getLongSequence(100000000);
+    String needle = getLongSequence((int) (haystack.length() / Math.log(haystack.length())));
 
-    String haystack = sb.toString();
-    String needle = "AAAA";
     int expectedPosition = haystack.length() - needle.length();
-
     Utilities.TimedExecution.getInstance().callWithTimeout(1, TimeUnit.SECONDS, () -> {
       Assert.assertEquals(expectedPosition, fuzzySearch.indexOf(haystack, needle));
       return null;
