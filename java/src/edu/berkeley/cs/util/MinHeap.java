@@ -1,5 +1,6 @@
 package edu.berkeley.cs.util;
 
+import java.lang.reflect.Array;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -9,7 +10,7 @@ public class MinHeap<T extends Comparable<T>> implements Iterable<T> {
   protected T[] array;
 
   public MinHeap() {
-    array = (T[]) new Comparable[initialSize];
+    array = (T[]) Array.newInstance(Comparable.class, initialSize);
   }
 
   public int size() {
@@ -47,7 +48,7 @@ public class MinHeap<T extends Comparable<T>> implements Iterable<T> {
   }
 
   private void resize(int capacity) {
-    T[] temp = (T[]) new Comparable[capacity];
+    T[] temp = (T[]) Array.newInstance(Comparable.class, capacity);
     System.arraycopy(array, 1, temp, 1, size);
     array = temp;
   }
