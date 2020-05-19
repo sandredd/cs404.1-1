@@ -1,8 +1,13 @@
 package edu.berkeley.cs.app;
 
+import edu.berkeley.cs.util.Utilities;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 public class FuzzySearch_T {
   private FuzzySearch fuzzySearch;
@@ -69,5 +74,23 @@ public class FuzzySearch_T {
   public void testFuzzySearch() {
     Assert.assertEquals(2, fuzzySearch.indexOf("A.AC.ATG", "ACT"));
     Assert.assertEquals(3, fuzzySearch.indexOf("ACT.G.CA", "GGAC"));
+  }
+
+  @Test
+  public void testPerformance() throws InterruptedException, ExecutionException, TimeoutException {
+    StringBuilder sb = new StringBuilder();
+    for (int i = 0; i < 10000000; i++) {
+      sb.append("ATCG");
+    }
+    sb.append("....");
+
+    String haystack = sb.toString();
+    String needle = "AAAA";
+    int expectedPosition = haystack.length() - needle.length();
+
+    Utilities.TimedExecution.getInstance().callWithTimeout(1, TimeUnit.SECONDS, () -> {
+      Assert.assertEquals(expectedPosition, fuzzySearch.indexOf(haystack, needle));
+      return null;
+    });
   }
 }
