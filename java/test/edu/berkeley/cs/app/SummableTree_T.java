@@ -1,8 +1,14 @@
 package edu.berkeley.cs.app;
 
+import edu.berkeley.cs.util.Utilities;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.Random;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 public class SummableTree_T {
   private SummableTree tree;
@@ -97,5 +103,55 @@ public class SummableTree_T {
 
       Assert.assertFalse(tree.hasPathSum(i));
     }
+  }
+
+  private void buildTree(SummableTree tree, int[] elements, int low, int high) {
+    if (high < low) {
+      return;
+    }
+
+    int mid = low + (high - low) / 2;
+    int element = elements[mid];
+    tree.put(element, true);
+
+    buildTree(tree, elements, low, mid - 1);
+    buildTree(tree, elements, mid + 1, high);
+  }
+
+  private int randomSum(int[] elements) {
+    Random random = new Random();
+
+    int sum = 0;
+    int low = 0;
+    int high = elements.length - 1;
+
+    while (low <= high) {
+      int mid = low + (high - low) / 2;
+      int element = elements[mid];
+      sum += element;
+
+      if (random.nextBoolean()) {
+        low = mid + 1;
+      }
+      else {
+        high = mid - 1;
+      }
+    }
+
+    return sum;
+  }
+
+  @Test
+  public void testPerformance() throws InterruptedException, ExecutionException, TimeoutException {
+    int[] elements = new int[1000000];
+    for (int i = 0; i < elements.length; i++) {
+      elements[i] = i;
+    }
+
+    buildTree(tree, elements, 0, elements.length - 1);
+    Utilities.TimedExecution.getInstance().callWithTimeout(100, TimeUnit.MILLISECONDS, () -> {
+      Assert.assertTrue(tree.hasPathSum(randomSum(elements)));
+      return null;
+    });
   }
 }

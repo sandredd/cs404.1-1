@@ -90,6 +90,7 @@ java_test(
     test_class = "edu.berkeley.cs.app.SummableTree_T",
     deps = [
         "//java/src/edu/berkeley/cs/app",
+        "//java/test/edu/berkeley/cs/util:utilities",
         "//thirdparty:junit4",
     ],
 )
