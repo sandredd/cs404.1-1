@@ -1,14 +1,28 @@
 package edu.berkeley.cs.app;
 
+import edu.berkeley.cs.util.Utilities;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.charset.CharsetEncoder;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 public class SortChecker_T {
   private char[] englishAlphabet =
       new char[] {
         'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
-        's', 't', 'u', 'v', 'x', 'y', 'z'
+        's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
       };
   private char[] alienAlphabet =
       new char[] {'*', '#', '!', '@', '%', '~', '&', '-', '^', '+', '$', '/'};
@@ -80,8 +94,45 @@ public class SortChecker_T {
   }
 
   @Test
+  public void testAlienDuplicateSorted() {
+    Assert.assertTrue(alien.isSorted(new String[] {"*##", "*##", "*##"}));
+  }
+
+  @Test
   public void testAlienSubsort() {
     Assert.assertTrue(alien.isSorted(new String[] {"*##", "*#@", "*#~", "*@#", "*&$"}));
     Assert.assertFalse(alien.isSorted(new String[] {"*#@", "*##", "*#~", "*@#", "*&$"}));
+  }
+
+  @Test
+  public void testPerformance() throws IOException, InterruptedException, ExecutionException, TimeoutException {
+    // TODO: bring the file into the project itself
+    Path dictionary = Paths.get("/usr/share/dict/words");
+    if (!Files.exists(dictionary)) {
+      System.err.println(String.format("Warning: %s doesn't exist on your system.", dictionary.toAbsolutePath()));
+      System.err.println("Warning: this file usually exists on linux or mac based systems.");
+      System.err.println("Warning: passing test, but it may fail during grading.");
+      return;
+    }
+
+    CharsetEncoder asciiEncoder = StandardCharsets.US_ASCII.newEncoder();
+    String[] words = new String[50000];
+
+    int i = 0;
+    try (BufferedReader reader = new BufferedReader(new FileReader(dictionary.toFile()))) {
+      for (String word = reader.readLine(); word != null && i < words.length; word = reader.readLine()) {
+        if (word.contains("'") || !asciiEncoder.canEncode(word)) {
+          continue;
+        }
+
+        words[i++] = word.toLowerCase();
+      }
+    }
+
+    Arrays.sort(words, String::compareTo);
+    Utilities.TimedExecution.getInstance().callWithTimeout(20, TimeUnit.MILLISECONDS, () -> {
+      Assert.assertTrue(english.isSorted(words));
+      return null;
+    });
   }
 }
