@@ -12,15 +12,21 @@ public class Merge<T extends Comparable<T>> extends Sort<T> {
     sort(input, auxiliary, 0, input.length - 1);
   }
 
-  private void merge(T[] input, T[] auxiliary, int low, int mid, int high) {}
+  private void merge(T[] input, T[] auxiliary, int low, int mid, int high) {
+    // TODO: complete this function
+  }
 
-  private void sort(T[] input, T[] auxiliary, int low, int high) {}
+  private void sort(T[] input, T[] auxiliary, int low, int high) {
+    // TODO: complete this function
+  }
 
   private LinkedList<T> merge(LinkedList<T> left, LinkedList<T> right) {
+    // TODO: complete this function
     return null;
   }
 
   public LinkedList<T> sort(LinkedList<T> input) {
+    // TODO: complete this function
     return null;
   }
 }

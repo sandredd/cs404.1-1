@@ -1,10 +1,10 @@
 package edu.berkeley.cs.sort;
 
-// Inspired by code available in Algorithms 4th Edition, by Robert Sedgewick and Kevin Wayne
 public class Quick<T extends Comparable<T>> extends Sort<T> {
   protected Insertion<T> insertion = new Insertion<>();
 
   protected int getPivotIndex(T[] input, int low, int high) {
+    // TODO: complete this function
     return low;
   }
 

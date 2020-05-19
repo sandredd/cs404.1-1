@@ -6,5 +6,7 @@ public class Insertion<T extends Comparable<T>> extends Sort<T> {
     sort(input, 0, input.length - 1);
   }
 
-  public void sort(T[] input, int low, int high) {}
+  public void sort(T[] input, int low, int high) {
+    // TODO: complete this function
+  }
 }
