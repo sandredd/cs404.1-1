@@ -34,7 +34,6 @@ public class Utilities {
       try {
         return future.get(timeout, unit);
       } catch (InterruptedException | TimeoutException | ExecutionException e) {
-        System.err.println("Error: time limit exceeded");
         future.cancel(true);
         throw e;
       }
