@@ -2,9 +2,14 @@ package edu.berkeley.cs.app;
 
 import edu.berkeley.cs.util.HashSet;
 import edu.berkeley.cs.util.LinkedList;
+import edu.berkeley.cs.util.Utilities;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 public class DuplicateUsernames_T {
   DuplicateUsernames duplicateUsernames;
@@ -113,5 +118,23 @@ public class DuplicateUsernames_T {
     groups.insertFront(f);
 
     Assert.assertEquals(3, duplicateUsernames.uniqueUsers(groups));
+  }
+
+  @Test
+  public void testPerformance() throws InterruptedException, ExecutionException, TimeoutException {
+    String username = "foobar";
+
+    LinkedList<HashSet<String>> groups = new LinkedList<>();
+    for (int i = 0; i < 100000; i++) {
+      HashSet<String> set = new HashSet<>();
+      set.add(Utilities.randomString(10));
+      set.add(username);
+      groups.insertFront(set);
+    }
+
+    Utilities.TimedExecution.getInstance().callWithTimeout(1, TimeUnit.SECONDS, () -> {
+      Assert.assertEquals(1, duplicateUsernames.uniqueUsers(groups));
+      return null;
+    });
   }
 }

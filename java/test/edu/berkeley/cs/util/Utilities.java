@@ -19,29 +19,38 @@ public class Utilities {
     private ExecutorService executor =
         new ThreadPoolExecutor(5, 32, 1000, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<>());
 
-    private static TimedExecution instance;
+    private static TimedExecution instance = new TimedExecution();
 
     private TimedExecution() {}
 
     public static TimedExecution getInstance() {
-      if (instance == null) {
-        instance = new TimedExecution();
-      }
-
       return instance;
     }
 
-    public <T> T callWithTimeout(Callable<T> callable, long timeout, TimeUnit unit)
+    public <T> T callWithTimeout(long timeout, TimeUnit unit, Callable<T> callable)
         throws TimeoutException, InterruptedException, ExecutionException {
       Future<T> future = executor.submit(callable);
 
       try {
         return future.get(timeout, unit);
       } catch (InterruptedException | TimeoutException | ExecutionException e) {
+        System.err.println("Error: time limit exceeded");
         future.cancel(true);
         throw e;
       }
     }
+  }
+
+  public static String randomString(int length) {
+    String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" + "abcdefghijklmnopqrstuvxyz" + "0123456789";
+
+    StringBuilder sb = new StringBuilder(length);
+    for (int i = 0; i < length; i++) {
+      int index = (int)(chars.length() * Math.random());
+      sb.append(chars.charAt(index));
+    }
+
+    return sb.toString();
   }
 
   public static Integer[] generateRandomArray(int size) {
