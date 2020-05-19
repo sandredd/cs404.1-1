@@ -61,6 +61,15 @@ public class FuzzySearch_T {
   }
 
   @Test
+  public void testEndMatch() {
+    Assert.assertEquals(4, fuzzySearch.indexOf("GGTCACAT", "ACAT"));
+    Assert.assertEquals(4, fuzzySearch.indexOf("GGTC.CAT", "ACAT"));
+    Assert.assertEquals(4, fuzzySearch.indexOf("GGTC..AT", "ACAT"));
+    Assert.assertEquals(4, fuzzySearch.indexOf("GGTC...T", "ACAT"));
+    Assert.assertEquals(4, fuzzySearch.indexOf("GGTC....", "ACAT"));
+  }
+
+  @Test
   public void testFirstMatch() {
     Assert.assertEquals(5, fuzzySearch.indexOf("GAGCTACATGGACAT", "ACAT"));
   }
