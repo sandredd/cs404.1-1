@@ -4,13 +4,13 @@ import edu.berkeley.cs.util.Stack;
 
 public class ShortestPath {
   private Edge[] edgeTo;
-  private double[] distTo;
+  private float[] distTo;
 
   public ShortestPath(Graph graph, int s) {
     // TODO: complete this function
   }
 
-  public double distTo(int v) {
+  public float distTo(int v) {
     return distTo[v];
   }
 
