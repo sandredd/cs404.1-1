@@ -170,6 +170,7 @@ public class HashMap_T {
     Assert.assertEquals(capacity, map.table.length);
     map.delete(map.keys().front());
     Assert.assertEquals(capacity / 2, map.table.length);
+    Assert.assertNotEquals(0, map.table.length);
   }
 
   @Test

@@ -55,6 +55,10 @@ public class HashMap<Key, Value> implements Map<Key, Value>, Iterable<HashMap<Ke
   }
 
   private void resize(int capacity) {
+    if (capacity <= 0) {
+      return;
+    }
+
     SplayList<Entry>[] oldTable = table;
 
     table = new SplayList[capacity];
