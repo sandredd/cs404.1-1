@@ -129,7 +129,7 @@ public class SortChecker_T {
     }
 
     Arrays.sort(words, String::compareTo);
-    Utilities.TimedExecution.getInstance().callWithTimeout(20, TimeUnit.MILLISECONDS, () -> {
+    Utilities.TimedExecution.getInstance().callWithTimeout(25, TimeUnit.MILLISECONDS, () -> {
       Assert.assertTrue(english.isSorted(words));
       return null;
     });
