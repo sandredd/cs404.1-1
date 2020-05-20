@@ -19,19 +19,18 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
 public class SortChecker_T {
-  private char[] englishAlphabet =
-      new char[] {
-        'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
-        's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
-      };
-  private char[] alienAlphabet =
-      new char[] {'*', '#', '!', '@', '%', '~', '&', '-', '^', '+', '$', '/'};
+  private char[] englishAlphabet = new char[26];
+  private char[] alienAlphabet = new char[] {'*', '#', '!', '@', '%', '~', '&', '-', '^', '+', '$', '/'};
 
   private SortChecker english;
   private SortChecker alien;
 
   @Before
   public void setup() {
+    for (int i = 0; i < englishAlphabet.length; i++) {
+      englishAlphabet[i] = (char) ('a' + i);
+    }
+
     english = new SortChecker(englishAlphabet);
     alien = new SortChecker(alienAlphabet);
   }
