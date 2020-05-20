@@ -9,7 +9,7 @@ public class DirectedGraph extends Graph {
   }
 
   @Override
-  public void addEdge(int from, int to, double weight) {
+  public void addEdge(int from, int to, float weight) {
     validateVertex(from);
     validateVertex(to);
 

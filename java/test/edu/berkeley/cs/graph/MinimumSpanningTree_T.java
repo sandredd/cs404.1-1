@@ -8,7 +8,7 @@ import org.junit.Test;
 public class MinimumSpanningTree_T {
   private static final double epsilon = 0.0001;
 
-  private void checkEdge(HashSet<Edge> edges, int from, int to, double weight) {
+  private void checkEdge(HashSet<Edge> edges, int from, int to, float weight) {
     Edge a = new Edge(from, to, weight);
     Edge b = a.reverse();
     Assert.assertTrue(from + " -- " + to + " missing", edges.contains(a) || edges.contains(b));

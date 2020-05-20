@@ -5,9 +5,9 @@ import java.util.Objects;
 public class Edge implements Comparable<Edge> {
   private final int from;
   private final int to;
-  private final double weight;
+  private final float weight;
 
-  public Edge(int from, int to, double weight) {
+  public Edge(int from, int to, float weight) {
     if (from < 0 || to < 0) {
       throw new IllegalArgumentException("Vertex names must be nonnegative integers");
     }
@@ -29,7 +29,7 @@ public class Edge implements Comparable<Edge> {
     return to;
   }
 
-  public double weight() {
+  public float weight() {
     return weight;
   }
 

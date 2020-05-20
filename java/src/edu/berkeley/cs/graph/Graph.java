@@ -37,7 +37,7 @@ public class Graph {
     addEdge(from, to, 0);
   }
 
-  public void addEdge(int from, int to, double weight) {
+  public void addEdge(int from, int to, float weight) {
     validateVertex(from);
     validateVertex(to);
 
