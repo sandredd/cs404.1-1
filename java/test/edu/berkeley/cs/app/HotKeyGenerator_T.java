@@ -2,9 +2,15 @@ package edu.berkeley.cs.app;
 
 import edu.berkeley.cs.util.HashMap;
 import edu.berkeley.cs.util.LinkedList;
+import edu.berkeley.cs.util.Utilities;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.Random;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 public class HotKeyGenerator_T {
   private HotKeyGenerator hotKeyGenerator;
@@ -76,5 +82,23 @@ public class HotKeyGenerator_T {
     int size = actions.size();
     HashMap<Character, String> result = hotKeyGenerator.generateHotKeys(actions);
     Assert.assertEquals(size, result.size());
+  }
+
+  @Test
+  public void testPerformance() throws InterruptedException, ExecutionException, TimeoutException {
+    StringBuilder sb = new StringBuilder();
+    int numActions = 12;
+
+    LinkedList<String> actions = new LinkedList<>();
+    for (int i = 0; i < numActions; i++) {
+      sb.append((char) ('a' + i));
+      actions.insertFront(sb.toString());
+    }
+
+    Utilities.TimedExecution.getInstance().callWithTimeout(1, TimeUnit.SECONDS, () -> {
+      HashMap<Character, String> result = hotKeyGenerator.generateHotKeys(actions);
+      Assert.assertEquals(numActions, result.size());
+      return null;
+    });
   }
 }
