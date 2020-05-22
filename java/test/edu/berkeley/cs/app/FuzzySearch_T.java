@@ -99,7 +99,7 @@ public class FuzzySearch_T {
   @Test
   public void testPerformance() throws InterruptedException, ExecutionException, TimeoutException {
     String haystack = getLongSequence(100000000);
-    String needle = getLongSequence((int) (haystack.length() / Math.log(haystack.length())));
+    String needle = getLongSequence(haystack.length() / 2);
 
     int expectedPosition = haystack.length() - needle.length();
     Utilities.TimedExecution.getInstance().callWithTimeout(1, TimeUnit.SECONDS, () -> {
