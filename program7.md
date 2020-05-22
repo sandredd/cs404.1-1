@@ -15,7 +15,7 @@ sort integers.
 Another way to implement radix sort is to use an R-way trie. Like binary search trees, tries have
 various properties about the order of data within them that we can exploit to extract a sorted set
 of elements. Implement an R-way radix trie that can be used to sort a set of strings
-lexicographically. Specifically, implement the `sorted(...)` function within the `RadixTrieMap`
+lexicographically. Then, implement the `sorted(...)` function within the `RadixTrieMap`
 class. Assume that all input strings are lowercase.
 
 Note: real radix tries also employ [path
