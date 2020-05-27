@@ -38,3 +38,12 @@ Analysis
 ### Space Complexity Analysis
 
 ### Future Work: How Would You Improve Your Solution?
+
+Grading
+-------
+### Scores
+- Percentage of test cases passing:
+- Selection of efficient data structure or algorithm:
+- Solution description:
+
+### Comments
