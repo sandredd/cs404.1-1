@@ -2,7 +2,7 @@ Alien Sort Checking
 -------------------
 The English language has a very clear lexicographic order: A comes before B, which comes before C,
 which comes before D, and so on. Therefore, when we look at two words, we can immediately tell
-whether they are in lexicographic sorted ordered: simply check if they are in dictionary order? For
+whether they are in lexicographic sorted ordered: simply check if they are in dictionary order. For
 example, given the words `[apple, application, apply, dinosaur, door]`, we can confirm that
 the words are in sorted order.
 
