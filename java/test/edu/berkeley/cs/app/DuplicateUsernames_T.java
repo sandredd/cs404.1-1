@@ -65,19 +65,6 @@ public class DuplicateUsernames_T {
   }
 
   @Test
-  public void testEmptyUsernames() {
-    LinkedList<HashSet<String>> groups = new LinkedList<>();
-
-    HashSet<String> a = new HashSet<>();
-    a.add("");
-
-    HashSet<String> b = new HashSet<>();
-    b.add("");
-
-    Assert.assertEquals(0, duplicateUsernames.uniqueUsers(groups));
-  }
-
-  @Test
   public void testOverlap() {
     LinkedList<HashSet<String>> groups = new LinkedList<>();
 
