@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.charset.CharsetEncoder;
@@ -105,14 +106,7 @@ public class SortChecker_T {
 
   @Test
   public void testPerformance() throws IOException, InterruptedException, ExecutionException, TimeoutException {
-    // TODO: bring the file into the project itself
-    Path dictionary = Paths.get("/usr/share/dict/words");
-    if (!Files.exists(dictionary)) {
-      System.err.println(String.format("Warning: %s doesn't exist on your system.", dictionary.toAbsolutePath()));
-      System.err.println("Warning: this file usually exists on linux or mac based systems.");
-      System.err.println("Warning: passing test, but it may fail during grading.");
-      return;
-    }
+    Path dictionary = Paths.get(System.getProperty("user.dir"), "resources", "words");
 
     CharsetEncoder asciiEncoder = StandardCharsets.US_ASCII.newEncoder();
     String[] words = new String[50000];

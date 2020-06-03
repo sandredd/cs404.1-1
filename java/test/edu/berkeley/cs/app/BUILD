@@ -63,6 +63,9 @@ java_test(
     name = "sort_checker",
     size = "small",
     srcs = ["SortChecker_T.java"],
+    data = [
+        "//resources:dictionary",
+    ],
     test_class = "edu.berkeley.cs.app.SortChecker_T",
     deps = [
         "//java/src/edu/berkeley/cs/app",
