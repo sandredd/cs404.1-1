@@ -6,7 +6,7 @@ function main() {
     git remote remove upstream
     git remote add upstream git@github.com:fsareshwala/cs404.1.git
     git fetch upstream
-    git merge --no-edit upstream/master
+    git merge --no-edit --ff upstream/master
 }
 
 main
