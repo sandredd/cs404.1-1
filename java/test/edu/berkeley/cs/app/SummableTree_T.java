@@ -123,7 +123,7 @@ public class SummableTree_T {
 
     int sum = 0;
     int low = 0;
-    int high = elements.length - 1;
+    int high = elements.length;
 
     while (low <= high) {
       int mid = low + (high - low) / 2;
