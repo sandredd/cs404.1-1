@@ -143,7 +143,7 @@ public class SummableTree_T {
 
   @Test
   public void testPerformance() throws InterruptedException, ExecutionException, TimeoutException {
-    int[] elements = new int[1000000];
+    int[] elements = new int[(int) Math.pow(2, 20) - 1];
     for (int i = 0; i < elements.length; i++) {
       elements[i] = i;
     }
