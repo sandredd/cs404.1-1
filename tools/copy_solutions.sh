@@ -49,25 +49,25 @@ function main() {
     fi
 
     files=()
-    if [[ $program == 1 ]]; then
+    if [[ $program == "program1" ]]; then
         files+=("java/src/edu/berkeley/cs/app/Calculator.java")
         files+=("java/src/edu/berkeley/cs/util/LinkedList.java")
         files+=("java/src/edu/berkeley/cs/util/Queue.java")
         files+=("java/src/edu/berkeley/cs/util/SplayList.java")
         files+=("java/src/edu/berkeley/cs/util/Stack.java")
-    elif [[ $program == 2 ]]; then
+    elif [[ $program == "program2" ]]; then
         files+=("java/src/edu/berkeley/cs/sort/Insertion.java")
         files+=("java/src/edu/berkeley/cs/sort/Merge.java")
         files+=("java/src/edu/berkeley/cs/sort/Quick.java")
         files+=("java/src/edu/berkeley/cs/sort/Selection.java")
         files+=("java/src/edu/berkeley/cs/sort/Shell.java")
-    elif [[ $program == 3 ]]; then
+    elif [[ $program == "program3" ]]; then
         files+=("java/src/edu/berkeley/cs/app/scheduling/FiFoScheduler.java")
         files+=("java/src/edu/berkeley/cs/app/scheduling/RoundRobinScheduler.java")
         files+=("java/src/edu/berkeley/cs/app/scheduling/ShortestJobFirstScheduler.java")
         files+=("java/src/edu/berkeley/cs/util/MinHeap.java")
         files+=("java/src/edu/berkeley/cs/util/TreeMap.java")
-    elif [[ $program == 4 ]]; then
+    elif [[ $program == "program4" ]]; then
         files+=("java/src/edu/berkeley/cs/app/SpellChecker.java")
         files+=("java/src/edu/berkeley/cs/graph/BreadthFirstSearch.java")
         files+=("java/src/edu/berkeley/cs/graph/DepthFirstOrder.java")
@@ -75,17 +75,17 @@ function main() {
         files+=("java/src/edu/berkeley/cs/graph/Graph.java")
         files+=("java/src/edu/berkeley/cs/util/HashMap.java")
         files+=("java/src/edu/berkeley/cs/util/HashSet.java")
-    elif [[ $program == 5 ]]; then
+    elif [[ $program == "program5" ]]; then
         files+=("java/src/edu/berkeley/cs/graph/Cycle.java")
         files+=("java/src/edu/berkeley/cs/graph/DirectedGraph.java")
         files+=("java/src/edu/berkeley/cs/graph/StronglyConnectedComponents.java")
         files+=("java/src/edu/berkeley/cs/graph/TopologicalSort.java")
-    elif [[ $program == 6 ]]; then
+    elif [[ $program == "program6" ]]; then
         files+=("java/src/edu/berkeley/cs/graph/MinimumSpanningTree.java")
         files+=("java/src/edu/berkeley/cs/graph/MultipleSourceShortestPath.java")
         files+=("java/src/edu/berkeley/cs/graph/ShortestPath.java")
         files+=("java/src/edu/berkeley/cs/util/UnionFind.java")
-    elif [[ $program == 7 ]]; then
+    elif [[ $program == "program7" ]]; then
         files+=("java/src/edu/berkeley/cs/app/PlagiarismDetector.java")
         files+=("java/src/edu/berkeley/cs/util/RadixTrieMap.java")
     elif [[ $program == "final" ]]; then
@@ -99,7 +99,7 @@ function main() {
     fi
 
     for file in "${files[@]}"; do
-        directory=solutions/program$program
+        directory=solutions/$program
         mkdir -p $directory
         cp $repo_path/$file $directory
     done
