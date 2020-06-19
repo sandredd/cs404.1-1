@@ -46,10 +46,6 @@ public class TreeMap<Key extends Comparable<Key>, Value> implements Map<Key, Val
 
   @Override
   public Value get(Key key) {
-    return get(root, key);
-  }
-
-  private Value get(Node node, Key key) {
     // TODO: complete this function
     return null;
   }
@@ -65,13 +61,9 @@ public class TreeMap<Key extends Comparable<Key>, Value> implements Map<Key, Val
       return;
     }
 
-    root = put(root, key, value);
     size++;
-  }
 
-  private Node put(Node node, Key key, Value value) {
     // TODO: complete this function
-    return null;
   }
 
   public void deleteMin() {
