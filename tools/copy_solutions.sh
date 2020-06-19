@@ -62,6 +62,7 @@ function main() {
         files+=("java/src/edu/berkeley/cs/sort/Selection.java")
         files+=("java/src/edu/berkeley/cs/sort/Shell.java")
     elif [[ $program == "program3" ]]; then
+        files+=("java/src/edu/berkeley/cs/app/SummableTree.java")
         files+=("java/src/edu/berkeley/cs/app/scheduling/FiFoScheduler.java")
         files+=("java/src/edu/berkeley/cs/app/scheduling/RoundRobinScheduler.java")
         files+=("java/src/edu/berkeley/cs/app/scheduling/ShortestJobFirstScheduler.java")
@@ -93,7 +94,6 @@ function main() {
         files+=("java/src/edu/berkeley/cs/app/FuzzySearch.java")
         files+=("java/src/edu/berkeley/cs/app/HotKeyGenerator.java")
         files+=("java/src/edu/berkeley/cs/app/SortChecker.java")
-        files+=("java/src/edu/berkeley/cs/app/SummableTree.java")
     else
         log_error "invalid program number"
     fi
