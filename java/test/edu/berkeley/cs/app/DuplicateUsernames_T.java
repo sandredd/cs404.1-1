@@ -3,13 +3,12 @@ package edu.berkeley.cs.app;
 import edu.berkeley.cs.util.HashSet;
 import edu.berkeley.cs.util.LinkedList;
 import edu.berkeley.cs.util.Utilities;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 
 public class DuplicateUsernames_T {
   DuplicateUsernames duplicateUsernames;
@@ -119,9 +118,13 @@ public class DuplicateUsernames_T {
       groups.insertFront(set);
     }
 
-    Utilities.TimedExecution.getInstance().callWithTimeout(1, TimeUnit.SECONDS, () -> {
-      Assert.assertEquals(1, duplicateUsernames.uniqueUsers(groups));
-      return null;
-    });
+    Utilities.TimedExecution.getInstance()
+        .callWithTimeout(
+            1,
+            TimeUnit.SECONDS,
+            () -> {
+              Assert.assertEquals(1, duplicateUsernames.uniqueUsers(groups));
+              return null;
+            });
   }
 }

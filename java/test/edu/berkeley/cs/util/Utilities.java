@@ -45,7 +45,7 @@ public class Utilities {
 
     StringBuilder sb = new StringBuilder(length);
     for (int i = 0; i < length; i++) {
-      int index = (int)(chars.length() * Math.random());
+      int index = (int) (chars.length() * Math.random());
       sb.append(chars.charAt(index));
     }
 

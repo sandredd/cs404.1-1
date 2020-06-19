@@ -3,14 +3,12 @@ package edu.berkeley.cs.app;
 import edu.berkeley.cs.util.HashMap;
 import edu.berkeley.cs.util.LinkedList;
 import edu.berkeley.cs.util.Utilities;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-
-import java.util.Random;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 
 public class HotKeyGenerator_T {
   private HotKeyGenerator hotKeyGenerator;
@@ -95,10 +93,14 @@ public class HotKeyGenerator_T {
       actions.insertFront(sb.toString());
     }
 
-    Utilities.TimedExecution.getInstance().callWithTimeout(1, TimeUnit.SECONDS, () -> {
-      HashMap<Character, String> result = hotKeyGenerator.generateHotKeys(actions);
-      Assert.assertEquals(numActions, result.size());
-      return null;
-    });
+    Utilities.TimedExecution.getInstance()
+        .callWithTimeout(
+            1,
+            TimeUnit.SECONDS,
+            () -> {
+              HashMap<Character, String> result = hotKeyGenerator.generateHotKeys(actions);
+              Assert.assertEquals(numActions, result.size());
+              return null;
+            });
   }
 }

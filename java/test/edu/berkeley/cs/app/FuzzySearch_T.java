@@ -1,13 +1,12 @@
 package edu.berkeley.cs.app;
 
 import edu.berkeley.cs.util.Utilities;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 
 public class FuzzySearch_T {
   private FuzzySearch fuzzySearch;
@@ -102,9 +101,13 @@ public class FuzzySearch_T {
     String needle = getLongSequence(haystack.length() / 2);
 
     int expectedPosition = haystack.length() - needle.length();
-    Utilities.TimedExecution.getInstance().callWithTimeout(1, TimeUnit.SECONDS, () -> {
-      Assert.assertEquals(expectedPosition, fuzzySearch.indexOf(haystack, needle));
-      return null;
-    });
+    Utilities.TimedExecution.getInstance()
+        .callWithTimeout(
+            1,
+            TimeUnit.SECONDS,
+            () -> {
+              Assert.assertEquals(expectedPosition, fuzzySearch.indexOf(haystack, needle));
+              return null;
+            });
   }
 }

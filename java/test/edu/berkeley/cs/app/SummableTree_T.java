@@ -1,14 +1,13 @@
 package edu.berkeley.cs.app;
 
 import edu.berkeley.cs.util.Utilities;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-
 import java.util.Random;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 
 public class SummableTree_T {
   private SummableTree tree;
@@ -132,8 +131,7 @@ public class SummableTree_T {
 
       if (random.nextBoolean()) {
         low = mid + 1;
-      }
-      else {
+      } else {
         high = mid - 1;
       }
     }
@@ -149,9 +147,13 @@ public class SummableTree_T {
     }
 
     buildTree(tree, elements, 0, elements.length - 1);
-    Utilities.TimedExecution.getInstance().callWithTimeout(100, TimeUnit.MILLISECONDS, () -> {
-      Assert.assertTrue(tree.hasPathSum(randomSum(elements)));
-      return null;
-    });
+    Utilities.TimedExecution.getInstance()
+        .callWithTimeout(
+            100,
+            TimeUnit.MILLISECONDS,
+            () -> {
+              Assert.assertTrue(tree.hasPathSum(randomSum(elements)));
+              return null;
+            });
   }
 }
