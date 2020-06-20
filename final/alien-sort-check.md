@@ -35,11 +35,11 @@ Note: you may not use the Java standard library sorting methods to solve this pr
 
 If you choose to solve this problem, you'll find some starter code in the following file(s):
 
-- `java/src/edu/berkeley/cs/app/SortChecker.java`
+- `java/src/edu/berkeley/cs/app/finalproject/SortChecker.java`
 
 The following command will be used to test and grade your solution:
 
-    $ bazel test java/test/edu/berkeley/cs/app:sort_checker
+    $ bazel test java/test/edu/berkeley/cs/app/finalproject:sort_checker
 
 Analysis
 --------

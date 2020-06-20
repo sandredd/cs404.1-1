@@ -23,11 +23,11 @@ the following code snippet for an example of how this would work.
 
 If you choose to solve this problem, you'll find some starter code in the following file(s):
 
-- `java/src/edu/berkeley/cs/app/FuzzySearch.java`
+- `java/src/edu/berkeley/cs/app/finalproject/FuzzySearch.java`
 
 The following command will be used to test and grade your solution:
 
-    $ bazel test java/test/edu/berkeley/cs/app:fuzzy_search
+    $ bazel test java/test/edu/berkeley/cs/app/finalproject:fuzzy_search
 
 Analysis
 --------

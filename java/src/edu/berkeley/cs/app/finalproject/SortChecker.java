@@ -1,4 +1,4 @@
-package edu.berkeley.cs.app;
+package edu.berkeley.cs.app.finalproject;
 
 public class SortChecker {
   public SortChecker(char[] order) {

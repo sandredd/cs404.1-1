@@ -36,11 +36,11 @@ exception.
 
 If you choose to solve this problem, you'll find some starter code in the following file(s):
 
-- `java/src/edu/berkeley/cs/app/HotkeyGenerator.java`
+- `java/src/edu/berkeley/cs/app/finalproject/HotkeyGenerator.java`
 
 The following command will be used to test and grade your solution:
 
-    $ bazel test java/test/edu/berkeley/cs/app:hotkey
+    $ bazel test java/test/edu/berkeley/cs/app/finalproject:hotkey
 
 Analysis
 --------

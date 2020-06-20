@@ -1,4 +1,4 @@
-package edu.berkeley.cs.app;
+package edu.berkeley.cs.app.finalproject;
 
 import edu.berkeley.cs.util.Utilities;
 import java.util.concurrent.ExecutionException;

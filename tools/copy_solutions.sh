@@ -90,10 +90,10 @@ function main() {
         files+=("java/src/edu/berkeley/cs/app/PlagiarismDetector.java")
         files+=("java/src/edu/berkeley/cs/util/RadixTrieMap.java")
     elif [[ $program == "final" ]]; then
-        files+=("java/src/edu/berkeley/cs/app/DuplicateUsernames.java")
-        files+=("java/src/edu/berkeley/cs/app/FuzzySearch.java")
-        files+=("java/src/edu/berkeley/cs/app/HotKeyGenerator.java")
-        files+=("java/src/edu/berkeley/cs/app/SortChecker.java")
+        files+=("java/src/edu/berkeley/cs/app/finalproject/DuplicateUsernames.java")
+        files+=("java/src/edu/berkeley/cs/app/finalproject/FuzzySearch.java")
+        files+=("java/src/edu/berkeley/cs/app/finalproject/HotKeyGenerator.java")
+        files+=("java/src/edu/berkeley/cs/app/finalproject/SortChecker.java")
     else
         log_error "invalid program number"
     fi

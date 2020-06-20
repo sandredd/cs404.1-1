@@ -1,4 +1,4 @@
-package edu.berkeley.cs.app;
+package edu.berkeley.cs.app.finalproject;
 
 import edu.berkeley.cs.util.HashMap;
 import edu.berkeley.cs.util.LinkedList;

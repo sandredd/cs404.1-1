@@ -44,11 +44,11 @@ determine the actual number of registered users.
 
 If you choose to solve this problem, you'll find some starter code in the following file(s):
 
-- `java/src/edu/berkeley/cs/app/DuplicateUsernames.java`
+- `java/src/edu/berkeley/cs/app/finalproject/DuplicateUsernames.java`
 
 The following command will be used to test and grade your solution:
 
-    $ bazel test java/test/edu/berkeley/cs/app:duplicate_usernames
+    $ bazel test java/test/edu/berkeley/cs/app/finalproject:duplicate_usernames
 
 Analysis
 --------
