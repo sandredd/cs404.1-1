@@ -45,3 +45,14 @@ java_test(
         "//thirdparty:junit4",
     ],
 )
+
+java_test(
+    name = "warmup",
+    size = "small",
+    srcs = ["Warmup_T.java"],
+    test_class = "edu.berkeley.cs.app.Warmup_T",
+    deps = [
+        "//java/src/edu/berkeley/cs/app",
+        "//thirdparty:junit4",
+    ],
+)
