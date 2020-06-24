@@ -3,6 +3,7 @@ package edu.berkeley.cs.sort;
 public class Quick<T extends Comparable<T>> extends Sort<T> {
   protected Insertion<T> insertion = new Insertion<>();
 
+  /** Get the index of the pivot element given a range (low, high) */
   protected int getPivotIndex(T[] input, int low, int high) {
     // TODO: complete this function
     return low;
@@ -42,6 +43,7 @@ public class Quick<T extends Comparable<T>> extends Sort<T> {
     sort(input, 0, input.length - 1);
   }
 
+  /** Sort the given range (low, high) of the input array using quicksort */
   private void sort(T[] input, int low, int high) {
     if (high <= low) {
       return;

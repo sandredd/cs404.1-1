@@ -1,30 +1,20 @@
 package edu.berkeley.cs.sort;
 
 import edu.berkeley.cs.util.LinkedList;
-import java.util.Arrays;
 
 public class Merge<T extends Comparable<T>> extends Sort<T> {
   protected Insertion<T> insertion = new Insertion<>();
 
+  /**
+   * Sort the given range (low, high) of the input array using mergesort. Use the insertion member
+   * variable when breaking off to insertion sort in order to make the tests happy.
+   */
   @Override
   public void sort(T[] input) {
-    T[] auxiliary = Arrays.copyOf(input, input.length);
-    sort(input, auxiliary, 0, input.length - 1);
-  }
-
-  private void merge(T[] input, T[] auxiliary, int low, int mid, int high) {
     // TODO: complete this function
   }
 
-  private void sort(T[] input, T[] auxiliary, int low, int high) {
-    // TODO: complete this function
-  }
-
-  private LinkedList<T> merge(LinkedList<T> left, LinkedList<T> right) {
-    // TODO: complete this function
-    return null;
-  }
-
+  /** Sort the given linked list using mergesort */
   public LinkedList<T> sort(LinkedList<T> input) {
     // TODO: complete this function
     return null;
