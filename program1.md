@@ -60,6 +60,9 @@ The rules of this style of compression are:
 - Letters that appear only a single time are emitted as they are
   - `c` remains `c` in the output instead of becoming `c1`
 
+In case you are curious, we will learn more sophisticated methods of data compression later on in
+the course.
+
 The file(s) you will need for this exercise are:
 
 - `java/src/edu/berkeley/cs/app/Warmup.java`
