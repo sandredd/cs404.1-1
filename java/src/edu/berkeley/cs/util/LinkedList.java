@@ -3,7 +3,7 @@ package edu.berkeley.cs.util;
 import java.util.Iterator;
 
 public class LinkedList<T> implements Iterable<T> {
-  static class ListNode<T> {
+  protected class ListNode<T> {
     ListNode<T> prev;
     ListNode<T> next;
     T value;
@@ -16,25 +16,6 @@ public class LinkedList<T> implements Iterable<T> {
   protected ListNode<T> head;
   protected ListNode<T> tail;
   private int size = 0;
-
-  @Override
-  public Iterator<T> iterator() {
-    return new Iterator<T>() {
-      ListNode<T> current = head;
-
-      @Override
-      public boolean hasNext() {
-        return current != null;
-      }
-
-      @Override
-      public T next() {
-        T value = current.value;
-        current = current.next;
-        return value;
-      }
-    };
-  }
 
   public void insertFront(T value) {
     // TODO: complete this function
@@ -82,6 +63,25 @@ public class LinkedList<T> implements Iterable<T> {
   public boolean isEmpty() {
     // TODO: complete this function
     return false;
+  }
+
+  @Override
+  public Iterator<T> iterator() {
+    return new Iterator<T>() {
+      ListNode<T> current = head;
+
+      @Override
+      public boolean hasNext() {
+        return current != null;
+      }
+
+      @Override
+      public T next() {
+        T value = current.value;
+        current = current.next;
+        return value;
+      }
+    };
   }
 
   @Override
