@@ -14,6 +14,11 @@ public class Calculator {
     private char operator;
     private int precedence;
 
+    /**
+     * Create a new token based on string input. This is the constructor used when tokenizing the
+     * input elements. The constructor figures out what type of token we are dealing with (e.g.
+     * operarator or a number).
+     */
     Token(String value) {
       switch (value) {
         case "+":
@@ -43,6 +48,7 @@ public class Calculator {
       }
     }
 
+    /** Create a token that is known to be a number. This is used only by the operate method. */
     private Token(double x) {
       type = Type.NUMBER;
       value = x;
@@ -60,6 +66,11 @@ public class Calculator {
       return precedence;
     }
 
+    /**
+     * Run the current token's operation on two known numbers and return the result. This method is
+     * really only useful for a token that is known to be an operator (e.g. when poppped from the
+     * operator stack).
+     */
     public Token operate(double a, double b) {
       double result = 0;
 

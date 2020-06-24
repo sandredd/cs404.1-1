@@ -13,22 +13,27 @@ public class Stack<T> implements Iterable<T> {
     this.list = list;
   }
 
+  /** @return the value of the top element in the container */
   public T peek() {
     return list.front();
   }
 
+  /** @param value the value to be added onto the top of the container */
   public void push(T value) {
     list.insertFront(value);
   }
 
+  /** @return the value of the top element in the container (removes the element as well) */
   public T pop() {
     return list.removeFront();
   }
 
+  /** @return the number of elements in the container */
   public int size() {
     return list.size();
   }
 
+  /** @return true if this container contains no elements */
   public boolean isEmpty() {
     return list.isEmpty();
   }

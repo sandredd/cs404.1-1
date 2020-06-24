@@ -13,22 +13,27 @@ public class Queue<T> implements Iterable<T> {
     this.list = list;
   }
 
+  /** @return the value of the element at the front of the container */
   public T peek() {
     return list.front();
   }
 
+  /** @param value the value to be added to the end of the container */
   public void enqueue(T value) {
     list.insertEnd(value);
   }
 
+  /** @return the value at the front of the container (removes the element as well) */
   public T dequeue() {
     return list.removeFront();
   }
 
+  /** @return the number of elements in the container */
   public int size() {
     return list.size();
   }
 
+  /** @return true if this container contains no elements */
   public boolean isEmpty() {
     return list.isEmpty();
   }
