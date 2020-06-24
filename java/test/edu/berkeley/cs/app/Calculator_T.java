@@ -40,21 +40,4 @@ public class Calculator_T {
   public void testMissingOperator() {
     Calculator.evaluate("1 2");
   }
-
-  @Test
-  public void testParenthesis() {
-    Assert.assertEquals(-4, Calculator.evaluate("( 2 - 3 ) * 4"), epsilon);
-    Assert.assertEquals(-4, Calculator.evaluate("( ( 2 - 3 ) ) * 4"), epsilon);
-    Assert.assertEquals(4, Calculator.evaluate("2 * ( 3 - 1 )"), epsilon);
-  }
-
-  @Test(expected = RuntimeException.class)
-  public void testMismatchedParenthesisLeft() {
-    Calculator.evaluate("( ( 3 - 2 ) * 4");
-  }
-
-  @Test(expected = RuntimeException.class)
-  public void testMismatchedParenthesisRight() {
-    Calculator.evaluate("( 3 - 2 ) * 4)");
-  }
 }
