@@ -10,6 +10,10 @@ public class BreadthFirstSearch {
   private final int[] edgeTo;
   private final int[] distTo;
 
+  /**
+   * @param graph the graph to search through
+   * @param source the source vertex where the search will begin
+   */
   public BreadthFirstSearch(Graph graph, int s) {
     this.graph = graph;
     this.source = s;
@@ -21,20 +25,32 @@ public class BreadthFirstSearch {
     bfs(s);
   }
 
+  /**
+   * @return the source vertex where the search began
+   */
   public int source() {
     return source;
   }
 
+  /**
+   * @return true if the source vertex has a path to vertex v
+   */
   public boolean hasPathTo(int v) {
     graph.validateVertex(v);
     return marked[v];
   }
 
+  /**
+   * @return the distance from the source vertex to vertex v
+   */
   public int distTo(int v) {
     graph.validateVertex(v);
     return distTo[v];
   }
 
+  /**
+   * @return the path from the source vertex to vertex v
+   */
   public Iterable<Integer> pathTo(int v) {
     graph.validateVertex(v);
 
@@ -52,6 +68,12 @@ public class BreadthFirstSearch {
     return path;
   }
 
+  /**
+   * Execute a breadth first search. This method is normally implemented recursively but you are
+   * free to implement it however you wish.
+   *
+   * @param v the vertex to execute the search on
+   */
   private void bfs(int s) {
     // TODO: complete this function
   }

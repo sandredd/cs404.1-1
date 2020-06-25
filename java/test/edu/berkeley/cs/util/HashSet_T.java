@@ -75,7 +75,7 @@ public class HashSet_T {
 
     int index = random.nextInt(keys.length);
     int key = keys[index];
-    set.remove(key);
+    set.delete(key);
 
     Assert.assertFalse(set.contains(key));
   }
