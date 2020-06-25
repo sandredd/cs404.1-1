@@ -11,6 +11,13 @@ public class FiFoScheduler implements Scheduler {
     }
   }
 
+  /**
+   * Determine the time units required to run the first in, first out scheduling algorithm.  In this
+   * algorithm, jobs are given an unlimited amount of time to process (e.g. use Integer.MAX_VALUE).
+   *
+   * Remember to add the time a given job took to those jobs still waiting in the queue in order to
+   * simulate them waiting for processor time.
+   */
   @Override
   public int simulate() {
     // TODO: complete this function

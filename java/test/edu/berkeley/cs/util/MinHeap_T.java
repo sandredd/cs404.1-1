@@ -21,11 +21,11 @@ public class MinHeap_T {
     Assert.assertTrue(heap.isEmpty());
     Assert.assertEquals(0, heap.size());
 
-    for (int i = 0; i < heap.initialSize; i++) {
+    for (int i = 0; i < heap.initialCapacity; i++) {
       heap.insert(i);
     }
 
-    Assert.assertEquals(heap.initialSize, heap.size());
+    Assert.assertEquals(heap.initialCapacity, heap.size());
     Assert.assertFalse(heap.isEmpty());
   }
 
@@ -61,9 +61,9 @@ public class MinHeap_T {
   @Test
   public void testIterator() {
     Random random = new Random();
-    int[] expected = new int[heap.initialSize];
+    int[] expected = new int[heap.initialCapacity];
 
-    for (int i = 0; i < heap.initialSize; i++) {
+    for (int i = 0; i < heap.initialCapacity; i++) {
       int r = random.nextInt();
       heap.insert(r);
       expected[i] = r;
@@ -72,7 +72,7 @@ public class MinHeap_T {
     Arrays.sort(expected);
 
     Iterator<Integer> itr = heap.iterator();
-    for (int i = 0; i < heap.initialSize; i++) {
+    for (int i = 0; i < heap.initialCapacity; i++) {
       int r = itr.next();
       Assert.assertTrue(Arrays.binarySearch(expected, r) >= 0);
     }
@@ -83,20 +83,20 @@ public class MinHeap_T {
   @Test
   public void testResize() {
     Random random = new Random();
-    for (int i = 0; i < heap.initialSize - 1; i++) {
+    for (int i = 0; i < heap.capacity(); i++) {
       heap.insert(random.nextInt());
     }
 
-    Assert.assertEquals(heap.initialSize, heap.capacity());
+    Assert.assertEquals(heap.initialCapacity, heap.capacity());
     heap.insert(random.nextInt());
-    Assert.assertEquals(2 * heap.initialSize, heap.capacity());
+    Assert.assertEquals(2 * heap.initialCapacity, heap.capacity());
 
-    for (int i = 0; i < heap.initialSize / 2; i++) {
+    for (int i = 0; i < heap.initialCapacity / 2; i++) {
       heap.removeMinimum();
     }
 
-    Assert.assertEquals(2 * heap.initialSize, heap.capacity());
+    Assert.assertEquals(2 * heap.initialCapacity, heap.capacity());
     heap.removeMinimum();
-    Assert.assertEquals(heap.initialSize, heap.capacity());
+    Assert.assertEquals(heap.initialCapacity, heap.capacity());
   }
 }

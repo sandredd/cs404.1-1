@@ -9,6 +9,7 @@ implementation by implementing the following functions:
 
 - `sink(...)`
 - `swim(...)`
+- `insert(...)`
 - `removeMinimum(...)`
 
 Note that this binary heap implementation uses a 1-based array indexing system similar to the type
