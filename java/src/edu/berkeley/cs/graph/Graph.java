@@ -47,15 +47,15 @@ public class Graph {
   }
 
   /**
-   * Connect two vertices in the graph with an edge that has a zero weight. This function is
-   * primarily used in non-edge-weighted graphs.
+   * Connect two vertices (bidirectional) in the graph with an edge that has a zero weight. This
+   * function is primarily used in non-edge-weighted graphs.
    */
   public void addEdge(int from, int to) {
     addEdge(from, to, 0);
   }
 
   /**
-   * Connect two vertices in the graph with an edge that has a given weight
+   * Connect two vertices (bidirectional) in the graph with an edge that has a given weight
    */
   public void addEdge(int from, int to, float weight) {
     validateVertex(from);
