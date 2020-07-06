@@ -83,6 +83,8 @@ that by this stage of your software engineering career, you are familiar with yo
 Having said that, I offer you the following suggestions:
 
 - [IntelliJ IDEA](https://www.jetbrains.com/idea/download)
+  - **NOTE**: use the latest version that starts with `2019`. Avoid version numbers starting with
+    `2020`. The Bazel plugin doesn't work with some of the latter versions of IntelliJ.
   - **NOTE**: the Bazel plugin for IntelliJ IDEA is known not to work very well with Windows and
     Java projects
   - Once installed, open IntelliJ IDEA and open the preferences pane
