@@ -4,7 +4,7 @@ Normally, repositories house code that all developers use as a base to build the
 When other developers make changes, all developers pull them in and continue their work on top.
 In our case, however, each student will have a separate fork of this repository in order to complete
 their assignments. Furthermore, each student must keep their fork private so as to prevent any
-possible plagiarism. Unfortunately, GitHub does not allow private forks of public repositories.
+possible plagiarism. Unfortunately, GitHub doesn't allow private forks of public repositories.
 
 For this reason, we won't be using the standard GitHub workflow here. Instead, we have to jump
 through some hoops in order to support our specific use case, while also using GitHub's repository
@@ -62,6 +62,9 @@ Use the following instructions to properly set up your environment and your repo
   - Add the `fsareshwala` user as a collaborator to your repository
 - Bootstrap your repository
   - Execute the following command in a new terminal
+  - **Warning**: some of the tools on Windows don't play well with directory paths that have spaces
+    in them (e.g. `C:\Program Files\...`). If you are using Windows, run the following command in a
+    directory path that doesn't contain spaces.
   - **Note**: make sure to replace `username` in the command below with your GitHub username
   ```
   curl https://raw.githubusercontent.com/fsareshwala/dotfiles/master/prefix/bin/bootstrap | bash -s cs404.1 username
@@ -73,7 +76,7 @@ Use the following instructions to properly set up your environment and your repo
 Part 3: Installing an IDE
 -------------------------
 An integrated development environment (IDE) is a tool that developers use to work on code. The IDE
-includes all of the elements necessary to compile, run, and debug our programs. You are not required
+includes all of the elements necessary to compile, run, and debug our programs. You aren't required
 to use any specific set of tools for this class outside of `git` and `bazel`. You may use whatever
 tools you prefer using and that includes your choice of IDE. It is up to you to determine whichever
 development environment works best for your personal tastes. As such, detailed instructions on how
