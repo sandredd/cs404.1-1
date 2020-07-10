@@ -66,4 +66,9 @@ public class Warmup_T {
   public void testSimpleCompress() {
     Assert.assertEquals("a2b3cd2ed2f", warmup.simpleCompress("aabbbcddeddf"));
   }
+
+  @Test
+  public void testSimpleCompressTrailing() {
+    Assert.assertEquals("a2b3cd2ed2f4", warmup.simpleCompress("aabbbcddeddffff"));
+  }
 }
