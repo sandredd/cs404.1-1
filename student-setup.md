@@ -88,8 +88,6 @@ Having said that, I offer you the following suggestions:
 - [IntelliJ IDEA](https://www.jetbrains.com/idea/download)
   - **NOTE**: use the latest version that starts with `2019`. Avoid version numbers starting with
     `2020`. The Bazel plugin doesn't work with some of the latter versions of IntelliJ.
-  - **NOTE**: the Bazel plugin for IntelliJ IDEA is known not to work very well with Windows and
-    Java projects. This isn't to say that others haven't been successful in the past.
   - Once installed, open IntelliJ IDEA and open the preferences pane
   - Search for and install the following extensions within IntelliJ IDEA
     - `Bazel` by Google
@@ -97,10 +95,12 @@ Having said that, I offer you the following suggestions:
   - Restart IntelliJ IDEA after installing your plugins
   - Open a terminal window, run the command `which bazel`, and copy the output
   - Open the preferences pane for IntelliJ IDEA
-  - Open the Other Settings dropdown on the left side pane
-  - Click on Bazel Settings to enter Bazel specific preferences
-  - Enter the output of `which bazel` into the `Bazel binary location` text field. This instructs
-    IntelliJ IDEA where Bazel lives on your system.
+  - Open the `Other Settings` dropdown on the left side pane
+  - Click on `Bazel Settings` to enter Bazel specific preferences
+  - Enter the output of the following command into the `Bazel binary location` text field. This
+    instructs IntelliJ IDEA where Bazel lives on your system.
+    - Windows: `scoop which bazel`
+    - Mac OS/Linux: `which bazel`
     - You may also place the Bazel binary on your `PATH` environment variable if you prefer
   - Load your assignment repository by importing a Bazel project in IntelliJ IDEA
   - Click through until the repository is loaded (default settings are fine to use)
