@@ -3,7 +3,9 @@ Program 1
 In this assignment, you will implement some basic programs to familiarize yourself with Java. The
 purpose of this assignment is to practice the syntax of the language, become familiar with the tools
 used within this course, and to get started thinking algorithmically before we begin implementing
-the data structures and algorithms we are going to learn.
+the data structures and algorithms we are going to learn. Don't worry too much about making your
+solutions optimal or the most efficient just yet. We'll learn the tools to do that in the rest of
+the course.
 
 Running Sum
 -----------
