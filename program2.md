@@ -6,7 +6,7 @@ lists, stacks, and queues.
 Doubly Linked List
 ------------------
 Fill in the empty method stubs in the linked list class  with the implementation for a doubly linked
-list. Ensure that your implementation has `O(1)` runtime.
+list. Ensure that your implementation has `O(1)` runtime where it makes sense (e.g. `size()`).
 
 Note: data structure operations are tricky to do in your head. For example, `remove(...)` has a lot
 of corner cases and can be tricky to get right. Try drawing out the data structure on a piece of
