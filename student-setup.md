@@ -60,20 +60,21 @@ Use the following instructions to properly set up your environment and your repo
   - Select the `Manage access` section on the left
   - Click `Invite a collaborator` near the bottom of the page
   - Add the `fsareshwala` user as a collaborator to your repository
-- Bootstrap your repository
-  - Execute the following command in a new terminal
-  - **Warning**: some of the tools on Windows don't play well with directory paths that have spaces
-    in them (e.g. `C:\Program Files\...`). If you are using Windows, run the following command in a
-    directory path that doesn't contain spaces.
-  - **Note**: make sure to replace `username` in the command below with your GitHub username
-  ```
-  curl https://raw.githubusercontent.com/fsareshwala/dotfiles/master/prefix/bin/bootstrap | bash -s cs404.1 username
+- Email `fsareshwala@berkeley.edu` that you have created your repository. I will complete the
+  remaining bootstrap steps to fill your repository with the code you need to complete your
+  assignments.
+- Wait for a response from me before continuing on to the next section.
 
-  ```
-  - You will now have a directory named `cs404.1` where you executed the command above. This is your
-    assignment directory where you will do your work.
+Part 3: Cloning Your Repository
+-------------------------------
+Now that your repository contains the code necessary to complete your assignments, you can clone
+your repository using GitHub Desktop or whatever other method you prefer.
 
-Part 3: Installing an IDE
+**Note**: some of the tools we use in this course don't work well with paths that contain spaces. If
+you are using Windows, make sure to clone your repository to a location that doesn't have a space in
+its path.
+
+Part 4: Installing an IDE
 -------------------------
 An integrated development environment (IDE) is a tool that developers use to work on code. The IDE
 includes all of the elements necessary to compile, run, and debug our programs. You aren't required
@@ -105,7 +106,7 @@ Having said that, I offer you the following suggestions:
   - Load your assignment repository by importing a Bazel project in IntelliJ IDEA
   - Click through until the repository is loaded (default settings are fine to use)
 
-Part 4: Making Your First Commit
+Part 5: Making Your First Commit
 --------------------------------
 Now that you have properly configured your system, let's start making some changes.
 
