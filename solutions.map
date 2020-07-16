@@ -1,42 +1,44 @@
-program1: java/src/edu/berkeley/cs/app/Calculator.java
-program1: java/src/edu/berkeley/cs/util/LinkedList.java
-program1: java/src/edu/berkeley/cs/util/Queue.java
-program1: java/src/edu/berkeley/cs/util/SplayList.java
-program1: java/src/edu/berkeley/cs/util/Stack.java
+program1: java/src/edu/berkeley/cs/app/Warmup.java
 
-program2: java/src/edu/berkeley/cs/sort/Insertion.java
-program2: java/src/edu/berkeley/cs/sort/Merge.java
-program2: java/src/edu/berkeley/cs/sort/Quick.java
-program2: java/src/edu/berkeley/cs/sort/Selection.java
-program2: java/src/edu/berkeley/cs/sort/Shell.java
+program2: java/src/edu/berkeley/cs/app/Calculator.java
+program2: java/src/edu/berkeley/cs/util/LinkedList.java
+program2: java/src/edu/berkeley/cs/util/Queue.java
+program2: java/src/edu/berkeley/cs/util/SplayList.java
+program2: java/src/edu/berkeley/cs/util/Stack.java
 
-program3: java/src/edu/berkeley/cs/app/SummableTree.java
-program3: java/src/edu/berkeley/cs/app/scheduling/FiFoScheduler.java
-program3: java/src/edu/berkeley/cs/app/scheduling/RoundRobinScheduler.java
-program3: java/src/edu/berkeley/cs/app/scheduling/ShortestJobFirstScheduler.java
-program3: java/src/edu/berkeley/cs/util/MinHeap.java
-program3: java/src/edu/berkeley/cs/util/TreeMap.java
+program3: java/src/edu/berkeley/cs/sort/Insertion.java
+program3: java/src/edu/berkeley/cs/sort/Merge.java
+program3: java/src/edu/berkeley/cs/sort/Quick.java
+program3: java/src/edu/berkeley/cs/sort/Selection.java
+program3: java/src/edu/berkeley/cs/sort/Shell.java
 
-program4: java/src/edu/berkeley/cs/app/SpellChecker.java
-program4: java/src/edu/berkeley/cs/graph/BreadthFirstSearch.java
-program4: java/src/edu/berkeley/cs/graph/DepthFirstOrder.java
-program4: java/src/edu/berkeley/cs/graph/DepthFirstSearch.java
-program4: java/src/edu/berkeley/cs/graph/Graph.java
-program4: java/src/edu/berkeley/cs/util/HashMap.java
-program4: java/src/edu/berkeley/cs/util/HashSet.java
+program4: java/src/edu/berkeley/cs/app/SummableTree.java
+program4: java/src/edu/berkeley/cs/app/scheduling/FiFoScheduler.java
+program4: java/src/edu/berkeley/cs/app/scheduling/RoundRobinScheduler.java
+program4: java/src/edu/berkeley/cs/app/scheduling/ShortestJobFirstScheduler.java
+program4: java/src/edu/berkeley/cs/util/MinHeap.java
+program4: java/src/edu/berkeley/cs/util/TreeMap.java
 
-program5: java/src/edu/berkeley/cs/graph/Cycle.java
-program5: java/src/edu/berkeley/cs/graph/DirectedGraph.java
-program5: java/src/edu/berkeley/cs/graph/StronglyConnectedComponents.java
-program5: java/src/edu/berkeley/cs/graph/TopologicalSort.java
+program5: java/src/edu/berkeley/cs/app/SpellChecker.java
+program5: java/src/edu/berkeley/cs/graph/BreadthFirstSearch.java
+program5: java/src/edu/berkeley/cs/graph/DepthFirstOrder.java
+program5: java/src/edu/berkeley/cs/graph/DepthFirstSearch.java
+program5: java/src/edu/berkeley/cs/graph/Graph.java
+program5: java/src/edu/berkeley/cs/util/HashMap.java
+program5: java/src/edu/berkeley/cs/util/HashSet.java
 
-program6: java/src/edu/berkeley/cs/graph/MinimumSpanningTree.java
-program6: java/src/edu/berkeley/cs/graph/MultipleSourceShortestPath.java
-program6: java/src/edu/berkeley/cs/graph/ShortestPath.java
-program6: java/src/edu/berkeley/cs/util/UnionFind.java
+program6: java/src/edu/berkeley/cs/graph/Cycle.java
+program6: java/src/edu/berkeley/cs/graph/DirectedGraph.java
+program6: java/src/edu/berkeley/cs/graph/StronglyConnectedComponents.java
+program6: java/src/edu/berkeley/cs/graph/TopologicalSort.java
 
-program7: java/src/edu/berkeley/cs/app/PlagiarismDetector.java
-program7: java/src/edu/berkeley/cs/util/RadixTrieMap.java
+program7: java/src/edu/berkeley/cs/graph/MinimumSpanningTree.java
+program7: java/src/edu/berkeley/cs/graph/MultipleSourceShortestPath.java
+program7: java/src/edu/berkeley/cs/graph/ShortestPath.java
+program7: java/src/edu/berkeley/cs/util/UnionFind.java
+
+program8: java/src/edu/berkeley/cs/app/PlagiarismDetector.java
+program8: java/src/edu/berkeley/cs/util/RadixTrieMap.java
 
 final: java/src/edu/berkeley/cs/app/finalproject/DuplicateUsernames.java
 final: java/src/edu/berkeley/cs/app/finalproject/FuzzySearch.java
