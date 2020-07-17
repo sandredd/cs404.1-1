@@ -1,6 +1,8 @@
 package edu.berkeley.cs.util;
 
 import java.util.Iterator;
+import java.util.Objects;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -24,6 +26,11 @@ public class LinkedList_T {
         return false;
       }
       return (x == ((Point) obj).x && y == ((Point) obj).y);
+    }
+
+    @Override
+    public int hashCode() {
+      return Objects.hash(x, y);
     }
   }
 
