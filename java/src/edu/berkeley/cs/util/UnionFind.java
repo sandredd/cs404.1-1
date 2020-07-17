@@ -5,9 +5,7 @@ public class UnionFind {
   private int[] size;
   private int count;
 
-  /**
-   * @param n the number of nodes
-   */
+  /** @param n the number of nodes */
   public UnionFind(int n) {
     count = n;
     parent = new int[n];
@@ -19,16 +17,12 @@ public class UnionFind {
     }
   }
 
-  /**
-   * @return the number of connected components
-   */
+  /** @return the number of connected components */
   public int count() {
     return count;
   }
 
-  /**
-   * @return the component id of node p
-   */
+  /** @return the component id of node p */
   public int find(int p) {
     validate(p);
     while (p != parent[p]) {
@@ -38,16 +32,12 @@ public class UnionFind {
     return p;
   }
 
-  /**
-   * @return true if node p and node q are connected
-   */
+  /** @return true if node p and node q are connected */
   public boolean connected(int p, int q) {
     return find(p) == find(q);
   }
 
-  /**
-   * @param p the node to validate
-   */
+  /** @param p the node to validate */
   private void validate(int p) {
     int n = parent.length;
     if (p < 0 || p >= n) {
@@ -55,9 +45,7 @@ public class UnionFind {
     }
   }
 
-  /**
-   * Join node p and node q along with the components they belong to
-   */
+  /** Join node p and node q along with the components they belong to */
   public void union(int p, int q) {
     int rootP = find(p);
     int rootQ = find(q);

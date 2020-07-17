@@ -1,19 +1,13 @@
 package edu.berkeley.cs.util;
 
 public interface Map<Key, Value> {
-  /**
-   * Reset this container as if it was newly created with no elements
-   */
+  /** Reset this container as if it was newly created with no elements */
   void clear();
 
-  /**
-   * @return true if this container contains no elements
-   */
+  /** @return true if this container contains no elements */
   boolean isEmpty();
 
-  /**
-   * @return the number of elements in this container
-   */
+  /** @return the number of elements in this container */
   int size();
 
   /**
@@ -37,8 +31,6 @@ public interface Map<Key, Value> {
    */
   void put(Key key, Value value);
 
-  /**
-   * @param key the key to delete from the container (the associated value is also deleted)
-   */
+  /** @param key the key to delete from the container (the associated value is also deleted) */
   void delete(Key key);
 }

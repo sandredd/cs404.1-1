@@ -1,9 +1,7 @@
 package edu.berkeley.cs.app;
 
 public class PlagiarismDetector {
-  /**
-   * @param searchText text to index and query later
-   */
+  /** @param searchText text to index and query later */
   public void addSearchText(String searchText) {
     // TODO: complete this function
   }

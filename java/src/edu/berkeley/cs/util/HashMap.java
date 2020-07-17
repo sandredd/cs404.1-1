@@ -4,9 +4,7 @@ import java.util.Iterator;
 import java.util.Objects;
 
 public class HashMap<Key, Value> implements Map<Key, Value>, Iterable<HashMap<Key, Value>.Entry> {
-  /**
-   * The key and value tuple used for storage within the container
-   */
+  /** The key and value tuple used for storage within the container */
   public class Entry {
     private Key key;
     private Value value;
@@ -47,9 +45,7 @@ public class HashMap<Key, Value> implements Map<Key, Value>, Iterable<HashMap<Ke
   protected SplayList<Entry>[] table = new SplayList[8];
   private int size = 0;
 
-  /**
-   * Construct an empty container
-   */
+  /** Construct an empty container */
   public HashMap() {
     for (int i = 0; i < table.length; i++) {
       table[i] = new SplayList<>();
@@ -88,9 +84,7 @@ public class HashMap<Key, Value> implements Map<Key, Value>, Iterable<HashMap<Ke
     }
   }
 
-  /**
-   * Reset this container as if it was newly created with no elements
-   */
+  /** Reset this container as if it was newly created with no elements */
   @Override
   public void clear() {
     size = 0;
@@ -99,17 +93,13 @@ public class HashMap<Key, Value> implements Map<Key, Value>, Iterable<HashMap<Ke
     }
   }
 
-  /**
-   * @return true if this container contains no elements
-   */
+  /** @return true if this container contains no elements */
   @Override
   public boolean isEmpty() {
     return size() == 0;
   }
 
-  /**
-   * @return the number of elements in this container
-   */
+  /** @return the number of elements in this container */
   @Override
   public int size() {
     return size;
@@ -153,9 +143,7 @@ public class HashMap<Key, Value> implements Map<Key, Value>, Iterable<HashMap<Ke
     };
   }
 
-  /**
-   * @return the keys within the container
-   */
+  /** @return the keys within the container */
   public LinkedList<Key> keys() {
     LinkedList<Key> keys = new LinkedList<>();
 
@@ -197,9 +185,7 @@ public class HashMap<Key, Value> implements Map<Key, Value>, Iterable<HashMap<Ke
     return false;
   }
 
-  /**
-   * @param key the key to delete from the container (the associated value is also deleted)
-   */
+  /** @param key the key to delete from the container (the associated value is also deleted) */
   @Override
   public void delete(Key key) {
     // TODO: complete this function

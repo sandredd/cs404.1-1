@@ -5,9 +5,7 @@ import edu.berkeley.cs.util.HashSet;
 public class SpellChecker {
   protected HashSet<String> words;
 
-  /**
-   * @param words the dictionary (all known words)
-   */
+  /** @param words the dictionary (all known words) */
   SpellChecker(HashSet<String> words) {
     this.words = words;
   }

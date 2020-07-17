@@ -25,32 +25,24 @@ public class BreadthFirstSearch {
     bfs(s);
   }
 
-  /**
-   * @return the source vertex where the search began
-   */
+  /** @return the source vertex where the search began */
   public int source() {
     return source;
   }
 
-  /**
-   * @return true if the source vertex has a path to vertex v
-   */
+  /** @return true if the source vertex has a path to vertex v */
   public boolean hasPathTo(int v) {
     graph.validateVertex(v);
     return marked[v];
   }
 
-  /**
-   * @return the distance from the source vertex to vertex v
-   */
+  /** @return the distance from the source vertex to vertex v */
   public int distTo(int v) {
     graph.validateVertex(v);
     return distTo[v];
   }
 
-  /**
-   * @return the path from the source vertex to vertex v
-   */
+  /** @return the path from the source vertex to vertex v */
   public Iterable<Integer> pathTo(int v) {
     graph.validateVertex(v);
 

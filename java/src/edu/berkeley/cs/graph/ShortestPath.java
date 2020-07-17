@@ -14,23 +14,17 @@ public class ShortestPath {
     // TODO: complete this function
   }
 
-  /**
-   * @return the distance from the source vertex to vertex v
-   */
+  /** @return the distance from the source vertex to vertex v */
   public float distTo(int v) {
     return distTo[v];
   }
 
-  /**
-   * @return true if the source vertex has a path to vertex v
-   */
+  /** @return true if the source vertex has a path to vertex v */
   public boolean hasPathTo(int v) {
     return distTo[v] < Float.MAX_VALUE;
   }
 
-  /**
-   * @return the path from the source vertex to vertex v
-   */
+  /** @return the path from the source vertex to vertex v */
   public Iterable<Edge> pathTo(int v) {
     if (!hasPathTo(v)) {
       return null;

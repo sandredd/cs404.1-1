@@ -1,24 +1,18 @@
 package edu.berkeley.cs.graph;
 
 public class Cycle {
-  /**
-   * @param graph the graph to search through
-   */
+  /** @param graph the graph to search through */
   public Cycle(Graph graph) {
     // TODO: complete this function
   }
 
-  /**
-   * @return true if the graph has a cycle
-   */
+  /** @return true if the graph has a cycle */
   public boolean hasCycle() {
     // TODO: complete this function
     return false;
   }
 
-  /**
-   * @return the vertices that make up the cycle
-   */
+  /** @return the vertices that make up the cycle */
   public Iterable<Integer> cycle() {
     // TODO: complete this function
     return null;

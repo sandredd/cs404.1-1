@@ -1,32 +1,24 @@
 package edu.berkeley.cs.graph;
 
 public class DepthFirstOrder {
-  /**
-   * @param graph the graph to search through
-   */
+  /** @param graph the graph to search through */
   public DepthFirstOrder(Graph graph) {
     // TODO: complete this function
   }
 
-  /**
-   * @return vertices ordered in preorder
-   */
+  /** @return vertices ordered in preorder */
   public Iterable<Integer> preorder() {
     // TODO: complete this function
     return null;
   }
 
-  /**
-   * @return vertices ordered in postorder
-   */
+  /** @return vertices ordered in postorder */
   public Iterable<Integer> postorder() {
     // TODO: complete this function
     return null;
   }
 
-  /**
-   * @return vertices ordered in reverse postorder
-   */
+  /** @return vertices ordered in reverse postorder */
   public Iterable<Integer> reversePostorder() {
     // TODO: complete this function
     return null;

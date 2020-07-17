@@ -19,8 +19,8 @@ public class RoundRobinScheduler implements Scheduler {
    * algorithm, jobs are given up to timeSlice time units to process before they are switched out,
    * returned to the end of the jobs queue, and the next job is allowed to run.
    *
-   * Remember to add the time a given job took to those jobs still waiting in the queue in order to
-   * simulate them waiting for processor time.
+   * <p>Remember to add the time a given job took to those jobs still waiting in the queue in order
+   * to simulate them waiting for processor time.
    */
   @Override
   public int simulate() {

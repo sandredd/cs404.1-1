@@ -1,26 +1,20 @@
 package edu.berkeley.cs.util;
 
 public class RadixTrieMap<Value> implements Map<String, Value> {
-  /**
-   * Reset this container as if it was newly created with no elements
-   */
+  /** Reset this container as if it was newly created with no elements */
   @Override
   public void clear() {
     // TODO: complete this function
   }
 
-  /**
-   * @return the number of elements in this container
-   */
+  /** @return the number of elements in this container */
   @Override
   public int size() {
     // TODO: complete this function
     return 0;
   }
 
-  /**
-   * @return true if this container contains no elements
-   */
+  /** @return true if this container contains no elements */
   @Override
   public boolean isEmpty() {
     // TODO: complete this function
@@ -59,9 +53,7 @@ public class RadixTrieMap<Value> implements Map<String, Value> {
     return false;
   }
 
-  /**
-   * @param key the key to delete from the container (the associated value is also deleted)
-   */
+  /** @param key the key to delete from the container (the associated value is also deleted) */
   @Override
   public void delete(String key) {
     throw new UnsupportedOperationException();
@@ -85,9 +77,7 @@ public class RadixTrieMap<Value> implements Map<String, Value> {
     return false;
   }
 
-  /**
-   * @return container keys in sorted order
-   */
+  /** @return container keys in sorted order */
   public Iterable<String> sorted() {
     // TODO: complete this function
     return null;

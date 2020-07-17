@@ -68,8 +68,7 @@ public class MinHeap<T extends Comparable<T>> implements Iterable<T> {
   }
 
   /**
-   * @return true if the heap property is satisfied at every level of the container's backing
-   *     array
+   * @return true if the heap property is satisfied at every level of the container's backing array
    */
   private boolean isMinHeapOrdered(int k) {
     if (k > size()) {

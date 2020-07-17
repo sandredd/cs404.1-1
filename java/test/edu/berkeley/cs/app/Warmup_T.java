@@ -44,7 +44,8 @@ public class Warmup_T {
 
   @Test
   public void testNumSmaller() {
-    Assert.assertArrayEquals(new int[] {4, 0, 1, 1, 3}, warmup.numSmaller(new int[] {8, 1, 2, 2, 3}));
+    Assert.assertArrayEquals(
+        new int[] {4, 0, 1, 1, 3}, warmup.numSmaller(new int[] {8, 1, 2, 2, 3}));
   }
 
   @Test

@@ -19,24 +19,18 @@ public class DepthFirstSearch {
     dfs(source);
   }
 
-  /**
-   * @return true if the source vertex has a path to vertex v
-   */
+  /** @return true if the source vertex has a path to vertex v */
   public boolean hasPathTo(int v) {
     graph.validateVertex(v);
     return marked[v];
   }
 
-  /**
-   * @return the source vertex where the search began
-   */
+  /** @return the source vertex where the search began */
   public int source() {
     return source;
   }
 
-  /**
-   * @return the number of vertices that are connected to the source vertex
-   */
+  /** @return the number of vertices that are connected to the source vertex */
   public int connectedVertices() {
     return connectedVertices;
   }

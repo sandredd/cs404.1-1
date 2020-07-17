@@ -24,23 +24,17 @@ public class Graph {
     }
   }
 
-  /**
-   * @return the total number of edges in the graph
-   */
+  /** @return the total number of edges in the graph */
   public int numEdges() {
     return edges;
   }
 
-  /**
-   * @return the total number of vertices in the graph
-   */
+  /** @return the total number of vertices in the graph */
   public int numVertices() {
     return vertices;
   }
 
-  /**
-   * Ensure that vertex v satisfies all required graph properties to be valid
-   */
+  /** Ensure that vertex v satisfies all required graph properties to be valid */
   protected void validateVertex(int v) {
     if (v < 0 || v >= vertices)
       throw new IllegalArgumentException("vertex " + v + " is not between 0 and " + (vertices - 1));
@@ -54,9 +48,7 @@ public class Graph {
     addEdge(from, to, 0);
   }
 
-  /**
-   * Connect two vertices (bidirectional) in the graph with an edge that has a given weight
-   */
+  /** Connect two vertices (bidirectional) in the graph with an edge that has a given weight */
   public void addEdge(int from, int to, float weight) {
     validateVertex(from);
     validateVertex(to);
@@ -66,9 +58,7 @@ public class Graph {
     adjacencyList[to].insertEnd(new Edge(to, from, weight));
   }
 
-  /**
-   * @return the edges in the graph
-   */
+  /** @return the edges in the graph */
   public Iterable<Edge> edges() {
     LinkedList<Edge> list = new LinkedList<>();
     for (int i = 0; i < vertices; i++) {
@@ -80,9 +70,7 @@ public class Graph {
     return list;
   }
 
-  /**
-   * @return the edges connected to vertex v
-   */
+  /** @return the edges connected to vertex v */
   public Iterable<Edge> edges(int v) {
     LinkedList<Edge> list = new LinkedList<>();
 
@@ -93,9 +81,7 @@ public class Graph {
     return list;
   }
 
-  /**
-   * @return the vertices adjacent to vertex v
-   */
+  /** @return the vertices adjacent to vertex v */
   public Iterable<Integer> adjacentVertices(int v) {
     validateVertex(v);
 
@@ -107,9 +93,7 @@ public class Graph {
     return vertices;
   }
 
-  /**
-   * @return the number of edges connected to vertex v
-   */
+  /** @return the number of edges connected to vertex v */
   public int degree(int v) {
     validateVertex(v);
     return adjacencyList[v].size();

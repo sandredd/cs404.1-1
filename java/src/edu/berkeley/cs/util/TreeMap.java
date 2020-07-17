@@ -19,26 +19,20 @@ public class TreeMap<Key extends Comparable<Key>, Value> implements Map<Key, Val
     }
   }
 
-  /**
-   * Reset this container as if it was newly created with no elements
-   */
+  /** Reset this container as if it was newly created with no elements */
   @Override
   public void clear() {
     root = null;
     size = 0;
   }
 
-  /**
-   * @return true if this container contains no elements
-   */
+  /** @return true if this container contains no elements */
   @Override
   public boolean isEmpty() {
     return size() == 0;
   }
 
-  /**
-   * @return the number of elements in this container
-   */
+  /** @return the number of elements in this container */
   @Override
   public int size() {
     return size;
@@ -89,9 +83,7 @@ public class TreeMap<Key extends Comparable<Key>, Value> implements Map<Key, Val
     // TODO: complete this function
   }
 
-  /**
-   * Delete the minimum element in the container
-   */
+  /** Delete the minimum element in the container */
   public void deleteMin() {
     if (isEmpty()) {
       throw new NoSuchElementException("Symbol table underflow");
@@ -110,9 +102,7 @@ public class TreeMap<Key extends Comparable<Key>, Value> implements Map<Key, Val
     return null;
   }
 
-  /**
-   * Delete the maximum element in the container
-   */
+  /** Delete the maximum element in the container */
   public void deleteMax() {
     if (isEmpty()) {
       throw new NoSuchElementException("Symbol table underflow");
@@ -131,9 +121,7 @@ public class TreeMap<Key extends Comparable<Key>, Value> implements Map<Key, Val
     return null;
   }
 
-  /**
-   * @param key the key to delete from the container (the associated value is also deleted)
-   */
+  /** @param key the key to delete from the container (the associated value is also deleted) */
   @Override
   public void delete(Key key) {
     if (key == null) {
@@ -176,9 +164,7 @@ public class TreeMap<Key extends Comparable<Key>, Value> implements Map<Key, Val
     return node;
   }
 
-  /**
-   * @return the minimum value key in the container
-   */
+  /** @return the minimum value key in the container */
   public Key min() {
     if (isEmpty()) {
       throw new NoSuchElementException("calls min() with empty symbol table");
@@ -196,9 +182,7 @@ public class TreeMap<Key extends Comparable<Key>, Value> implements Map<Key, Val
     return null;
   }
 
-  /**
-   * @return the maximum value key in the container
-   */
+  /** @return the maximum value key in the container */
   public Key max() {
     if (isEmpty()) {
       throw new NoSuchElementException("calls max() with empty symbol table");
@@ -216,16 +200,14 @@ public class TreeMap<Key extends Comparable<Key>, Value> implements Map<Key, Val
     return null;
   }
 
-  /**
-   * @return true if the container exhibits the binary search tree property at all nodes
-   */
+  /** @return true if the container exhibits the binary search tree property at all nodes */
   public boolean isBST() {
     return isBST(root, null, null);
   }
 
   /**
    * @return true if the container exhibits the binary search tree property at the subtree rooted at
-   * node.
+   *     node.
    */
   private boolean isBST(Node node, Key min, Key max) {
     if (node == null) {
