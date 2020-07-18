@@ -39,6 +39,25 @@ public class Stack<T> implements Iterable<T> {
   }
 
   @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+
+    sb.append("TOP  [");
+    boolean added = false;
+    for (T value : this) {
+      if (added) {
+        sb.append(", ");
+      }
+
+      sb.append(value);
+      added = true;
+    }
+
+    sb.append("]  BOTTOM");
+    return sb.toString();
+  }
+
+  @Override
   public Iterator<T> iterator() {
     return list.iterator();
   }
