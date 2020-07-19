@@ -81,6 +81,8 @@ in.
 - Upon reaching end of input, process operators remaining on operator stack until the operator stack
   is empty
 - Result is single element remaining on top of value stack
+  - If there is more than one element in the value stack, there was a missing operator and your code
+    should throw a `RuntimeException`
 
 Implement the above algorithm. Your implementation should support the following operations:
 
@@ -108,6 +110,8 @@ like `(4 - 2) * 3`. Extend the above algorithm with the instructions below.
     - Apply operator to value tokens
     - Push result onto value stack
   - Pop left parenthesis token from top of operator stack
+    - If the top of the operator stack is not a left parenthesis, throw a `RuntimeException` to
+      indicate that parenthesis are imbalanced
   - Discard right parenthesis token
 
 ### Further Reading
