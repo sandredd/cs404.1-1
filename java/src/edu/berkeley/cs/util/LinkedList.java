@@ -40,6 +40,8 @@ public class LinkedList<T> implements Iterable<T> {
   }
 
   /**
+   * Remove the first occurrence of a given value.
+   *
    * @param value The value to remove
    * @return true if the value was removed successfully, false otherwise
    */
