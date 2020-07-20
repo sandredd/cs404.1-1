@@ -20,6 +20,11 @@ public class Calculator_T {
   }
 
   @Test
+  public void testLowerPrecedenceTopStack() {
+    Assert.assertEquals(-3, Calculator.evaluate("2 - 5 * 5 / 5"), epsilon);
+  }
+
+  @Test
   public void testMultiplicationDivisionPrecedence() {
     Assert.assertEquals(14, Calculator.evaluate("2 + 3 * 4"), epsilon);
     Assert.assertEquals(2.66, Calculator.evaluate("2 / 3 * 4"), epsilon);
