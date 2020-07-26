@@ -27,6 +27,24 @@ public abstract class Sort<T extends Comparable<T>> {
   }
 
   /**
+   * Use this method instead of implementing your own in order to make the tests happy.
+   *
+   * @return true if v is less than or equal to w
+   */
+  protected boolean lessOrEqual(T v, T w) {
+    compares++;
+    if (less(v, w)) {
+      return true;
+    }
+
+    if (v.equals(w)) {
+      return true;
+    }
+
+    return false;
+  }
+
+  /**
    * Swap index i with index j in the input array. Use this method instead of implementing your own
    * in order to make the tests happy.
    */
