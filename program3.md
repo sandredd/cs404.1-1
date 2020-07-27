@@ -59,8 +59,9 @@ The file(s) you will need for this exercise are:
 
 Merge Sort
 ----------
-Implement top-down mergesort. Once you have a working implementation, make the following
-improvements to your implementation:
+Implement top-down mergesort. While implementing mergesort, if you need to make a copy of a generic
+array (e.g. for the auxiliary array), you can use `Arrays.copyOf(input, input.length);`. Once you
+have a working implementation, make the following improvements to your implementation:
 
 ### Use insertion sort for small subarrays
 For subarrays of size less than or equal to 5, cut off to insertion sort.
