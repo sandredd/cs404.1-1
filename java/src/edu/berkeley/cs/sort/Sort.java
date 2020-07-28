@@ -32,7 +32,6 @@ public abstract class Sort<T extends Comparable<T>> {
    * @return true if v is less than or equal to w
    */
   protected boolean lessOrEqual(T v, T w) {
-    compares++;
     if (less(v, w)) {
       return true;
     }
