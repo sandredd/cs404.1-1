@@ -120,3 +120,23 @@ Now that you have properly configured your system, let's start making some chang
   - Replace the contents with your name
   - Commit the addition and push the change to GitHub
   - This is how I know who the repository belongs to
+
+Troubleshooting
+---------------
+For most students, the above instructions should work. However, on some systems, you may receive one
+of the following errors. Follow the instructions below to fix them. If you receive an error that
+isn't listed here, please reach out to me and we can look into it together.
+
+**Error:Deriving targets from project directories failed**
+- Open the project view file within Intellij: `Bazel | Project | Open Project View File`
+- Replace the contents of the file with the following:
+
+  ```
+  derive_targets_from_directories: false
+  directories:
+    java
+  targets:
+    //java/...
+  ```
+
+- Sync the project once more by clicking the green heart button on the top right of IntelliJ IDEA
