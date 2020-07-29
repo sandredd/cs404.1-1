@@ -35,6 +35,11 @@ Windows doesn't come standard with a lot of the developer tools necessary for th
 these developer tools, you will have to install a few different programs. To do so, follow the
 instructions below:
 
+- Download and install the Microsoft Visual C++ Redistributable
+  - Navigate to the [Microsoft Downloads](https://visualstudio.microsoft.com/downloads/) page
+  - At the bottom of the page, you'll find a section entitled "All Downloads" with a search bar
+  - Search for "redistributable"
+  - Download and run the appropriate package for your architecture (e.g. 32 bit or 64 bit Windows)
 - [Download](https://git-scm.com/download/win) and install `git`
   - The default settings already selected during installation are fine to use
 - Install Bazel
@@ -86,22 +91,22 @@ that by this stage of your software engineering career, you are familiar with yo
 
 Having said that, I offer you the following suggestions:
 
-- [IntelliJ IDEA](https://www.jetbrains.com/idea/download)
-  - **NOTE**: use the latest version that starts with `2019`. Avoid version numbers starting with
+- [IntelliJ IDEA](https://www.jetbrains.com/idea/download/other.html)
+  - **WARNING**: use the community version and **not** the ultimate version of IntelliJ.
+  - **WARNING**: use the latest version that starts with `2019`. Avoid version numbers starting with
     `2020`. The Bazel plugin doesn't work with some of the latter versions of IntelliJ.
   - Once installed, open IntelliJ IDEA and open the preferences pane
   - Search for and install the following extensions within IntelliJ IDEA
     - `Bazel` by Google
     - `google-java-format` by Google`
   - Restart IntelliJ IDEA after installing your plugins
-  - Open a terminal window, run the command `which bazel`, and copy the output
   - Open the preferences pane for IntelliJ IDEA
   - Open the `Other Settings` dropdown on the left side pane
   - Click on `Bazel Settings` to enter Bazel specific preferences
-  - Enter the output of the following command into the `Bazel binary location` text field. This
+  - Enter the location of the `bazel` binary into the `Bazel binary location` text field. This
     instructs IntelliJ IDEA where Bazel lives on your system.
-    - Windows: `scoop which bazel`
-    - Mac OS/Linux: `which bazel`
+    - Windows: `C:\ProgramData\scoop\apps\bazel\current\bazel.exe`
+    - Mac OS/Linux: `/usr/local/bin/bazel`
     - You may also place the Bazel binary on your `PATH` environment variable if you prefer
   - Load your assignment repository by importing a Bazel project in IntelliJ IDEA
   - Click through until the repository is loaded (default settings are fine to use)
