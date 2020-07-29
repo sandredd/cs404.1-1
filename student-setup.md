@@ -127,7 +127,7 @@ For most students, the above instructions should work. However, on some systems,
 of the following errors. Follow the instructions below to fix them. If you receive an error that
 isn't listed here, please reach out to me and we can look into it together.
 
-**Error:Deriving targets from project directories failed**
+**Error: Deriving targets from project directories failed**
 - Open the project view file within Intellij: `Bazel | Project | Open Project View File`
 - Replace the contents of the file with the following:
 
