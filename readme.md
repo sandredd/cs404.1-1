@@ -3,14 +3,10 @@ CompSci 404.1
 This repository houses the code and scaffolding that UC Berkeley Extension students taking CS 404.1
 use when completing their assignments.
 
-Starter Code
-------------
-This repository contains various pieces of starter code that provide a skeleton and will help you
-get started on your assignments. When working with this starter code, please remember that you may
-not change or delete:
-
-- Any of the code or tests already present
-- Any of the interfaces, APIs, or methods already present
+Student Setup
+-------------
+In order to set up your environment, follow the setup instructions in the [Student
+Setup](https://github.com/ucbext/cs404.1/blob/master/student-setup.md) guide.
 
 Supported Languages
 -------------------
@@ -20,10 +16,14 @@ languages. Other languages may be offered in the future.
 
 - Java
 
-Student Setup
--------------
-In order to set up your environment, follow the setup instructions in the [Student
-Setup](https://github.com/fsareshwala/cs404.1/blob/master/student-setup.md) guide.
+Starter Code
+------------
+This repository contains various pieces of starter code that provide a skeleton and will help you
+get started on your assignments. When working with this starter code, please remember that you may
+not change or delete:
+
+- Any of the code or tests already present
+- Any of the interfaces, APIs, or methods already present
 
 Use of the Standard Library
 ---------------------------
@@ -66,5 +66,5 @@ assignment.
 Contributing
 ------------
 If you find any issues within this repository while completing your assignments, please [open an
-issue](https://github.com/fsareshwala/cs404.1/issues/new) in the issue tracker. Better yet, please
-open a pull request against the repository and I will be happy to merge it in.
+issue](https://github.com/ucbext/cs404.1/issues/new) in the issue tracker. Better yet, please open a
+pull request against the repository and I will be happy to merge it in.
