@@ -7,7 +7,15 @@ Before beginning on this assignment, make sure to read the abstract `Sort` class
 - `java/src/edu/berkeley/cs/sort/Sort.java`
 
 Within this file, there are some already implemented methods you can use while completing your
-implementations.
+implementations:
+
+- `less(...)`: determine if a value is less than another in a generic way
+- `swap(...)`: swap the position of two values
+
+When completing your implementations, you must make sure to use the above methods instead of
+implementing them on your own within your code. The above methods keep track of the calls made to
+them which the unit tests use when grading your work. If you forget to use the above methods, you
+might see tests fail unnecessarily. Please make sure to use them.
 
 Shellsort and quicksort have already been implemented for you:
 
