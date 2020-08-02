@@ -26,19 +26,29 @@ The file(s) you will need for this exercise are:
 Priority Queues
 ---------------
 Your company builds and operates the world's fastest supercomputer and sells access to top research
-universities for them to conduct various experiments (jobs). The company charges a flat rate per job
-run. In exchange, the research firms demand full (dedicated) access to the entire supercomputer's
-resources during the time in which they run their jobs. Although each experiment takes a different
-amount of time to complete, it is known roughly how long a job will take to complete before
-launching it.
+firms and universities for them to conduct various experiments (jobs). The company charges a flat
+rate per job run. In exchange, the research firms demand full, dedicated access to the entire
+supercomputer's resources during the time in which they run their jobs. Although each experiment
+takes a different amount of time to complete, it is known roughly how long a job will take to
+complete before launching it.
+
+To better understand the problem, we assign some vocabulary to some concepts:
+
+- Job processing time: the time it will take a given job to complete when run on the supercomputer
+- Job waiting time: the time a job waits for other jobs to complete before it can run
+- Job turnaround time: job processing time + job waiting time
+- Total turnaround time: the sum of the turnaround time of all jobs
+
+Regardless of what order the jobs run in, the sum of their processing time will be the same. There
+isn't much we can do about that. However, your company can provide a better experience by reducing a
+job's waiting time as much as possible, thereby reducing its total turnaround time and getting
+results back to the client as fast as possible. The company tasks you with finding the best ordering
+of jobs such that job waiting time, and thereby total turnaround time, is kept as small as possible.
+You decide to experiment with the following scheduling algorithms to find the best one.
 
 For this task, we can assume that research firms only care that they get their results back at some
 point in the future and have no hard deadlines of when their jobs must be completed by. Furthermore,
 we can assume that no job depends on another job to be run before it in order to run successfully.
-
-In order to maximize its own profit, the company must run as many jobs as possible every day. The
-company tasks you to find the best ordering of jobs such that they can maximize their profit. You
-decide to experiment with the following scheduling algorithms to find the best one.
 
 ### First In First Out (FIFO)
 Jobs are processed in the arriving order. The job at the front of the queue is served until it has
