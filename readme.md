@@ -53,6 +53,20 @@ formatting the code in adherence to the style guide.
 In order to format your code, run `tools/format.sh` from the top level repository root. This script
 formats all supported languages within the repository.
 
+Private Repositories
+--------------------
+In order to discourage any form of academic dishonesty, now or in the future, the repositories you
+work in should use the private setting. A private repository has the same capabilities as a public
+repository, except that only you and your instructor will be able to access it. This is important
+while the course is progressing so that other students cannot find your work and use it as their
+own. However, it continues to be important even after the course is over. As you complete
+assignments, solutions will be committed to your repositories. Even after you have completed this
+course, please don't make your repository or the solutions to the assignments public. Future
+students may be solving similar assignments and they shouldn't be able to find solutions online.
+
+For the most part, GitHub's platform will take care of repository access and privacy. However, I
+write this here so that you can be cognizant of it as well, now and going forward.
+
 Submitting Your Work
 --------------------
 Submit your work by committing your changes and pushing them upstream before the due date.
