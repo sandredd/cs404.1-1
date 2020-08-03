@@ -134,9 +134,9 @@ isn't listed here, please reach out to me and we can look into it together.
   ```
   derive_targets_from_directories: false
   directories:
-    java
+    .
   targets:
-    //java/...
+    //...
   ```
 
 - Sync the project once more by clicking the green heart button on the top right of IntelliJ IDEA
