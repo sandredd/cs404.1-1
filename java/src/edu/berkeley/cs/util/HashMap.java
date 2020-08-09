@@ -33,7 +33,7 @@ public class HashMap<Key, Value> implements Map<Key, Value>, Iterable<HashMap<Ke
 
     @Override
     public int hashCode() {
-      return Objects.hash(key, value);
+      return Objects.hash(key);
     }
 
     @Override
