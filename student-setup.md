@@ -92,7 +92,6 @@ that by this stage of your software engineering career, you are familiar with yo
 Having said that, I offer you the following suggestions:
 
 - [IntelliJ IDEA](https://www.jetbrains.com/idea/download/other.html)
-  - **WARNING**: use the community version and **not** the ultimate version of IntelliJ.
   - **WARNING**: use the latest version that starts with `2019`. Avoid version numbers starting with
     `2020`. The Bazel plugin doesn't work with some of the latter versions of IntelliJ.
   - Once installed, open IntelliJ IDEA and open the preferences pane
@@ -128,7 +127,7 @@ of the following errors. Follow the instructions below to fix them. If you recei
 isn't listed here, please reach out to me and we can look into it together.
 
 **Error: Deriving targets from project directories failed**
-- Open the project view file within Intellij: `Bazel | Project | Open Project View File`
+- Open the project view file within IntelliJ: `Bazel | Project | Open Project View File`
 - Replace the contents of the file with the following:
 
   ```
