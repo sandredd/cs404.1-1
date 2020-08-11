@@ -72,6 +72,8 @@ public class Graph {
 
   /** @return the edges connected to vertex v */
   public Iterable<Edge> edges(int v) {
+    // create a copy of the adjacency list to expressly avoid passing back an internal reference
+    // that the caller can modify (could potentially corrupt the internal adjacency lists).
     LinkedList<Edge> list = new LinkedList<>();
 
     for (Edge edge : adjacencyList[v]) {
