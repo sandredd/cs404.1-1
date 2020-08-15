@@ -8,9 +8,6 @@ bazel-*
 # java
 *.class
 
-# python
-*.pyc
-
 # miscellaneous
 *.tags
 .DS_Store
