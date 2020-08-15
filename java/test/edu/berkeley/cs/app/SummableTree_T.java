@@ -138,22 +138,4 @@ public class SummableTree_T {
 
     return sum;
   }
-
-  @Test
-  public void testPerformance() throws InterruptedException, ExecutionException, TimeoutException {
-    int[] elements = new int[(int) Math.pow(2, 20) - 1];
-    for (int i = 0; i < elements.length; i++) {
-      elements[i] = i;
-    }
-
-    buildTree(tree, elements, 0, elements.length - 1);
-    Utilities.TimedExecution.getInstance()
-        .callWithTimeout(
-            100,
-            TimeUnit.MILLISECONDS,
-            () -> {
-              Assert.assertTrue(tree.hasPathSum(randomSum(elements)));
-              return null;
-            });
-  }
 }
