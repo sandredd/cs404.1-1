@@ -17,6 +17,7 @@ public class Cycle_T {
     int first = -1;
     int last = -1;
     int prev = -1;
+
     for (int vertex : finder.cycle()) {
       if (first == -1) {
         first = vertex;
@@ -31,9 +32,9 @@ public class Cycle_T {
       Assert.assertTrue(graph.adjacentVertices(prev).contains(vertex));
       prev = vertex;
     }
-    last = prev;
 
     // we must begin and end on the same node
+    last = prev;
     Assert.assertEquals(first, last);
   }
 
