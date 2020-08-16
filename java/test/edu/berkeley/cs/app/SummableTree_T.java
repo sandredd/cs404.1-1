@@ -1,10 +1,6 @@
 package edu.berkeley.cs.app;
 
-import edu.berkeley.cs.util.Utilities;
 import java.util.Random;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
