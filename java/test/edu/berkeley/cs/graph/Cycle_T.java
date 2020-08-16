@@ -14,18 +14,27 @@ public class Cycle_T {
     Cycle finder = new Cycle(graph);
     Assert.assertTrue(finder.hasCycle());
 
-    LinkedList<Integer> expectedCycle = new LinkedList<>();
-    expectedCycle.insertFront(3);
-    expectedCycle.insertFront(2);
-    expectedCycle.insertFront(3);
+    int first = -1;
+    int last = -1;
+    int prev = -1;
+    for (int vertex : finder.cycle()) {
+      if (first == -1) {
+        first = vertex;
+      }
 
-    int actualSize = 0;
-    for (int node : finder.cycle()) {
-      actualSize++;
-      Assert.assertTrue(expectedCycle.contains(node));
+      graph.validateVertex(vertex);
+      if (prev == -1) {
+        prev = vertex;
+        continue;
+      }
+
+      Assert.assertTrue(graph.adjacentVertices(prev).contains(vertex));
+      prev = vertex;
     }
+    last = prev;
 
-    Assert.assertEquals(expectedCycle.size(), actualSize);
+    // we must begin and end on the same node
+    Assert.assertEquals(first, last);
   }
 
   @Test

@@ -84,7 +84,7 @@ public class Graph {
   }
 
   /** @return the vertices adjacent to vertex v */
-  public Iterable<Integer> adjacentVertices(int v) {
+  public LinkedList<Integer> adjacentVertices(int v) {
     validateVertex(v);
 
     LinkedList<Integer> vertices = new LinkedList<>();
