@@ -130,27 +130,29 @@ public class Utilities {
   public static DirectedGraph smallAcyclicGraph() {
     DirectedGraph graph = new DirectedGraph(13);
 
+    graph.addEdge(8, 7, 31);
+    graph.addEdge(7, 2, 1);
     graph.addEdge(2, 3, 39);
+    graph.addEdge(3, 0, 3);
+    graph.addEdge(0, 5, 29);
+    graph.addEdge(5, 1, 6);
+    graph.addEdge(1, 6, 10);
+    graph.addEdge(6, 9, 37);
+    graph.addEdge(9, 11, 46);
+    graph.addEdge(11, 10, 4);
+    graph.addEdge(10, 12, 4);
+    graph.addEdge(12, 4, 4);
+
     graph.addEdge(0, 6, 30);
     graph.addEdge(0, 1, 43);
     graph.addEdge(2, 0, 7);
     graph.addEdge(11, 12, 25);
     graph.addEdge(9, 12, 28);
     graph.addEdge(9, 10, 18);
-    graph.addEdge(9, 11, 46);
     graph.addEdge(3, 5, 12);
-    graph.addEdge(8, 7, 31);
     graph.addEdge(5, 4, 38);
-    graph.addEdge(0, 5, 29);
     graph.addEdge(6, 4, 11);
-    graph.addEdge(6, 9, 37);
     graph.addEdge(7, 6, 5);
-    graph.addEdge(7, 2, 1);
-    graph.addEdge(3, 0, 3);
-    graph.addEdge(5, 1, 6);
-    graph.addEdge(1, 6, 10);
-    graph.addEdge(11, 10, 4);
-    graph.addEdge(12, 4, 4);
 
     return graph;
   }
