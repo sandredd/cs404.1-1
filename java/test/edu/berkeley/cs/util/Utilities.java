@@ -145,6 +145,12 @@ public class Utilities {
     graph.addEdge(6, 4, 11);
     graph.addEdge(6, 9, 37);
     graph.addEdge(7, 6, 5);
+    graph.addEdge(7, 2, 1);
+    graph.addEdge(3, 0, 3);
+    graph.addEdge(5, 1, 6);
+    graph.addEdge(1, 6, 10);
+    graph.addEdge(11, 10, 4);
+    graph.addEdge(12, 4, 4);
 
     return graph;
   }
