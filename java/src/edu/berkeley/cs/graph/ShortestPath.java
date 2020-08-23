@@ -8,7 +8,7 @@ public class ShortestPath {
 
   /**
    * @param graph the graph to search through
-   * @param source the source vertex where the search will begin
+   * @param s the source vertex where the search will begin
    */
   public ShortestPath(Graph graph, int s) {
     // TODO: complete this function
