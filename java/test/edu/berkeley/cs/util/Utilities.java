@@ -153,7 +153,6 @@ public class Utilities {
     graph.addEdge(5, 4, 38);
     graph.addEdge(6, 4, 11);
     graph.addEdge(7, 6, 5);
-    graph.addEdge(10, 12, 3);
 
     return graph;
   }
