@@ -2,7 +2,7 @@ package edu.berkeley.cs.graph;
 
 public class MultipleSourceShortestPath {
   /**
-   * @param graph the graph to search through
+   * @param input the graph to search through
    * @param sources the source vertices where the search will begin
    */
   public MultipleSourceShortestPath(DirectedGraph graph, int[] sources) {
