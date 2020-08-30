@@ -19,11 +19,10 @@ languages. Other languages may be offered in the future.
 Starter Code
 ------------
 This repository contains various pieces of starter code that provide a skeleton and will help you
-get started on your assignments. When working with this starter code, please remember that you may
-not change or delete:
-
-- Any of the code or tests already present
-- Any of the interfaces, APIs, or methods already present
+get started on your assignments. The starter code is my solutions to the problems with some parts
+removed. However, the method that I use to solve the problem isn't necessarily the only method (or
+even the best). When working with this starter code, you may modify it to your needs. The only
+restriction is that you may not change or delete any code within the `java/test` directory.
 
 Use of the Standard Library
 ---------------------------
