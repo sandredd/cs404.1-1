@@ -120,7 +120,7 @@ public class DuplicateUsernames_T {
 
     Utilities.TimedExecution.getInstance()
         .callWithTimeout(
-            1,
+            3,
             TimeUnit.SECONDS,
             () -> {
               Assert.assertEquals(1, duplicateUsernames.uniqueUsers(groups));
