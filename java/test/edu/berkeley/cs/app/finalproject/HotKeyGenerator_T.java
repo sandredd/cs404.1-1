@@ -95,7 +95,7 @@ public class HotKeyGenerator_T {
 
     Utilities.TimedExecution.getInstance()
         .callWithTimeout(
-            1,
+            3,
             TimeUnit.SECONDS,
             () -> {
               HashMap<Character, String> result = hotKeyGenerator.generateHotKeys(actions);
