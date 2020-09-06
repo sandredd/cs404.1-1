@@ -126,8 +126,8 @@ public class SortChecker_T {
     Arrays.sort(words, String::compareTo);
     Utilities.TimedExecution.getInstance()
         .callWithTimeout(
-            35,
-            TimeUnit.MILLISECONDS,
+            1,
+            TimeUnit.SECONDS,
             () -> {
               Assert.assertTrue(english.isSorted(words));
               return null;
