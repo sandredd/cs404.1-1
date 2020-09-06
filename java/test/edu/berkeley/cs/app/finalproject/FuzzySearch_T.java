@@ -103,7 +103,7 @@ public class FuzzySearch_T {
     int expectedPosition = haystack.length() - needle.length();
     Utilities.TimedExecution.getInstance()
         .callWithTimeout(
-            1,
+            3,
             TimeUnit.SECONDS,
             () -> {
               Assert.assertEquals(expectedPosition, fuzzySearch.indexOf(haystack, needle));
