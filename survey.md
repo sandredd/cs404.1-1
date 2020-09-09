@@ -27,7 +27,7 @@ Your answer here.
 
 Format
 ------
-Your responses should be formatted in [markdown](md) format with a maximum line length of 100
+Your responses should be formatted in [markdown][md] format with a maximum line length of 100
 columns. Text editors should automatically be able to format content based on line length. You may
 need to search through your text editor's settings to figure out how to do this. If all else fails,
 you can use the `fmt -w 100 filename` command instead.
