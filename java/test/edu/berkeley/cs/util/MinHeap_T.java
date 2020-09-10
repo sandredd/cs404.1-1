@@ -32,7 +32,20 @@ public class MinHeap_T {
   @Test(expected = NoSuchElementException.class)
   public void testRemoveMinimumEmptyHeap() {
     Assert.assertNull(heap.removeMinimum());
+  }
+
+  @Test(expected = NoSuchElementException.class)
+  public void testMinimumEmptyHeap() {
     Assert.assertNull(heap.min());
+  }
+
+  @Test(expected = NoSuchElementException.class)
+  public void testRemoveSingleEntry() {
+    heap.insert(0);
+    Assert.assertEquals(1, heap.size());
+    Assert.assertEquals(Integer.valueOf(0), heap.removeMinimum());
+    Assert.assertEquals(0, heap.size());
+    Assert.assertNull(heap.removeMinimum());
   }
 
   @Test
