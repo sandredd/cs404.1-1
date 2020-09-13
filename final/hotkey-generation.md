@@ -4,10 +4,11 @@ Given a list of actions, we would like to assign unique hotkeys to them so that 
 action again quickly. The way we select hotkeys has some restrictions:
 
 - A hotkey must be a single character
-- A hotkey must use some character from within the action that it is mapping to. For example, the
-  action `down` has potential hotkeys `d`, `o`, `w`, `n`
-- Each hotkey should be unique such that it maps to only a single action. For example, the hotkey
-  `d` cannot map to both `down` and `diagonal`
+- A hotkey must use some character from within the action that it is mapping to
+  - For example, the action `down` has potential hotkeys `d`, `o`, `w`, `n`
+- A hotkey cannot map to two or more actions
+  - For example, the hotkey `d` cannot map to both `down` and `diagonal`
+  - However, it is possible for `h` to map to `hi` and `i` to also map to `hi`
 
 See the following code snippet for an example of how this would work.
 
