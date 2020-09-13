@@ -30,9 +30,10 @@ See the following code snippet for an example of how this would work.
 Notice that we chose to assign `r` to `flyr` instead of assigning it to `right`. In fact, `right`
 received `i` as its hotkey. This is important because `f` was taken by `forward`, `l` was taken by
 `left`, and `y` was taken by `fly`, so the only remaining hotkey for `flyr` is `r`. That means that
-`r` cannot be given to `right` and we must use the next letter, `i`, as the hotkey for `right`. If
-it is not possible to assign a hotkey to all given actions using the rules above, throw an
-exception.
+`r` cannot be given to `right` and we must use the next letter, `i`, as the hotkey for `right`.
+
+A valid solution assigns all actions a unique hotkey. If it is not possible to assign a hotkey to
+all given actions using the rules above, return an empty mapping.
 
 If you choose to solve this problem, you'll find some starter code in the following file(s):
 
