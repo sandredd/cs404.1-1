@@ -4,10 +4,10 @@ Given a list of actions, we would like to assign unique hotkeys to them so that 
 action again quickly. The way we select hotkeys has some restrictions:
 
 - A hotkey must be a single character
-- A hotkey must use some character from within the action that it is mapping to
-    - The action `down` has potential hotkeys `d`, `o`, `w`, `n`
-- Each hotkey should be unique such that it maps to only a single action
-    - The hotkey `d` cannot map to both `down` and `diagonal`
+- A hotkey must use some character from within the action that it is mapping to. For example, the
+  action `down` has potential hotkeys `d`, `o`, `w`, `n`
+- Each hotkey should be unique such that it maps to only a single action. For example, the hotkey
+  `d` cannot map to both `down` and `diagonal`
 
 See the following code snippet for an example of how this would work.
 
@@ -27,10 +27,10 @@ See the following code snippet for an example of how this would work.
         'r': "flyr",
     }
 
-Notice that we chose to assign 'r' to "flyr" instead of assigning it to "right". In fact, "right"
-received 'i' as its hotkey. This is important because 'f' was taken by "forward", 'l' was taken by
-"left", and 'y' was taken by "fly", so the only remaining hotkey for "flyr" is 'r'. That means that
-'r' cannot be given to "right" and we must use the next letter, 'i', as the hotkey for "right". If
+Notice that we chose to assign `r` to `flyr` instead of assigning it to `right`. In fact, `right`
+received `i` as its hotkey. This is important because `f` was taken by `forward`, `l` was taken by
+`left`, and `y` was taken by `fly`, so the only remaining hotkey for `flyr` is `r`. That means that
+`r` cannot be given to `right` and we must use the next letter, `i`, as the hotkey for `right`. If
 it is not possible to assign a hotkey to all given actions using the rules above, throw an
 exception.
 
