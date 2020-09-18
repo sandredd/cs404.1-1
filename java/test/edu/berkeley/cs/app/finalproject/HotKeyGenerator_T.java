@@ -58,10 +58,22 @@ public class HotKeyGenerator_T {
   }
 
   @Test
-  public void testNoSolution() {
+  public void testNoSolutionSimple() {
     LinkedList<String> actions = new LinkedList<>();
     actions.insertFront("a");
     actions.insertFront("a");
+
+    HashMap<Character, String> result = hotKeyGenerator.generateHotKeys(actions);
+    Assert.assertTrue(result.isEmpty());
+  }
+
+  @Test
+  public void testNoSolutionComplex() {
+    LinkedList<String> actions = new LinkedList<>();
+    actions.insertFront("a");
+    actions.insertFront("b");
+    actions.insertFront("ab");
+    actions.insertFront("def");
 
     HashMap<Character, String> result = hotKeyGenerator.generateHotKeys(actions);
     Assert.assertTrue(result.isEmpty());
