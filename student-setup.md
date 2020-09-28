@@ -1,19 +1,12 @@
 Student Setup
 -------------
-Normally, repositories house code that all developers use as a base to build their changes off of.
-When other developers make changes, all developers pull them in and continue their work on top.
-In our case, however, each student will have a separate fork of this repository in order to complete
-their assignments. Furthermore, each student must keep their fork private so as to prevent any
-possible plagiarism. Unfortunately, GitHub doesn't allow private forks of public repositories.
-
-For this reason, we won't be using the standard GitHub workflow here. Instead, we have to jump
-through some hoops in order to support our specific use case, while also using GitHub's repository
-hosting platform.
+This set of instructions will guide you through setting up your local environment with all the tools
+and accounts you will need for this course.
 
 Part 1: Operating System Specific Setup
 ---------------------------------------
-Use the following instructions to properly set up your environment and your repository. The
-instructions are slightly different for different operating systems.
+Use the following instructions to properly set up your local environment. The instructions are
+slightly different for different operating systems.
 
 ### Mac OS X
 Mac OS X doesn't come standard with a lot of the developer tools necessary for this course. To get
@@ -53,27 +46,16 @@ instructions below:
 
 Part 2: Bootstrap Your Repository
 ---------------------------------
-Use the following instructions to properly set up your environment and your repository.
+Use the following instructions to create your repository.
 
 - Ensure you have a GitHub account, have verified your email address, and are signed in
-- [Create a new repository](https://github.com/new) on GitHub
-  - Name your repository `cs404.1`
-  - Ensure the repository is marked private
-  - Create the repository
-- Add `fsareshwala` as a collaborator
-  - Visit the `Settings` tab
-  - Select the `Manage access` section on the left
-  - Click `Invite a collaborator` near the bottom of the page
-  - Add the `fsareshwala` user as a collaborator to your repository
-- Email `fsareshwala@berkeley.edu` that you have created your repository. I will complete the
-  remaining bootstrap steps to fill your repository with the code you need to complete your
-  assignments.
-- Wait for a response from me before continuing on to the next section.
+- Navigate to the [classroom page](https://classroom.github.com/a/46HFlkcR) on GitHub
+- Accept the assignment to have GitHub create a repository for you to do your work in
 
 Part 3: Cloning Your Repository
 -------------------------------
-Now that your repository contains the code necessary to complete your assignments, you can clone
-your repository using GitHub Desktop or whatever other method you prefer.
+Now that you have a repository with some starter code in it, you can clone your repository using
+GitHub Desktop or whatever other method you prefer.
 
 **Note**: some of the tools we use in this course don't work well with paths that contain spaces. If
 you are using Windows, make sure to clone your repository to a location that doesn't have a space in
@@ -97,7 +79,7 @@ Having said that, I offer you the following suggestions:
   - Once installed, open IntelliJ IDEA and open the preferences pane
   - Search for and install the following extensions within IntelliJ IDEA
     - `Bazel` by Google
-    - `google-java-format` by Google`
+    - `google-java-format` by Google
   - Restart IntelliJ IDEA after installing your plugins
   - Open the preferences pane for IntelliJ IDEA
   - Open the `Other Settings` dropdown on the left side pane
