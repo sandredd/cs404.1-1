@@ -35,6 +35,8 @@ instructions below:
   - Download and run the appropriate package for your architecture (e.g. 32 bit or 64 bit Windows)
 - [Download](https://git-scm.com/download/win) and install `git`
   - The default settings already selected during installation are fine to use
+- [Download](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html) and install Java
+  JDK 11
 - Install Bazel
   - In a new PowerShell window, execute the following commands:
     ```
@@ -91,6 +93,8 @@ Having said that, I offer you the following suggestions:
     - You may also place the Bazel binary on your `PATH` environment variable if you prefer
   - Load your assignment repository by importing a Bazel project in IntelliJ IDEA
   - Click through until the repository is loaded (default settings are fine to use)
+  - Open the `Project Settings` under the `File` menu in IntelliJ IDEA and set the JDK IntelliJ
+    should use to JDK 11.
 
 Part 5: Making Your First Commit
 --------------------------------
