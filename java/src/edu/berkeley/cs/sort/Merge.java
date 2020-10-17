@@ -6,8 +6,8 @@ public class Merge<T extends Comparable<T>> extends Sort<T> {
   protected Insertion<T> insertion = new Insertion<>();
 
   /**
-   * Sort the given range (low, high) of the input array using mergesort. Use the insertion member
-   * variable when breaking off to insertion sort in order to make the tests happy.
+   * Sort the given array using mergesort. Use the insertion member variable when breaking off to
+   * insertion sort in order to make the tests happy.
    */
   @Override
   public void sort(T[] input) {
