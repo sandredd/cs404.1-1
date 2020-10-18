@@ -54,9 +54,9 @@ to 5, cut off to insertion sort.
 
 ### Pivot selection
 Choosing the right pivot can make all the difference for the execution of quicksort. Ideally, we
-would select the median value of all the elements in each subarray. However, finding the median
-efficiently is a tricky problem. Instead, use the median value of first, middle, and last element of
-the subarray to be sorted.
+would select the [median](https://en.wikipedia.org/wiki/Median) value of all the elements in each
+subarray. However, finding the median efficiently is a tricky problem. Instead, use the median value
+of first, middle, and last element of the subarray to be sorted.
 
 **Note**: for this step, you may find that `partition(...)` needs to be slightly modified for the
 sort to continue working.
