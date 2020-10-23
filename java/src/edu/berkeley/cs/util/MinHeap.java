@@ -58,7 +58,10 @@ public class MinHeap<T extends Comparable<T>> implements Iterable<T> {
     array = temp;
   }
 
-  /** @return the minimum element in the container */
+  /**
+   * @return the minimum element in the container. If called on an empty container, throw a
+   *     NoSuchElementException.
+   */
   public T min() {
     if (isEmpty()) {
       throw new NoSuchElementException("Priority queue underflow");
@@ -133,7 +136,8 @@ public class MinHeap<T extends Comparable<T>> implements Iterable<T> {
   }
 
   /**
-   * Remove the minimum value from this container and ensure that the heap property is maintained
+   * Remove the minimum value from this container and ensure that the heap property is maintained.
+   * If called on an empty container, throw a NoSuchElementException.
    */
   public T removeMinimum() {
     // TODO: complete this function

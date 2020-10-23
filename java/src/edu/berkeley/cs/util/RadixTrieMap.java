@@ -25,7 +25,8 @@ public class RadixTrieMap<Value> implements Map<String, Value> {
    * Associate a key with a value. If the key already exists in the container, this method
    * overwrites the previous value with the new one.
    *
-   * @param key the key to be inserted into the container (cannot be null)
+   * @param key the key to be inserted into the container (cannot be null, must use characters from
+   *     a-z). If key is null or contains characters not in a-z, throw an IllegalArgumentException.
    * @param value the value associated with the input key (deletes key if null)
    */
   @Override

@@ -17,7 +17,7 @@ public class Calculator {
     /**
      * Create a new token based on string input. This is the constructor used when tokenizing the
      * input elements. The constructor figures out what type of token we are dealing with (e.g.
-     * operarator or a number).
+     * operarator or a number). If a number is incorrectly formatted, throw a RuntimeException.
      */
     Token(String value) {
       switch (value) {
@@ -96,6 +96,10 @@ public class Calculator {
     }
   }
 
+  /**
+   * Evaluate an expression. If there is an error in evaluating the expression, throw a
+   * RuntimeException.
+   */
   public static double evaluate(String expression) {
     Stack<Token> values = new Stack<>();
     Stack<Token> operators = new Stack<>();

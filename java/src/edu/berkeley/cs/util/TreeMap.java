@@ -39,7 +39,8 @@ public class TreeMap<Key extends Comparable<Key>, Value> implements Map<Key, Val
   }
 
   /**
-   * @param key The element whose presence in this container is to be tested
+   * @param key The element whose presence in this container is to be tested. If key is null, throw
+   *     an IllegalArgumentException.
    * @return true if this container contains the specified element
    */
   @Override
@@ -52,7 +53,8 @@ public class TreeMap<Key extends Comparable<Key>, Value> implements Map<Key, Val
   }
 
   /**
-   * @param key The element whose presence in this container is to be tested
+   * @param key The element whose presence in this container is to be tested. If key is null, throw
+   *     an IllegalArgumentException.
    * @return the value associated with the input key, if it exists in the container (null otherwise)
    */
   @Override
@@ -65,7 +67,8 @@ public class TreeMap<Key extends Comparable<Key>, Value> implements Map<Key, Val
    * Associate a key with a value. If the key already exists in the container, this method
    * overwrites the previous value with the new one.
    *
-   * @param key the key to be inserted into the container (cannot be null)
+   * @param key the key to be inserted into the container (cannot be null). If a null key is
+   *     provided, throw an IllegalArgumentException.
    * @param value the value associated with the input key (deletes key if null)
    */
   @Override
@@ -83,7 +86,10 @@ public class TreeMap<Key extends Comparable<Key>, Value> implements Map<Key, Val
     // TODO: complete this function
   }
 
-  /** Delete the minimum element in the container */
+  /**
+   * Delete the minimum element in the container. If is called on an empty container, throw a
+   * NoSuchElementException.
+   */
   public void deleteMin() {
     if (isEmpty()) {
       throw new NoSuchElementException("Symbol table underflow");
@@ -102,7 +108,10 @@ public class TreeMap<Key extends Comparable<Key>, Value> implements Map<Key, Val
     return null;
   }
 
-  /** Delete the maximum element in the container */
+  /**
+   * Delete the maximum element in the container. If called on an empty container, throw a
+   * NoSuchElementException.
+   */
   public void deleteMax() {
     if (isEmpty()) {
       throw new NoSuchElementException("Symbol table underflow");
@@ -121,7 +130,10 @@ public class TreeMap<Key extends Comparable<Key>, Value> implements Map<Key, Val
     return null;
   }
 
-  /** @param key the key to delete from the container (the associated value is also deleted) */
+  /**
+   * @param key the key to delete from the container (the associated value is also deleted). If key
+   *     is null, throw an IllegalArgumentException.
+   */
   @Override
   public void delete(Key key) {
     if (key == null) {
@@ -164,7 +176,10 @@ public class TreeMap<Key extends Comparable<Key>, Value> implements Map<Key, Val
     return node;
   }
 
-  /** @return the minimum value key in the container */
+  /**
+   * @return the minimum value key in the container. If called on an empty container, throw a
+   *     NoSuchElementException.
+   */
   public Key min() {
     if (isEmpty()) {
       throw new NoSuchElementException("calls min() with empty symbol table");
@@ -182,7 +197,10 @@ public class TreeMap<Key extends Comparable<Key>, Value> implements Map<Key, Val
     return null;
   }
 
-  /** @return the maximum value key in the container */
+  /**
+   * @return the maximum value key in the container. If called on an empty container, throw a
+   *     NoSuchElementException.
+   */
   public Key max() {
     if (isEmpty()) {
       throw new NoSuchElementException("calls max() with empty symbol table");
