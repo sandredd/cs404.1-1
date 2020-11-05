@@ -93,7 +93,8 @@ The file(s) you will need for this exercise are:
 Depth First Order
 -----------------
 Now that you have practiced writing depth first search, use DFS to implement functionality to
-determine the various orderings (e.g. preorder, postorder, reverse postorder) in a graph.
+determine the various orderings (e.g. preorder, postorder, reverse postorder) in a graph. For
+consistency, iterate through all nodes in the graph starting from node 0 as the source node.
 
 The file(s) you will need for this exercise are:
 
