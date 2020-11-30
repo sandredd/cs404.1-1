@@ -95,19 +95,42 @@ public class RadixTrieMap_T {
 
   @Test
   public void testSorted() {
-    String[] sorted = {"go", "going", "gone", "house", "ephemeris", "eikons", "nail", "sick", "sikkimese",  "poet",
-            "marylanders", "unparasitically", "unbuttressed", "solemnest", "escalades", "devoration", "weight", "vice",
-            "begotten", "pugil", "assurgent", "podsnappery", "dramatist", "leonese", "wreathy"};
+    String[] sorted = {
+      "go",
+      "going",
+      "gone",
+      "house",
+      "ephemeris",
+      "eikons",
+      "nail",
+      "sick",
+      "sikkimese",
+      "poet",
+      "marylanders",
+      "unparasitically",
+      "unbuttressed",
+      "solemnest",
+      "escalades",
+      "devoration",
+      "weight",
+      "vice",
+      "begotten",
+      "pugil",
+      "assurgent",
+      "podsnappery",
+      "dramatist",
+      "leonese",
+      "wreathy"
+    };
 
-    for(String str : sorted){
+    for (String str : sorted) {
       map.put(str, true);
     }
 
     String[] actual = new String[map.size()];
     int i = 0;
     for (String word : map.sorted()) {
-      actual[i] = word;
-      i++;
+      actual[i++] = word;
     }
 
     Arrays.sort(sorted);
