@@ -95,38 +95,18 @@ public class RadixTrieMap_T {
 
   @Test
   public void testSorted() {
-    map.put("go", true);
-    map.put("going", true);
-    map.put("gone", true);
-    map.put("house", true);
-    map.put("ephemeris", true);
-    map.put("eikons", true);
-    map.put("nail", true);
-    map.put("sick", true);
-    map.put("sikkimese", true);
-    map.put("marylanders", true);
-    map.put("unparasitically", true);
-    map.put("unbuttressed", true);
-    map.put("solemnest", true);
-    map.put("escalades", true);
-    map.put("devoration", true);
-    map.put("weight", true);
-    map.put("vice", true);
-    map.put("begotten", true);
-    map.put("pugil", true);
-    map.put("assurgent", true);
-    map.put("podsnappery", true);
-    map.put("poet", true);
-    map.put("dramatist", true);
-    map.put("leonese", true);
-    map.put("wreathy", true);
+    String[] sorted = {"go", "going", "gone", "house", "ephemeris", "eikons", "nail", "sick", "sikkimese",  "poet",
+            "marylanders", "unparasitically", "unbuttressed", "solemnest", "escalades", "devoration", "weight", "vice",
+            "begotten", "pugil", "assurgent", "podsnappery", "dramatist", "leonese", "wreathy"};
+
+    for(String str : sorted){
+      map.put(str, true);
+    }
 
     String[] actual = new String[map.size()];
-    String[] sorted = new String[map.size()];
     int i = 0;
     for (String word : map.sorted()) {
       actual[i] = word;
-      sorted[i] = word;
       i++;
     }
 
