@@ -6,6 +6,8 @@ action again quickly. The way we select hotkeys has some restrictions:
 - A hotkey must be a single character
 - A hotkey must use some character from within the action that it is mapping to
   - For example, the action `down` has potential hotkeys `d`, `o`, `w`, `n`
+- We prefer hotkeys to be earlier characters from the word
+  - For example, hotkey `d` for the action `down` is better than `o`
 - A hotkey cannot map to two or more actions
   - For example, the hotkey `d` cannot map to both `down` and `diagonal`
   - However, it is possible for `h` to map to `hi` and `i` to also map to `hi`
