@@ -36,6 +36,7 @@ java_test(
     deps = [
         "//java/src/edu/berkeley/cs/app/finalproject",
         "//java/test/edu/berkeley/cs/util:utilities",
+        "//resources:words",
         "//thirdparty:junit4",
     ],
 )
