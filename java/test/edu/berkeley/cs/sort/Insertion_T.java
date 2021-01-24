@@ -1,11 +1,12 @@
 package edu.berkeley.cs.sort;
 
 import edu.berkeley.cs.util.Utilities;
-import java.util.Arrays;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class Elementary_T {
+import java.util.Arrays;
+
+public class Insertion_T {
   private int n = 1000;
 
   @Test
@@ -36,34 +37,4 @@ public class Elementary_T {
     Assert.assertFalse(Utilities.isSorted(input, 0, input.length));
   }
 
-  @Test
-  public void testSelectionSort() {
-    Selection<Integer> selection = new Selection<>();
-
-    Integer[] actual = Utilities.generateRandomArray(n);
-    Integer[] expected = Arrays.copyOf(actual, actual.length);
-
-    Arrays.sort(expected);
-    selection.sort(actual);
-
-    Assert.assertArrayEquals(expected, actual);
-    Assert.assertEquals(499500, selection.compares());
-    Assert.assertTrue(selection.swaps() >= 999);
-    Assert.assertTrue(selection.swaps() <= 1000);
-  }
-
-  @Test
-  public void testShellSort() {
-    Shell<Integer> shell = new Shell<>();
-
-    Integer[] actual = Utilities.generateRandomArray(n);
-    Integer[] expected = Arrays.copyOf(actual, actual.length);
-
-    Arrays.sort(expected);
-    shell.sort(actual);
-
-    Assert.assertArrayEquals(expected, actual);
-    Assert.assertTrue(shell.compares() < 16000);
-    Assert.assertTrue(shell.swaps() < 11000);
-  }
 }

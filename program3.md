@@ -103,4 +103,4 @@ Testing your code
 Tests have already been written to help you ensure that your code works. The following commands will
 be used to test and grade your code:
 
-    $ bazel test java/test/edu/berkeley/cs/sort:{elementary,merge,quick}
+    $ bazel test java/test/edu/berkeley/cs/sort:{insertion,selection,shell,merge,quick}
