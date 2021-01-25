@@ -1,1 +1,1 @@
-workspace(name = 'algorithms')
+workspace(name = "algorithms")
