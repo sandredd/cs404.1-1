@@ -51,7 +51,7 @@ Part 2: Bootstrap Your Repository
 Use the following instructions to create your repository.
 
 - Ensure you have a GitHub account, have verified your email address, and are signed in
-- Navigate to the [classroom page](https://classroom.github.com/a/46HFlkcR) on GitHub
+- Navigate to the [classroom page](https://classroom.github.com/a/Of08dvLU) on GitHub
 - Accept the assignment to have GitHub create a repository for you to do your work in
 
 Part 3: Cloning Your Repository
