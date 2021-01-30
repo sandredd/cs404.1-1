@@ -9,7 +9,7 @@ test_suite(
     name = "program2",
     tests = [
         "//java/test/edu/berkeley/cs/app:calculator",
-        "//java/test/edu/berkeley/cs/app:calculator_ec",
+        "//java/test/edu/berkeley/cs/app:calculatorextracredit",
         "//java/test/edu/berkeley/cs/util:linkedlist",
         "//java/test/edu/berkeley/cs/util:queue",
         "//java/test/edu/berkeley/cs/util:splaylist",
@@ -31,11 +31,11 @@ test_suite(
 test_suite(
     name = "program4",
     tests = [
-        "//java/test/edu/berkeley/cs/app:summable_tree",
-        "//java/test/edu/berkeley/cs/app/scheduling:fifo",
+        "//java/test/edu/berkeley/cs/app:summabletree",
+        "//java/test/edu/berkeley/cs/app/scheduling:fifoscheduler",
         "//java/test/edu/berkeley/cs/app/scheduling:job",
-        "//java/test/edu/berkeley/cs/app/scheduling:rr",
-        "//java/test/edu/berkeley/cs/app/scheduling:sjf",
+        "//java/test/edu/berkeley/cs/app/scheduling:roundrobinscheduler",
+        "//java/test/edu/berkeley/cs/app/scheduling:shortestjobfirstscheduler",
         "//java/test/edu/berkeley/cs/util:minheap",
         "//java/test/edu/berkeley/cs/util:treemap",
     ],
@@ -46,9 +46,9 @@ test_suite(
     tests = [
         "//java/test/edu/berkeley/cs/app:spellchecker",
         "//java/test/edu/berkeley/cs/graph",
-        "//java/test/edu/berkeley/cs/graph:bfs",
-        "//java/test/edu/berkeley/cs/graph:dfs",
-        "//java/test/edu/berkeley/cs/graph:dfsorder",
+        "//java/test/edu/berkeley/cs/graph:breadthfirstsearch",
+        "//java/test/edu/berkeley/cs/graph:depthfirstorder",
+        "//java/test/edu/berkeley/cs/graph:depthfirstsearch",
         "//java/test/edu/berkeley/cs/util:hashmap",
         "//java/test/edu/berkeley/cs/util:hashset",
     ],
@@ -58,18 +58,18 @@ test_suite(
     name = "program6",
     tests = [
         "//java/test/edu/berkeley/cs/graph:cycle",
-        "//java/test/edu/berkeley/cs/graph:digraph",
-        "//java/test/edu/berkeley/cs/graph:scc",
-        "//java/test/edu/berkeley/cs/graph:toposort",
+        "//java/test/edu/berkeley/cs/graph:directedgraph",
+        "//java/test/edu/berkeley/cs/graph:stronglyconnectedcomponents",
+        "//java/test/edu/berkeley/cs/graph:topologicalsort",
     ],
 )
 
 test_suite(
     name = "program7",
     tests = [
-        "//java/test/edu/berkeley/cs/graph:mssp",
-        "//java/test/edu/berkeley/cs/graph:mst",
-        "//java/test/edu/berkeley/cs/graph:sp",
+        "//java/test/edu/berkeley/cs/graph:minimumspanningtree",
+        "//java/test/edu/berkeley/cs/graph:multiplesourceshortestpath",
+        "//java/test/edu/berkeley/cs/graph:shortestpath",
         "//java/test/edu/berkeley/cs/util:unionfind",
     ],
 )
@@ -77,17 +77,17 @@ test_suite(
 test_suite(
     name = "program8",
     tests = [
-        "//java/test/edu/berkeley/cs/app:plagiarism",
-        "//java/test/edu/berkeley/cs/util:trie",
+        "//java/test/edu/berkeley/cs/app:plagiarismdetector",
+        "//java/test/edu/berkeley/cs/util:radixtriemap",
     ],
 )
 
 test_suite(
     name = "final",
     tests = [
-        "//java/test/edu/berkeley/cs/app/finalproject:duplicate_usernames",
-        "//java/test/edu/berkeley/cs/app/finalproject:fuzzy_search",
-        "//java/test/edu/berkeley/cs/app/finalproject:hotkey",
-        "//java/test/edu/berkeley/cs/app/finalproject:sort_checker",
+        "//java/test/edu/berkeley/cs/app/finalproject:duplicateusernames",
+        "//java/test/edu/berkeley/cs/app/finalproject:fuzzysearch",
+        "//java/test/edu/berkeley/cs/app/finalproject:hotkeygenerator",
+        "//java/test/edu/berkeley/cs/app/finalproject:sortchecker",
     ],
 )

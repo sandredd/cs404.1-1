@@ -48,7 +48,7 @@ If you choose to solve this problem, you'll find some starter code in the follow
 
 The following command will be used to test and grade your solution:
 
-    $ bazel test java/test/edu/berkeley/cs/app/finalproject:duplicate_usernames
+    $ bazel test java/test/edu/berkeley/cs/app/finalproject:duplicateusernames
 
 Analysis
 --------
