@@ -125,3 +125,8 @@ isn't listed here, please reach out to me and we can look into it together.
   ```
 
 - Sync the project once more by clicking the green heart button on the top right of IntelliJ IDEA
+
+**Windows Specific Issues**
+If you use Windows and are having issues, the
+[Bazel website has a guide](https://docs.bazel.build/versions/master/windows.html)
+specifically for fixing issues on Windows.
