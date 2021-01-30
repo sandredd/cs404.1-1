@@ -74,4 +74,4 @@ Testing your code
 Tests have already been written to help you ensure that your code works. The following commands will
 be used to test and grade your code:
 
-    $ bazel test java/test/edu/berkeley/cs/app:warmup
+    $ bazel test java:program1

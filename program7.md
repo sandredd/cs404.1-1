@@ -76,5 +76,4 @@ Grading
 Tests have already been written to help you ensure that your code works. The following commands will
 be used to test and grade your code:
 
-    $ bazel test java/test/edu/berkeley/cs/graph:{mssp,sp,mst}
-    $ bazel test java/test/edu/berkeley/cs/util:unionfind
+    $ bazel test java:program7

@@ -1,5 +1,4 @@
 program1-src: java/src/edu/berkeley/cs/app/Warmup.java
-program1-test: java/test/edu/berkeley/cs/app:warmup
 
 program2-src: java/src/edu/berkeley/cs/app/Calculator.java
 program2-src: java/src/edu/berkeley/cs/util/LinkedList.java
@@ -7,24 +6,11 @@ program2-src: java/src/edu/berkeley/cs/util/Queue.java
 program2-src: java/src/edu/berkeley/cs/util/SplayList.java
 program2-src: java/src/edu/berkeley/cs/util/Stack.java
 
-program2-test: java/test/edu/berkeley/cs/app:calculator
-program2-test: java/test/edu/berkeley/cs/app:calculator_ec
-program2-test: java/test/edu/berkeley/cs/util:linkedlist
-program2-test: java/test/edu/berkeley/cs/util:queue
-program2-test: java/test/edu/berkeley/cs/util:splaylist
-program2-test: java/test/edu/berkeley/cs/util:stack
-
 program3-src: java/src/edu/berkeley/cs/sort/Insertion.java
 program3-src: java/src/edu/berkeley/cs/sort/Merge.java
 program3-src: java/src/edu/berkeley/cs/sort/Quick.java
 program3-src: java/src/edu/berkeley/cs/sort/Selection.java
 program3-src: java/src/edu/berkeley/cs/sort/Shell.java
-
-program3-test: java/test/edu/berkeley/cs/sort:insertion
-program3-test: java/test/edu/berkeley/cs/sort:merge
-program3-test: java/test/edu/berkeley/cs/sort:quick
-program3-test: java/test/edu/berkeley/cs/sort:selection
-program3-test: java/test/edu/berkeley/cs/sort:shell
 
 program4-src: java/src/edu/berkeley/cs/app/SummableTree.java
 program4-src: java/src/edu/berkeley/cs/app/scheduling/FiFoScheduler.java
@@ -34,14 +20,6 @@ program4-src: java/src/edu/berkeley/cs/app/scheduling/ShortestJobFirstScheduler.
 program4-src: java/src/edu/berkeley/cs/util/MinHeap.java
 program4-src: java/src/edu/berkeley/cs/util/TreeMap.java
 
-program4-test: java/test/edu/berkeley/cs/app/scheduling:fifo
-program4-test: java/test/edu/berkeley/cs/app/scheduling:job
-program4-test: java/test/edu/berkeley/cs/app/scheduling:rr
-program4-test: java/test/edu/berkeley/cs/app/scheduling:sjf
-program4-test: java/test/edu/berkeley/cs/app:summable_tree
-program4-test: java/test/edu/berkeley/cs/util:minheap
-program4-test: java/test/edu/berkeley/cs/util:treemap
-
 program5-src: java/src/edu/berkeley/cs/app/SpellChecker.java
 program5-src: java/src/edu/berkeley/cs/graph/BreadthFirstSearch.java
 program5-src: java/src/edu/berkeley/cs/graph/DepthFirstOrder.java
@@ -50,46 +28,20 @@ program5-src: java/src/edu/berkeley/cs/graph/Graph.java
 program5-src: java/src/edu/berkeley/cs/util/HashMap.java
 program5-src: java/src/edu/berkeley/cs/util/HashSet.java
 
-program5-test: java/test/edu/berkeley/cs/util:hashset
-program5-test: java/test/edu/berkeley/cs/util:hashmap
-program5-test: java/test/edu/berkeley/cs/graph:graph
-program5-test: java/test/edu/berkeley/cs/graph:bfs
-program5-test: java/test/edu/berkeley/cs/graph:dfs
-program5-test: java/test/edu/berkeley/cs/graph:dfsorder
-program5-test: java/test/edu/berkeley/cs/app:spellchecker
-
 program6-src: java/src/edu/berkeley/cs/graph/Cycle.java
 program6-src: java/src/edu/berkeley/cs/graph/DirectedGraph.java
 program6-src: java/src/edu/berkeley/cs/graph/StronglyConnectedComponents.java
 program6-src: java/src/edu/berkeley/cs/graph/TopologicalSort.java
-
-program6-test: java/test/edu/berkeley/cs/graph:digraph
-program6-test: java/test/edu/berkeley/cs/graph:cycle
-program6-test: java/test/edu/berkeley/cs/graph:toposort
-program6-test: java/test/edu/berkeley/cs/graph:scc
 
 program7-src: java/src/edu/berkeley/cs/graph/MinimumSpanningTree.java
 program7-src: java/src/edu/berkeley/cs/graph/MultipleSourceShortestPath.java
 program7-src: java/src/edu/berkeley/cs/graph/ShortestPath.java
 program7-src: java/src/edu/berkeley/cs/util/UnionFind.java
 
-program7-test: java/test/edu/berkeley/cs/graph:mssp
-program7-test: java/test/edu/berkeley/cs/graph:mst
-program7-test: java/test/edu/berkeley/cs/graph:sp
-program7-test: java/test/edu/berkeley/cs/util:unionfind
-
 program8-src: java/src/edu/berkeley/cs/app/PlagiarismDetector.java
 program8-src: java/src/edu/berkeley/cs/util/RadixTrieMap.java
-
-program8-test: java/test/edu/berkeley/cs/app:plagiarism
-program8-test: java/test/edu/berkeley/cs/util:trie
 
 final-src: java/src/edu/berkeley/cs/app/finalproject/DuplicateUsernames.java
 final-src: java/src/edu/berkeley/cs/app/finalproject/FuzzySearch.java
 final-src: java/src/edu/berkeley/cs/app/finalproject/HotKeyGenerator.java
 final-src: java/src/edu/berkeley/cs/app/finalproject/SortChecker.java
-
-final-test: java/test/edu/berkeley/cs/app/finalproject:duplicate_usernames
-final-test: java/test/edu/berkeley/cs/app/finalproject:fuzzy_search
-final-test: java/test/edu/berkeley/cs/app/finalproject:hotkey
-final-test: java/test/edu/berkeley/cs/app/finalproject:sort_checker

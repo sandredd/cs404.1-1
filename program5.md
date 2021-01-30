@@ -105,6 +105,4 @@ Grading
 Tests have already been written to help you ensure that your code works. The following commands will
 be used to test and grade your code:
 
-    $ bazel test java/test/edu/berkeley/cs/util:{hashset,hashmap}
-    $ bazel test java/test/edu/berkeley/cs/graph:{graph,bfs,dfs,dfsorder}
-    $ bazel test java/test/edu/berkeley/cs/app:spellchecker
+    $ bazel test java:program5
