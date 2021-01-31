@@ -78,6 +78,8 @@ Having said that, I offer you the following suggestions:
 - [IntelliJ IDEA](https://www.jetbrains.com/idea/download/other.html)
   - **WARNING**: use the latest version that starts with `2019`. Avoid version numbers starting with
     `2020`. The Bazel plugin doesn't work with some of the latter versions of IntelliJ.
+  - **Note**: Some of these instructions are available in
+    [video form](https://www.youtube.com/watch?v=5gUF57S0sbI).
   - Once installed, open IntelliJ IDEA and open the preferences pane
   - Search for and install the following extensions within IntelliJ IDEA
     - `Bazel` by Google
