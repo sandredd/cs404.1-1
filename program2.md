@@ -1,38 +1,7 @@
 Program 2
 ---------
-In this assignment, you will implement some basic data structures and algorithms relating to linked
-lists, stacks, and queues.
-
-Doubly Linked List
-------------------
-Fill in the empty method stubs in the linked list class  with the implementation for a doubly linked
-list. Ensure that your implementation has `O(1)` runtime where it makes sense (e.g. `size()`).
-
-Note: data structure operations are tricky to do in your head. For example, `remove(...)` has a lot
-of corner cases and can be tricky to get right. Try drawing out the data structure on a piece of
-paper, working through each individual step of the operations above, and then converting the steps
-to code.
-
-The file(s) you will need for this exercise are:
-
-- `java/src/edu/berkeley/cs/util/LinkedList.java`
-
-Move to Front
--------------
-If the order that items in a list are stored is not important, you can frequently speed up searching
-with a heuristic known as move to front. Whenever an item is accessed, move it to the front of the
-list. This action usually results in an improvement because frequently accessed items tend to
-migrate toward the front of the list, whereas less frequently accessed items tend to migrate toward
-the end of the list. Consequently, the time complexity of `contains(...)` is often much less than
-`O(n)` because the most frequently accessed items tend to require the least searching.
-
-Extend the `LinkedList` class in to implement the move-to-front heuristic for linked lists.
-
-Note: `front(...)` and `back(...)` should not implement the move-to-front heuristic.
-
-The file(s) you will need for this exercise are:
-
-- `java/src/edu/berkeley/cs/util/SplayList.java`
+In this assignment, you will implement some basic data structures and algorithms relating to stacks,
+queues, and searching.
 
 Stack and Queue
 ---------------
@@ -120,6 +89,88 @@ full two stack algorithm. The arithmetic expression evaluation algorithm summari
 assignment are only simplified versions of this algorithm. The full algorithm supports many more
 mathematical operations (e.g. unary operators, variables, composite functions, functions with
 multiple arguments, etc).
+
+Binary Heap
+-----------
+Parts of an array backed binary minimum heap have been implemented for you. Complete the
+implementation by implementing the following functions:
+
+- `sink(...)`
+- `swim(...)`
+- `insert(...)`
+- `removeMinimum(...)`
+
+Note that this binary heap implementation uses a 1-based array indexing system similar to the type
+presented in class. When implementing your binary heap, you can make use of the `resize(...)`
+function to grow or shrink the array backing the binary heap to a given capacity. Remember that when
+growing the array, we want to double in size. However, when shrinking the array, we only want to do
+so when the array is 1/4 used, rather than 1/2 used. This avoids avoid a possible worst case of
+repeatedly growing and shrinking as discussed in class.
+
+The file(s) you will need for this exercise are:
+
+- `java/src/edu/berkeley/cs/util/MinHeap.java`
+
+Priority Queues
+---------------
+Your company builds and operates the world's fastest supercomputer and sells access to top research
+firms and universities for them to conduct various experiments (jobs). The company charges a flat
+rate per job run. In exchange, the research firms demand full, dedicated access to the entire
+supercomputer's resources during the time in which they run their jobs. Although each experiment
+takes a different amount of time to complete, it is known roughly how long a job will take to
+complete before launching it.
+
+To better understand the problem, we assign some vocabulary to some concepts:
+
+- Job processing time: the time it will take a given job to complete when run on the supercomputer
+- Job waiting time: the time a job waits for other jobs to complete before it can run
+- Job turnaround time: job processing time + job waiting time
+- Total turnaround time: the sum of the turnaround time of all jobs
+
+Regardless of what order the jobs run in, the sum of their processing time will be the same. There
+isn't much we can do about that. However, your company can provide a better experience by reducing a
+job's waiting time as much as possible, thereby reducing its total turnaround time and getting
+results back to the client as fast as possible. The company tasks you with finding the best ordering
+of jobs such that job waiting time, and thereby total turnaround time, is kept as small as possible.
+You decide to experiment with the following scheduling algorithms to find the best one.
+
+For this task, we can assume that research firms only care that they get their results back at some
+point in the future and have no hard deadlines of when their jobs must be completed by. Furthermore,
+we can assume that no job depends on another job to be run before it in order to run successfully.
+
+### First In First Out (FIFO)
+Jobs are processed in the arriving order. The job at the front of the queue is served until it has
+completed. That job is then removed from the queue. The next job at the front of the queue is served
+until it has completed and then it is removed from the queue. This process is continued until the
+queue is empty.
+
+### Shortest Job First
+The job with the shortest processing time is processed first until it has completed. That job is
+then removed from the queue. The next job with the smallest processing time is then served until it
+has completed and then it is removed from the queue. This process is continued until the queue is
+empty.
+
+### Round Robin (RR)
+Jobs are processed using a fixed time slice. The jobs are initially kept in a queue based on the
+order of arrival. The job at the front of the queue is removed and served similar to the FIFO
+algorithm. However, unlike the FIFO algorithm, each job is served up to the predefined slice of
+time. If the job can be completed within the allotted time, it is fully served and removed from the
+queue. If the job cannot be completed in the allotted time, it is served for the allotted time and
+then added to the end of the queue to be served later for the remaining time. This process is
+continued until the queue is empty.
+
+The total turnaround time is the total time a job spends in the system: processing time + waiting
+time (time spent in the queue). For example, if the workload is 15 units of time, but the job spends
+50 units of time in queue, waiting to be processed, then the total turnaround time is equal to 65
+units.
+
+Implement each scheduling algorithm in its respective file. The first in first out scheduler can be
+implemented with a linked list or a queue. The shortest job first scheduler should be implemented
+with a priority queue, and the round robin scheduler should be implemented with a queue. Some of
+this data structure selection has been done for you already. The directory you will be working in
+ for this exercise is:
+
+- `java/src/edu/berkeley/cs/app/scheduling`
 
 Testing your code
 -----------------

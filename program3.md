@@ -1,102 +1,118 @@
 Program 3
 ---------
-In this assignment, you will implement and make improvements to various sorting algorithms.
+In this assignment, you will implement and experiment with various searching algorithms.
 
-Before beginning on this assignment, make sure to read the abstract `Sort` class:
+Tree Map
+--------
+One of the methods to implement a symbol table is to use a binary search tree. Parts of a `TreeMap`
+backed by a binary search tree have been implemented for you. Complete the implementation by
+implementing the following methods:
 
-- `java/src/edu/berkeley/cs/sort/Sort.java`
+- `put(...)`
+- `get(...)`
+- `min(...)`
+- `max(...)`
+- `deleteMax(...)`
+- `deleteMin(...)`
 
-Within this file, there are some already implemented methods you can use while completing your
-implementations:
-
-- `less(...)`: determine if a value is less than another in a generic way
-- `swap(...)`: swap the position of two values
-
-When completing your implementations, you must make sure to use the above methods instead of
-implementing them on your own within your code. The above methods keep track of the calls made to
-them which the unit tests use when grading your work. If you forget to use the above methods, you
-might see tests fail unnecessarily. Please make sure to use them.
-
-Shellsort and quicksort have already been implemented for you:
-
-- `java/src/edu/berkeley/cs/sort/Shell.java`
-- `java/src/edu/berkeley/cs/sort/Quick.java`
-
-Selection Sort
---------------
-Implement selection sort.
+You may implement these functions either iteratively or recursively. An example recursive
+implementation of Hibbard deletion is implemented in `delete(...)`. The same could have been done
+iteratively.
 
 The file(s) you will need for this exercise are:
 
-- `java/src/edu/berkeley/cs/sort/Selection.java`
+- `java/src/edu/berkeley/cs/util/TreeMapjava`
 
-Insertion Sort
---------------
-When sorting an array, we normally want to sort it in its entirety. However, it is also useful to be
-able to sort just a portion of the array. For example, when cutting off to insertion sort for small
-subarrays in mergesort or quicksort, we want to be able to sort just the subarray. Implement
-insertion sort to support sorting just the subarray starting from the index `low` and ending at the
-index `high`.
+Summable Tree
+-------------
+Given a binary search tree of integer keys and a target sum, we want to determine if there is a path
+from the root of the tree to a leaf node such that the integers along the path, when summed
+together, equal the target sum. For example, suppose we have the following binary search tree as
+input.
 
-The file(s) you will need for this exercise are:
+              ┌───┐
+              │ 4 │
+              └─┬─┘
+         ┌──────┴──────┐
+       ┌─┴─┐         ┌─┴─┐
+       │ 2 │         │ 6 │
+       └─┬─┘         └─┬─┘
+      ┌──┴───┐      ┌──┴───┐
+    ┌─┴─┐  ┌─┴─┐  ┌─┴─┐  ┌─┴─┐
+    │ 1 │  │ 3 │  │ 5 │  │ 7 │
+    └───┘  └───┘  └───┘  └───┘
 
-- `java/src/edu/berkeley/cs/sort/Insertion.java`
-
-Quicksort
-----------
-Quicksort has already been implemented for you in this exercise. However, there are various
-improvements that can still be made to this implementation to make it faster in practice. Make the
-following changes to the quicksort implementation.
-
-### Use insertion sort for small subarrays
-Quicksort is slower than insertion sort for tiny subarrays. For subarrays of size less than or equal
-to 5, cut off to insertion sort.
-
-### Pivot selection
-Choosing the right pivot can make all the difference for the execution of quicksort. Ideally, we
-would select the [median](https://en.wikipedia.org/wiki/Median) value of all the elements in each
-subarray. However, finding the median efficiently is a tricky problem. Instead, use the median value
-of first, middle, and last element of the subarray to be sorted.
-
-**Note**: for this step, you may find that `partition(...)` needs to be slightly modified for the
-sort to continue working.
+If the target sum were 15, we have a path (4, 6, 5) whose sum equals the target sum. However, if the
+target sum were 16 instead, there is no path to a leaf node which equals the target sum. Implement
+an algorithm that determines if there is such a path, as defined above, for a given binary search
+tree and a target sum. You don't need to return the path itself.
 
 The file(s) you will need for this exercise are:
 
-- `java/src/edu/berkeley/cs/sort/Quick.java`
+- `java/src/edu/berkeley/cs/app/SummableTree.java`
 
-Merge Sort
-----------
-Implement top-down mergesort. While implementing mergesort, if you need to make a copy of a generic
-array (e.g. for the auxiliary array), you can use `Arrays.copyOf(input, input.length);`. Once you
-have a working implementation, make the following improvements to your implementation:
+Hash Map (Separate Chaining)
+----------------------------
+A hash map is a symbol table backed by a hash table. In the previous assignment, you implemented a
+tree map (a symbol table backed by a binary tree). Hash maps have various advantages and
+disadvantages over tree maps and the correct choice depends on the application and problem you
+are trying to solve. Parts of a hash map using separate chaining have been implemented for you.
+Complete the implementation by implementing the following functions:
 
-### Use insertion sort for small subarrays
-For subarrays of size less than or equal to 5, cut off to insertion sort.
+- `get(...)`
+- `put(...)`
+- `contains(...)`
+- `delete(...)`
 
-### Test whether the array is already in order
-Skip the call to `merge(...)` if `input[mid]` is less than or equal to `input[mid+1]`. This
-effectively converts mergesort's time complexity to `O(n)` when sorting an array that is already in
-sorted order.
-
-The file(s) you will need for this exercise are:
-
-- `java/src/edu/berkeley/cs/sort/Merge.java`
-
-Mergesort Linked Lists
-----------------------
-Up until now, all of our sorting algorithms have dealt with sorting arrays. However, we must also be
-able to sort other data structures that hold ordered data (e.g. linked lists). In fact, mergesort is
-the method of choice for sorting linked lists because it uses no extra space and is guaranteed to be
-linearithmic. Unfortunately, our current implementation of mergesort will not work on linked lists.
-
-Fill in the linked list specific `merge(...)` and `sort(...)` methods within your mergesort
-implementation. For your specific implementation, you don't need to worry about optimizing to avoid
-allocating extra space.
+When implementing the above methods, remember to double the hash map when `n / m >= 8` where `n` is
+the number of elements within the hash map and `m` is the size of the array of `SplayList`s (take
+some time also to think about why we use a `SplayList` here). You should also halve the size of the
+hash map when `n / m <= 2`. The `resize(...)` function has already been written for you.
 
 The file(s) you will need for this exercise are:
 
-- `java/src/edu/berkeley/cs/sort/Merge.java`
+- `java/src/edu/berkeley/cs/util/HashMap.java`
+
+Hash Set
+--------
+A hash map can easily decompose into a hash set if the values stored are simply a boolean true. Such
+a hash set has been implemented for you. Read and understand its implementation.
+
+The file(s) you will need for this exercise are:
+
+- `java/src/edu/berkeley/cs/util/HashSet.java`
+
+Spell Checker
+-------------
+One way to implement a very basic spell checker is to use a hash set, preloaded with a list of words
+known to be spelled correctly. As new words are seen by the application, the spell checker can be
+queried to see if the word is spelled correctly or not (e.g. if the hash set contains the word or
+not). The spell checker can also offer suggestions on the correct spelling of the word being
+examined.
+
+Implement a spell checker using the hash set you read about in the previous step. You must implement
+the following methods:
+
+- `isCorrectlySpelled(...)`
+- `getSuggestions(...)`
+
+For the `getSuggestions(...)` method, return any words in the dictionary that are obtainable by
+applying any of the following rules:
+
+- Add one (any) character to the beginning
+- Add one (any) character to the end
+- Remove one (any) character from the beginning
+- Remove one (any) character from the end
+- Exchange any two adjacent characters
+
+The file(s) you will need for this exercise are:
+
+- `java/src/edu/berkeley/cs/app/SpellChecker.java`
+
+### Further Reading
+Real spell checkers are not built using hash tables and heuristic rules to reach correctly spelled
+words. To learn more about the real algorithms behind spell checkers, read about the [Levenshtein
+distance](https://en.wikipedia.org/wiki/Levenshtein_distance) algorithm.
 
 Testing your code
 -----------------

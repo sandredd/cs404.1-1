@@ -3,19 +3,6 @@ Program 7
 In this assignment, you will continue implementing various directed graph algorithms. You will also
 begin working with some string processing algorithms.
 
-Union Find
-----------
-The [Union Find](https://en.wikipedia.org/wiki/Disjoint-set_data_structure) algorithm is a data
-structure and algorithm that allows us to efficiently partition a set of elements and quickly
-determine whether two elements are a part of the same partition. For future exercises, we will need
-the functionality provided by Union Find. An implementation of Weighted Quick Union has been
-provided for you in the files mentioned below. To understand how it works, refer to the class slides
-or read section 1.5 of the textbook.
-
-The file(s) you will need for this exercise are:
-
-- `java/src/edu/berkeley/cs/util/UnionFind.java`
-
 Minimum Spanning Trees
 ----------------------
 You work for a regional water utility company which has been selected to provide water from its
