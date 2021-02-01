@@ -1,35 +1,19 @@
 package edu.berkeley.cs.util;
 
 public class UnionFind {
-  private int[] parent;
-  private int[] size;
-  private int count;
-
   /** @param n the number of nodes */
   public UnionFind(int n) {
-    count = n;
-    parent = new int[n];
-    size = new int[n];
-
-    for (int i = 0; i < n; i++) {
-      parent[i] = i;
-      size[i] = 1;
-    }
+    // TODO: implement this function
   }
 
   /** @return the number of connected components */
   public int count() {
-    return count;
+    // TODO: implement this function
   }
 
   /** @return the component id of node p */
   public int find(int p) {
-    validate(p);
-    while (p != parent[p]) {
-      p = parent[p];
-    }
-
-    return p;
+    // TODO: implement this function
   }
 
   /** @return true if node p and node q are connected */
@@ -37,31 +21,8 @@ public class UnionFind {
     return find(p) == find(q);
   }
 
-  /** @param p the node to validate */
-  private void validate(int p) {
-    int n = parent.length;
-    if (p < 0 || p >= n) {
-      throw new IllegalArgumentException("index " + p + " is not between 0 and " + (n - 1));
-    }
-  }
-
   /** Join node p and node q along with the components they belong to */
   public void union(int p, int q) {
-    int rootP = find(p);
-    int rootQ = find(q);
-
-    if (rootP == rootQ) {
-      return;
-    }
-
-    if (size[rootP] < size[rootQ]) {
-      parent[rootP] = rootQ;
-      size[rootQ] += size[rootP];
-    } else {
-      parent[rootQ] = rootP;
-      size[rootP] += size[rootQ];
-    }
-
-    count--;
+    // TODO: implement this function
   }
 }
