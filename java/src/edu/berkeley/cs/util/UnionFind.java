@@ -9,11 +9,13 @@ public class UnionFind {
   /** @return the number of connected components */
   public int count() {
     // TODO: implement this function
+    return 0;
   }
 
   /** @return the component id of node p */
   public int find(int p) {
     // TODO: implement this function
+    return 0;
   }
 
   /** @return true if node p and node q are connected */
