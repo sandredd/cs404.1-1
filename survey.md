@@ -22,6 +22,9 @@ Your answer here.
 ### What are your goals after completing this course?
 Your answer here.
 
+### How did you find out about this course?
+Your answer here.
+
 ### Is there anything else you would like me to know?
 Your answer here.
 
