@@ -129,6 +129,19 @@ isn't listed here, please reach out to me and we can look into it together.
 - Sync the project once more by clicking the green heart button on the top right of IntelliJ IDEA
 
 **Windows Specific Issues**
-If you use Windows and are having issues, the
+If you use Windows and are unable to sync properly, the
 [Bazel website has a guide](https://docs.bazel.build/versions/master/windows.html)
-specifically for fixing issues on Windows.
+specifically for fixing issues on Windows. Specifically, the following instructions have worked for
+students in the past:
+
+- Open the `.bazelrc` file from the top-level root of the repository
+- Add the following contents to the file:
+
+  ```
+  startup --output_user_root=C:/tmp
+  startup --windows_enable_symlinks
+  build --enable_runfiles
+
+  ```
+
+- Sync the project once more by clicking the green heart button on the top right of IntelliJ IDEA
