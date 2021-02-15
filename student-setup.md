@@ -94,6 +94,7 @@ Having said that, I offer you the following suggestions:
     - Mac OS/Linux: `/usr/local/bin/bazel`
     - You may also place the Bazel binary on your `PATH` environment variable if you prefer
   - Load your assignment repository by importing a Bazel project in IntelliJ IDEA
+    - Note: Select to load the top level directory of the entire repository
   - Click through until the repository is loaded (default settings are fine to use)
   - Open the `Project Settings` under the `File` menu in IntelliJ IDEA and set the JDK IntelliJ
     should use to JDK 11.
